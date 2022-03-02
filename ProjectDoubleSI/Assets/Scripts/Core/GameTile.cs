@@ -5,6 +5,5 @@ using UnityEngine;
 [System.Serializable]
 public class GameTile
 {
-    public Food food;
 
 }

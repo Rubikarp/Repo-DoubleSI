@@ -9,5 +9,5 @@ public class RecipeSCO : ScriptableObject
     public  string recipeName = "Brand New Recipe";
     [Space(10)]
     public Season period = Season.Neutral;
-    public Food[] ingredients;
+    public FoodType[] ingredients;
 }
