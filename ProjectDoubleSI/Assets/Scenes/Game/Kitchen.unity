@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6288944, g: 0.5624476, b: 0.40522733, a: 1}
+  m_IndirectSpecularColor: {r: 0.24890107, g: 0.24890107, b: 0.24890107, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -662,7 +662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589556384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.5}
+  m_LocalPosition: {x: 0, y: 0, z: 10.62}
   m_LocalScale: {x: 22, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 2056423850}
@@ -771,6 +771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056423850}
+  - component: {fileID: 2056423851}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -797,6 +798,27 @@ Transform:
   m_Father: {fileID: 819943719}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2056423851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056423849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfe0ee4a9ebd1e4e849bae37644eeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid:
+    size: {x: 5, y: 5}
+    offSet: {x: 0, y: 0}
+    cellSize: 4
+    tiles: []
+    showDebug: 0
+    debugLineColor: {r: 0.101122856, g: 0, b: 1, a: 1}
+    showCenter: 0
+    debugCenterColor: {r: 0.18177521, g: 1, b: 0, a: 1}
 --- !u!1 &2059118265
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,11 +964,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.01
+  far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 18.2
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -969,13 +991,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094414840}
-  m_LocalRotation: {x: 0, y: 0.7372774, z: -0.67559016, w: 0}
-  m_LocalPosition: {x: 0, y: 40, z: 5}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 0.15, y: 17.41, z: -7.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 498609172}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 85, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &2094414844
 MonoBehaviour:
   m_ObjectHideFlags: 0
