@@ -1,10 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class FoodItem : MonoBehaviour
 {
-    public FoodType type;
+    [Expandable]
+    public FoodSCO food;
 
     void Start()
     {

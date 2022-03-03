@@ -1,6 +1,6 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using NaughtyAttributes;
+using UnityEngine;
 
 namespace Menu
 {

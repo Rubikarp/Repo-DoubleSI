@@ -58,4 +58,14 @@ public static class KarpHelper
     {
         return array[array.Count - 1];
     }
+
+    public static Vector3 ToPlaneXZ(this Vector2 pos)
+    {
+        return new Vector3(pos.x, 0,pos.y);
+    }
+    public static Vector2 ToPlaneXZ(this Vector3 pos)
+    {
+        return new Vector2(pos.x, pos.z);
+    }
+
 }

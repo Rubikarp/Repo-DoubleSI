@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_New
   m_EditorClassIdentifier: 
-  recipeName: Soupe Fraiche
+  name: Brand New Recipe
+  ingredients:
+  - {fileID: 0}
   period: 4
-  ingredients: 020000000300000067000000

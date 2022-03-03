@@ -1,4 +1,3 @@
-
 namespace Core
 {
     [System.Flags]
