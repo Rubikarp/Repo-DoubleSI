@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_New
   m_EditorClassIdentifier: 
-  name: Brand New Recipe
+  name: RandomPlat
   ingredients:
-  - {fileID: 0}
-  period: 4
+  - {fileID: 11400000, guid: ae39a3363adf66542ac4eae50f82fbdd, type: 2}
+  - {fileID: 11400000, guid: 06695cbb06ce1eb4fb696bb0f1201af8, type: 2}
+  - {fileID: 11400000, guid: b1a32adfa2316234aaf1bda9564f29e4, type: 2}
+  period: 2
