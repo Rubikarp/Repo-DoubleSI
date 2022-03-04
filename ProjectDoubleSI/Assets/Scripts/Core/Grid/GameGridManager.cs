@@ -45,7 +45,7 @@ public class GameGridManager : MonoBehaviour
         UpdateName();
     }
     [Button]
-    private void ShuffleGrid()
+    public void ShuffleGrid()
     {
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
