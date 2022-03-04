@@ -6,7 +6,8 @@ public enum FoodType
     Meat,
     Fruit,
 }
-/* public enum FoodType
+
+public enum FoodElement
 {
     //Viande
     Salmon = 001,
@@ -17,7 +18,7 @@ public enum FoodType
     Tomato = 101,
     Onion = 102,
     Squash = 103,
-    Epinar = 104,
+    Spinach = 104,
     Mushroom = 105,
 
     //Produit Frais
@@ -30,4 +31,4 @@ public enum FoodType
     Rice = 301,
     Pasta = 302,
     Potato = 303,
-}*/
+}

@@ -5,7 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class GameTile
 {
-    public GameObject item;
+    [HideInInspector] public string name = "Tile[0,0]";
+
+    [Header("info")]
+    public FoodItem item;
+    [SerializeField] private List<LineMatch> matchIn = new List<LineMatch>();
 
     [Header("Position")]
     public Vector2Int gridPos;

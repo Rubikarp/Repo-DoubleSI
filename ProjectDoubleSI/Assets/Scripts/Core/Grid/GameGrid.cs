@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Collections;
 using NaughtyAttributes;
 using UnityEngine;
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-[System.Serializable]
-public class GameGrid
+public class GameGrid : MonoBehaviour
 {
     [Header("Parameter")]
     public Vector2Int size = new Vector2Int(5, 5);
@@ -25,14 +25,6 @@ public class GameGrid
     [BoxGroup("Debug")] [ShowIf("showCenter")] public Color debugCenterColor = Color.black;
     #endregion
 
-    public void UpdateZone()
-    {
-        //Get bottom left corner |_
-        Vector2 bottomLeft = offSet;
-        bottomLeft -= (Vector2)size * 0.5f * cellSize;
-
-        zone = new Rect(bottomLeft, (Vector2)size * cellSize);
-    }
     public bool InZone(Vector3 pos)
     {
         return InZone(pos.ToPlaneXZ());
@@ -41,18 +33,43 @@ public class GameGrid
     {
         return zone.Contains(pos);
     }
+    public bool InGrid(int x, int y)
+    {
+        if (x < 0 || y < 0)
+        {
+            return false;
+        }
+        if (x >= size.x || y >= size.y)
+        {
+            return false;
+        }
+        return true;
+    }
+    public bool InGrid(Vector2Int testedPos)
+    {
+        return InGrid(testedPos.x, testedPos.y);
+    }
 
 
     public GameTile GetTile(int x, int y)
     {
-        if(x < 0 || x > size.x || y < 0 || y > size.y) { return null; }
+        if(!InGrid(x,y)) { return null; }
         return tiles[x + (y * (size.x))];
     }
     public GameTile GetTile(Vector2Int pos)
     {
-        if (pos.x < 0 || pos.x > size.x || pos.y < 0 || pos.y > size.y) { return null; }
-        return tiles[pos.x + (pos.y * (size.x))];
+        return GetTile(pos.x, pos.y);
     }
+    public FoodSCO GetFood(int x, int y)
+    {
+        if (GetTile(x, y) == null) return null;
+        return GetTile(x,y).item.Food;
+    }
+    public FoodSCO GetFood(Vector2Int pos)
+    {
+        return GetFood(pos.x, pos.y);
+    }
+
 
     #region Grid<->World Convertion
     /// <summary>
@@ -95,29 +112,45 @@ public class GameGrid
     }
     #endregion
 
-    public void FillGrid()
+    private void OnValidate()
+    {
+        UpdateZone();
+    }
+    public void UpdateZone()
+    {
+        //Get bottom left corner |_
+        Vector2 bottomLeft = offSet;
+        bottomLeft -= (Vector2)size * 0.5f * cellSize;
+
+        zone = new Rect(bottomLeft, (Vector2)size * cellSize);
+    }
+
+    [Button]
+    public void SetGridTiles()
     {
         if (tiles == null || tiles.Length == 0)
         {
             tiles = new GameTile[size.x * size.y];
         }
-        for (int y = 0; y < size.y; y++)
+
+        GameTile temp;
+        for (int x = 0; x < size.x; x++)
         {
-            for (int x = 0; x < size.x; x++)
+            for (int y = 0; y < size.y; y++)
             {
                 if (GetTile(x, y) != null)
                 {
-                    GameTile temp = GetTile(x, y);
-
+                    temp = GetTile(x, y);
                     temp.gridPos = new Vector2Int(x, y);
                     temp.worldPos = TileToPos(temp.gridPos);
+                    temp.name = "Tile[" + temp.gridPos.x + "," + temp.gridPos.y + "]";
                 }
             }
         }
     }
 
 #if UNITY_EDITOR
-    public void DrawGizmos()
+    public void OnDrawGizmos()
     {
         if (showDebug)
         {

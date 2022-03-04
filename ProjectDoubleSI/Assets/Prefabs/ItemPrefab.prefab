@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3517961073621412117}
   - component: {fileID: 2323192732601407378}
   m_Layer: 0
-  m_Name: Graph_01
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 680518189906868688}
   - component: {fileID: 5769283713676916539}
+  - component: {fileID: 7298458193152680159}
   m_Layer: 0
   m_Name: ItemPrefab
   m_TagString: Untagged
@@ -209,4 +210,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2e420f86fab94418423d78c12cf169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
+  food: {fileID: 11400000, guid: ae39a3363adf66542ac4eae50f82fbdd, type: 2}
+  onChangingFood:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7298458193152680159}
+        m_TargetAssemblyTypeName: FoodItemVisual, Assembly-CSharp
+        m_MethodName: UpdateSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &7298458193152680159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854309284851856226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0faf63b748e9364bb61a77c52b673fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItem: {fileID: 5769283713676916539}
+  render: {fileID: 442331016663706549}
+  renderShadow: {fileID: 2323192732601407378}

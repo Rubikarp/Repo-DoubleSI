@@ -9,11 +9,12 @@ public class InputHandler : MonoBehaviour
     [Header("reférence")]
     public Camera cam;
     public Transform camTransf;
+    public GameGrid grid;
 
     [Header("Internal Value")]
     public Plane inputSurf = new Plane(Vector3.up, Vector3.zero);
     [Space(10)]
-    [SerializeField] public Ray ray;
+    [SerializeField] public Ray ray = new Ray(Vector3.up * 5, Vector3.down);
     [SerializeField] public float hitDist = 0f;
     [SerializeField] public Vector3 hitPoint = Vector3.zero;
 
@@ -26,11 +27,10 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-
         GetHitPos();
 
         //OnPress
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && grid.InZone(hitPoint))
         {
             if (!KarpHelper.IsOverUI())
             {
@@ -39,26 +39,22 @@ public class InputHandler : MonoBehaviour
             }
         }
         //OnDrag
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && isMaintaining)
         {
             if (KarpHelper.IsOverUI())
             {
                 onInputRelease?.Invoke();
             }
             else
-            if (isMaintaining)
             {
                 onInputMaintain?.Invoke();
             }
         }
         //OnRelease
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && isMaintaining)
         {
-            if (isMaintaining)
-            {
-                isMaintaining = false;
-                onInputRelease?.Invoke();
-            }
+            isMaintaining = false;
+            onInputRelease?.Invoke();
         }
     }
 
@@ -67,6 +63,10 @@ public class InputHandler : MonoBehaviour
     {
         //Reset HitPoint
         hitPoint = Vector3.zero;
+        //Mouse In Screen
+        if (!cam.pixelRect.Contains(cam.ScreenToViewportPoint(Input.mousePosition))) 
+        { return hitPoint; }
+
         //Get Ray
         ray = cam.ScreenPointToRay(Input.mousePosition);
         //Raycast
@@ -78,6 +78,7 @@ public class InputHandler : MonoBehaviour
         {
             Debug.LogError("Ray parrallèle to plane", this);
         }
+
         return hitPoint;
     }
     private void OnDrawGizmosSelected()

@@ -121,28 +121,6 @@ public struct Direction
     {
         return new Direction(_dirIndex);
     }
-    public static Quaternion ToQuat2D(DirectionEnum _dirIndex)
-    {
-        switch (_dirIndex)
-        {
-            case DirectionEnum.left:
-                return new Quaternion(0, 0, 1f, 0f).normalized;
-                break;
-            case DirectionEnum.right:
-                return new Quaternion(0, 0, 0f, 1f).normalized;
-                break;
-            case DirectionEnum.up:
-                return new Quaternion(0, 0, 0.7071068f, 0.7071068f).normalized;
-                break;
-            case DirectionEnum.down:
-                return new Quaternion(0, 0, -0.7071068f, 0.7071068f).normalized;
-                break;
-
-            default:
-                return Quaternion.identity;
-                break;
-        }
-    }
 
     //Methode
     public static bool IsVertical(Direction dir)
