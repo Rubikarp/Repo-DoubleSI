@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b167d781b663538488b18f6549550712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Kitchen
+  sceneName: KarpKitchen
 --- !u!114 &732767400
 MonoBehaviour:
   m_ObjectHideFlags: 0
