@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/KarpKitchen.unity
+    guid: d121dac8fabab044ca94f1d80b4dda43
+  - enabled: 1
     path: Assets/Scenes/Game/SplashScreen.unity
     guid: 4462aecf90249da47990cd9aba12ec50
   - enabled: 1
