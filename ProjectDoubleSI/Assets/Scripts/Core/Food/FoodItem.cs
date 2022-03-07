@@ -22,4 +22,8 @@ public class FoodItem : MonoBehaviour
     }
     public FoodEvent onChangingFood;
 
+    private void Start()
+    {
+        onChangingFood?.Invoke(this);
+    }
 }

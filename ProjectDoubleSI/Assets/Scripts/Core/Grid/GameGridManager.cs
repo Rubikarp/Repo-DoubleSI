@@ -18,6 +18,9 @@ public class GameGridManager : MonoBehaviour
 
     public FoodListSCO foodList;
 
+    [Header("parameter")]
+    public float dropTime = 1.2f;
+
     void Awake()
     {
         grid = transform.GetComponent<GameGrid>();
@@ -32,14 +35,17 @@ public class GameGridManager : MonoBehaviour
         LeanTween.move(a.item.gameObject, a.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
         LeanTween.move(b.item.gameObject, b.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
     }
-    public void DropDown(GameTile from, GameTile to)
+    
+    public void ClearMatch(LineMatch match)
     {
-        to.item = from.item;
-        from.item = null;
+        foreach (var tile in match.matchingTile)
+        {
+            Destroy(tile.item.gameObject);
+            tile.item = null;
+        }
 
-        LeanTween.move(to.item.gameObject, to.worldPos, 0.2f).setEase(LeanTweenType.easeOutBounce);
+        GravityCheck();
     }
-
     public void GravityCheck()
     {
         bool gravEnd = true;
@@ -65,10 +71,16 @@ public class GameGridManager : MonoBehaviour
                 }
             }
         } while (!gravEnd);
-        ReFillGrid();
+        FillEmptyTiles();
     }
+    public void DropDown(GameTile from, GameTile to)
+    {
+        to.item = from.item;
+        from.item = null;
 
-    public void ReFillGrid()
+        LeanTween.move(to.item.gameObject, to.worldPos, 0.6f * (from.gridPos-to.gridPos).magnitude).setEase(LeanTweenType.easeOutBounce);
+    }
+    public void FillEmptyTiles()
     {
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
@@ -77,13 +89,16 @@ public class GameGridManager : MonoBehaviour
             {
                 InvockFoodOn(tile, out tempItem);
                 tempItem.Food = foodList.GetRandomFood();
+                tempItem.transform.position = tile.worldPos + Vector3.up * 20;
+                LeanTween.move(tempItem.gameObject, tile.worldPos, dropTime).setEase(LeanTweenType.easeOutBounce);
             }
         }
         UpdateName();
     }
 
+
     [Button]
-    private void FillGrid()
+    private void GenerateGrid()
     {
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
@@ -93,7 +108,7 @@ public class GameGridManager : MonoBehaviour
         }
         UpdateName();
     }
-    [Button]
+
     public void ShuffleGrid()
     {
         FoodItem tempItem;
@@ -101,7 +116,6 @@ public class GameGridManager : MonoBehaviour
         {
             tempItem = tile.item;
             tempItem.Food = foodList.GetRandomFood();
-
 #if UNITY_EDITOR
             tempItem.onChangingFood?.Invoke(tempItem);
 #endif

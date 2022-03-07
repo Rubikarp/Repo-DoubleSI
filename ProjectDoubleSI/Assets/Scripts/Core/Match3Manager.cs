@@ -5,6 +5,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class MatchEvent : UnityEvent<LineMatch> { }
+
 public class Match3Manager : MonoBehaviour
 {
     [Header("Info")]
@@ -14,7 +17,7 @@ public class Match3Manager : MonoBehaviour
     public GameGrid grid;
     public GameObject linePrefab;
     [Header("Event")]
-    public UnityEvent onMatch;
+    public MatchEvent onMatch;
 
     [NaughtyAttributes.Button]
     public void LookForMatch()
@@ -58,7 +61,8 @@ public class Match3Manager : MonoBehaviour
     }
     public void Touch(GameTile tileTouched)
     {
-        foundMatchs[0].matchingTile.Contains(tileTouched);
+        if (foundMatchs.Count < 1) return;
+
         List<LineMatch> lineMatched = foundMatchs.Where(line => line.matchingTile.Contains(tileTouched)).ToList();
 
         if (lineMatched.Count > 0)
@@ -66,13 +70,7 @@ public class Match3Manager : MonoBehaviour
             //Score
             //Mana
 
-            foreach (var tile in lineMatched[0].matchingTile)
-            {
-                Destroy(tile.item.gameObject);
-                tile.item = null;
-            }
-
-            onMatch?.Invoke();
+            onMatch?.Invoke(lineMatched[0]);
         }
     }
     public LineMatch CheckItemLineFrom(bool vert, GameTile testedTile, Vector2Int dir)
