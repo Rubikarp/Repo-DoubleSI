@@ -29,7 +29,8 @@ public class CollectionButton : MonoBehaviour
             if(SCODeckManagement.instance.playerRecipesDeck.Count == 0)
             {
                 SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
-                //UpdateVisuel
+                DeckManager.Instance.UpdateDeckButton();
+                
             }
             else
             {
@@ -44,7 +45,7 @@ public class CollectionButton : MonoBehaviour
                     }
 
                     SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
-                    //UpdateVisuel
+                    DeckManager.Instance.UpdateDeckButton();
                 }
             } 
         }
@@ -53,7 +54,7 @@ public class CollectionButton : MonoBehaviour
             if (SCODeckManagement.instance.playerToolsDeck.Count == 0)
             {
                 SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
-                //UpdateVisuel
+                DeckManager.Instance.UpdateDeckButton();
             }
             else
             {
@@ -68,7 +69,7 @@ public class CollectionButton : MonoBehaviour
                     }
 
                     SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
-                    //UpdateVisuel
+                    DeckManager.Instance.UpdateDeckButton();
                 }
             }
 

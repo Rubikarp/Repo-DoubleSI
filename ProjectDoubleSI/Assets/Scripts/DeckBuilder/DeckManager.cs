@@ -27,18 +27,19 @@ public class DeckManager : Singleton<DeckManager>
         Initialisation();
     }
 
-    private void UpdateDeckButtonVisual()
+    public void UpdateDeckButton()
     {
+
         //UpdateToolsButton
         for (int i = 0; i < SCODeckManagement.instance.playerToolsDeck.Count; i++)
         {
-
+            playerDeckToolsButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerToolsDeck[i]);
         }
 
         //UpdateRecipesButton
         for (int i = 0; i < SCODeckManagement.instance.playerRecipesDeck.Count; i++)
         {
-
+            playerDeckRecipesButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerRecipesDeck[i]);
         }
     }
 
@@ -85,9 +86,11 @@ public class DeckManager : Singleton<DeckManager>
 
             for (int i = 3; i < 6; i++)
             {
-                playerDeckRecipesButton.Add(playerCollectionButton[i].gameObject);
+                playerDeckRecipesButton.Add(playerDeckButton[i].gameObject);
+            
             }
 
+        UpdateDeckButton();
     }
     
 }

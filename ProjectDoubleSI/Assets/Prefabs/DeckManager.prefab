@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 16746459}
   - component: {fileID: 16746458}
   - component: {fileID: 16746457}
+  - component: {fileID: 78284722}
   m_Layer: 5
   m_Name: B_DeckTool2
   m_TagString: Untagged
@@ -67,7 +68,7 @@ RectTransform:
   m_Children:
   - {fileID: 2023327391}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -156,6 +157,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &78284722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16746455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &160482794
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +880,7 @@ GameObject:
   - component: {fileID: 491093010}
   - component: {fileID: 491093009}
   - component: {fileID: 491093008}
+  - component: {fileID: 801070110}
   m_Layer: 5
   m_Name: B_DeckRecipe2
   m_TagString: Untagged
@@ -887,7 +901,7 @@ RectTransform:
   m_Children:
   - {fileID: 160482795}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -976,6 +990,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &801070110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491093006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563134293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,6 +1341,7 @@ GameObject:
   - component: {fileID: 727856725}
   - component: {fileID: 727856724}
   - component: {fileID: 727856723}
+  - component: {fileID: 1301622539}
   m_Layer: 5
   m_Name: B_DeckTool0
   m_TagString: Untagged
@@ -1335,7 +1362,7 @@ RectTransform:
   m_Children:
   - {fileID: 939882657}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1424,6 +1451,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1301622539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727856721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &847549180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1703,7 @@ GameObject:
   - component: {fileID: 1118915145}
   - component: {fileID: 1118915144}
   - component: {fileID: 1118915143}
+  - component: {fileID: 1910778759}
   m_Layer: 5
   m_Name: B_DeckTool1
   m_TagString: Untagged
@@ -1684,7 +1724,7 @@ RectTransform:
   m_Children:
   - {fileID: 1013853151}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1773,6 +1813,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1910778759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118915141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238573875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2275,7 @@ GameObject:
   - component: {fileID: 1599774899}
   - component: {fileID: 1599774898}
   - component: {fileID: 1599774897}
+  - component: {fileID: 518434335}
   m_Layer: 5
   m_Name: B_DeckRecipe0
   m_TagString: Untagged
@@ -2243,7 +2296,7 @@ RectTransform:
   m_Children:
   - {fileID: 1952877172}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2332,6 +2385,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &518434335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599774895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607566886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,12 +3262,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1599774896}
-  - {fileID: 2056766284}
-  - {fileID: 491093007}
   - {fileID: 727856722}
   - {fileID: 1118915142}
   - {fileID: 16746456}
+  - {fileID: 1599774896}
+  - {fileID: 2056766284}
+  - {fileID: 491093007}
   m_Father: {fileID: 453743199}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3326,6 +3391,7 @@ GameObject:
   - component: {fileID: 2056766287}
   - component: {fileID: 2056766286}
   - component: {fileID: 2056766285}
+  - component: {fileID: 316009692}
   m_Layer: 5
   m_Name: B_DeckRecipe1
   m_TagString: Untagged
@@ -3346,7 +3412,7 @@ RectTransform:
   m_Children:
   - {fileID: 323274756}
   m_Father: {fileID: 2020570250}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3435,6 +3501,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &316009692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056766283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116ae76d95543242b792e9ea00ef7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2093808517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,10 +3704,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollectionButton: []
-  playerRecipesButton: []
-  playerToolsButton: []
+  playerCollectionRecipesButton: []
+  playerCollectionToolsButton: []
   collectionParent: {fileID: 1927357371}
   deckParent: {fileID: 2020570249}
+  playerDeckButton: []
+  playerDeckRecipesButton: []
+  playerDeckToolsButton: []
   alimentsParents: {fileID: 431632620}
   alimentsChildren: []
   numberOfCards: 0

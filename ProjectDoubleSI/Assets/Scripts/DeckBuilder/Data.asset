@@ -26,5 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bf610fb1d2adb14e89d4039c89a9f5d, type: 2}
   - {fileID: 11400000, guid: f17b2b6af057f4d45bd36ebdd1bf6dce, type: 2}
   numberOfCards: 0
-  playerToolDeck: []
-  playerRecipeDeck: []
+  playerToolsDeck: []
+  playerRecipesDeck: []
