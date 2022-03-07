@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    /// <summary>
-    /// XP - This script handle the management of the Deck : Visual and Datas.
-    /// XP - The player is able to equip cards.
-    /// </summary>
-
-    
-    #region StartVar
-    public List<CardSCO> allCards = new List<CardSCO>();
-    public List<GameObject> playerToolDeck = new List<GameObject>();
-    public List<GameObject> playerRecipeDeck = new List<GameObject>();
-    #endregion
-
     #region UI
     public List<GameObject> playerCollectionButton = new List<GameObject>();
     public List<GameObject> playerRecipesButton = new List<GameObject>();
@@ -28,17 +16,26 @@ public class DeckManager : MonoBehaviour
     public List<GameObject> alimentsChildren = new List<GameObject>();
     #endregion
 
+    public int numberOfCards;
 
     // Start is called before the first frame update
     void Start()
     {
+        Initialisation();
+    }
+
+
+    void Initialisation()
+    {
+        numberOfCards = SCODeckManagement.instance.allCards.Count;
+
         //Je récupère l'ensemble des points permettant d'afficher les aliments selon les recettes équipées.
-        foreach(Transform child in alimentsParents.transform)
+        foreach (Transform child in alimentsParents.transform)
         {
             alimentsChildren.Add(child.gameObject);
         }
 
-        foreach(Transform child in collectionParent.transform)
+        foreach (Transform child in collectionParent.transform)
         {
             playerCollectionButton.Add(child.gameObject);
         }
@@ -47,16 +44,16 @@ public class DeckManager : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             playerToolsButton.Add(playerCollectionButton[i].gameObject);
-          
+            playerToolsButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
         }
 
         //Récupérer les Tools de la collection pour les ranger dans une liste
         for (int i = 6; i < 12; i++)
         {
             playerRecipesButton.Add(playerCollectionButton[i].gameObject);
+            playerRecipesButton[i - 6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
         }
+
     }
-        //Pour chaque button dans la liste : Initialisation des visuels des boutons.
+    //Pour chaque button dans la liste : Initialisation des visuels des boutons.
 }
-
-

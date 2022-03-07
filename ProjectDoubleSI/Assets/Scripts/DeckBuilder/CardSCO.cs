@@ -8,6 +8,7 @@ public class CardSCO : ScriptableObject
 {
     public string cardName;
     public int level;
+    public int cardCost;
 
     public Sprite cardAsset;
     public string cardEffet;
