@@ -24,50 +24,51 @@ public class CollectionButton : MonoBehaviour
     
     public void Equip()
     {
-
         if(cardContener.typeOfCard == CardSCO.cardType.Recipe)
         {
-            if(SCODeckManagement.instance.playerRecipeDeck.Count == 0)
+            if(SCODeckManagement.instance.playerRecipesDeck.Count == 0)
             {
-                SCODeckManagement.instance.playerRecipeDeck.Add(cardContener);
+                SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
+                //UpdateVisuel
             }
             else
             {
-                if (SCODeckManagement.instance.playerRecipeDeck.Count < 3)
+                if (SCODeckManagement.instance.playerRecipesDeck.Count < 3)
                 {
-                    for (int i = 0; i < SCODeckManagement.instance.playerRecipeDeck.Count; i++)
+                    for (int i = 0; i < SCODeckManagement.instance.playerRecipesDeck.Count; i++)
                     {
-                        if (SCODeckManagement.instance.playerRecipeDeck[i] == cardContener)
+                        if (SCODeckManagement.instance.playerRecipesDeck[i] == cardContener)
                         {
                             return;
                         }
                     }
 
-                    SCODeckManagement.instance.playerRecipeDeck.Add(cardContener);
+                    SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
+                    //UpdateVisuel
                 }
-            }
-
-            
+            } 
         }
         else
         {
-            if (SCODeckManagement.instance.playerToolDeck.Count == 0)
+            if (SCODeckManagement.instance.playerToolsDeck.Count == 0)
             {
-                SCODeckManagement.instance.playerToolDeck.Add(cardContener);
+                SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
+                //UpdateVisuel
             }
             else
             {
-                if (SCODeckManagement.instance.playerToolDeck.Count < 3)
+                if (SCODeckManagement.instance.playerToolsDeck.Count < 3)
                 {
-                    for (int i = 0; i < SCODeckManagement.instance.playerToolDeck.Count; i++)
+                    for (int i = 0; i < SCODeckManagement.instance.playerToolsDeck.Count; i++)
                     {
-                        if (SCODeckManagement.instance.playerToolDeck[i] == cardContener)
+                        if (SCODeckManagement.instance.playerToolsDeck[i] == cardContener)
                         {
                             return;
                         }
                     }
 
-                    SCODeckManagement.instance.playerToolDeck.Add(cardContener);
+                    SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
+                    //UpdateVisuel
                 }
             }
 
