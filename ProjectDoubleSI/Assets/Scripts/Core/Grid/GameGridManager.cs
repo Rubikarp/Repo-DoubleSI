@@ -32,6 +32,55 @@ public class GameGridManager : MonoBehaviour
         LeanTween.move(a.item.gameObject, a.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
         LeanTween.move(b.item.gameObject, b.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
     }
+    public void DropDown(GameTile from, GameTile to)
+    {
+        to.item = from.item;
+        from.item = null;
+
+        LeanTween.move(to.item.gameObject, to.worldPos, 0.2f).setEase(LeanTweenType.easeOutBounce);
+    }
+
+    public void GravityCheck()
+    {
+        bool gravEnd = true;
+        do
+        {
+            gravEnd = true;
+            //De bas en haut + gauch à droite
+            for (int x = 0; x < grid.size.x; x++)
+            {
+                for (int y = 0; y < grid.size.y; y++)
+                {
+                    if (grid.GetTile(x, y).item == null)
+                    {
+                        if (grid.GetTile(x, y + 1) == null)
+                        { continue; }
+
+                        if (grid.GetTile(x, y + 1).item != null)
+                        {
+                            DropDown(grid.GetTile(x, y + 1), grid.GetTile(x, y));
+                            gravEnd = false;
+                        }
+                    }
+                }
+            }
+        } while (!gravEnd);
+        ReFillGrid();
+    }
+
+    public void ReFillGrid()
+    {
+        FoodItem tempItem;
+        foreach (var tile in grid.tiles)
+        {
+            if (tile.item == null)
+            {
+                InvockFoodOn(tile, out tempItem);
+                tempItem.Food = foodList.GetRandomFood();
+            }
+        }
+        UpdateName();
+    }
 
     [Button]
     private void FillGrid()
@@ -39,7 +88,7 @@ public class GameGridManager : MonoBehaviour
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
         {
-            InvockFoodOn(tile,out tempItem);
+            InvockFoodOn(tile, out tempItem);
             tempItem.Food = foodList.GetRandomFood();
         }
         UpdateName();

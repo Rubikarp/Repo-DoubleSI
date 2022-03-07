@@ -22,13 +22,4 @@ public class FoodItem : MonoBehaviour
     }
     public FoodEvent onChangingFood;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
