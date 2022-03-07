@@ -3859,6 +3859,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 247547978}
     m_Modifications:
     - target: {fileID: -6463972969867177843, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
+      propertyPath: deckParent
+      value: 
+      objectReference: {fileID: 2020570249}
+    - target: {fileID: -6463972969867177843, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
       propertyPath: alimentsParents
       value: 
       objectReference: {fileID: 431632620}

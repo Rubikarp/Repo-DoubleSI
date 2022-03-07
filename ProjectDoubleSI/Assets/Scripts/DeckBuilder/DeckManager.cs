@@ -9,20 +9,25 @@ public class DeckManager : MonoBehaviour
     /// XP - The player is able to equip cards.
     /// </summary>
 
+    
+    #region StartVar
+    public List<CardSCO> allCards = new List<CardSCO>();
+    public List<GameObject> playerToolDeck = new List<GameObject>();
+    public List<GameObject> playerRecipeDeck = new List<GameObject>();
+    #endregion
+
+    #region UI
+    public List<GameObject> playerCollectionButton = new List<GameObject>();
+    public List<GameObject> playerRecipesButton = new List<GameObject>();
+    public List<GameObject> playerToolsButton = new List<GameObject>();
+    public GameObject collectionParent;
+    public GameObject deckParent;
+
     //Aliments
     [SerializeField] private GameObject alimentsParents;
     public List<GameObject> alimentsChildren = new List<GameObject>();
-
-    #region StartVar
-    public List<GameObject> playerDeck = new List<GameObject>();
-    public List<GameObject> playerCollection = new List<GameObject>();
-    public List<GameObject> playerRecipes = new List<GameObject>();
-    public List<GameObject> playerTools = new List<GameObject>();
-    public GameObject collectionParent;
-    public GameObject deckParent;
     #endregion
 
-   
 
     // Start is called before the first frame update
     void Start()
@@ -35,19 +40,20 @@ public class DeckManager : MonoBehaviour
 
         foreach(Transform child in collectionParent.transform)
         {
-            playerCollection.Add(child.gameObject);
+            playerCollectionButton.Add(child.gameObject);
         }
 
         //Récupérer les recipes de la collection pour les ranger dans une liste
         for (int i = 0; i < 6; i++)
         {
-            playerTools.Add(playerCollection[i].gameObject);
+            playerToolsButton.Add(playerCollectionButton[i].gameObject);
+          
         }
 
         //Récupérer les Tools de la collection pour les ranger dans une liste
         for (int i = 6; i < 12; i++)
         {
-            playerRecipes.Add(playerCollection[i].gameObject);
+            playerRecipesButton.Add(playerCollectionButton[i].gameObject);
         }
     }
         //Pour chaque button dans la liste : Initialisation des visuels des boutons.
