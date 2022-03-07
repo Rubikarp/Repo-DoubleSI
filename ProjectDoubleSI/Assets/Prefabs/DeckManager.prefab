@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 563134298}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 657312056}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -1856,7 +1856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1238573880}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1427025623}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2148,7 +2148,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1449818814}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2450,7 +2450,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1625027003}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1687572447}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1890529670}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -2955,7 +2955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 1927265999}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -3518,7 +3518,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478115895}
+      - m_Target: {fileID: 2093808522}
         m_TargetAssemblyTypeName: CollectionButton, Assembly-CSharp
         m_MethodName: Equip
         m_Mode: 1
@@ -3628,8 +3628,8 @@ MonoBehaviour:
   playerCollectionButton: []
   playerRecipesButton: []
   playerToolsButton: []
-  collectionParent: {fileID: 0}
-  deckParent: {fileID: 0}
-  alimentsParents: {fileID: 0}
+  collectionParent: {fileID: 1927357371}
+  deckParent: {fileID: 2020570249}
+  alimentsParents: {fileID: 431632620}
   alimentsChildren: []
   numberOfCards: 0

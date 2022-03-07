@@ -19,7 +19,7 @@ public class DeckManager : MonoBehaviour
     public int numberOfCards;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Initialisation();
     }
@@ -43,15 +43,15 @@ public class DeckManager : MonoBehaviour
         //Récupérer les recipes de la collection pour les ranger dans une liste
         for (int i = 0; i < 6; i++)
         {
-            playerToolsButton.Add(playerCollectionButton[i].gameObject);
-            playerToolsButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            playerRecipesButton.Add(playerCollectionButton[i].gameObject);
+            playerRecipesButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
         }
 
         //Récupérer les Tools de la collection pour les ranger dans une liste
         for (int i = 6; i < 12; i++)
         {
-            playerRecipesButton.Add(playerCollectionButton[i].gameObject);
-            playerRecipesButton[i - 6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            playerToolsButton.Add(playerCollectionButton[i].gameObject);
+            playerToolsButton[i-6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
         }
 
     }

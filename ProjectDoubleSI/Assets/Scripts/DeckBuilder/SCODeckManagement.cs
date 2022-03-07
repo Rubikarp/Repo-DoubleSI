@@ -17,8 +17,8 @@ public class SCODeckManagement : ScriptableSingleton<SCODeckManagement>
     #region StartVar
     public List<CardSCO> allCards = new List<CardSCO>();
     [SerializeField] private int numberOfCards;
-    public List<GameObject> playerToolDeck = new List<GameObject>();
-    public List<GameObject> playerRecipeDeck = new List<GameObject>();
+    public List<CardSCO> playerToolDeck = new List<CardSCO>();
+    public List<CardSCO> playerRecipeDeck = new List<CardSCO>();
     #endregion
 
     [NaughtyAttributes.Button]

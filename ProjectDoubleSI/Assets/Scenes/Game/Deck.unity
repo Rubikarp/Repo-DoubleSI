@@ -185,11 +185,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &431632620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 431632620, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-  m_PrefabInstance: {fileID: 6212988541136744553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498609171
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,16 +309,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1927357371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1927357371, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-  m_PrefabInstance: {fileID: 6212988541136744553}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2020570249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2020570249, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-  m_PrefabInstance: {fileID: 6212988541136744553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094414840
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,18 +909,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7448763093978567461, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-      propertyPath: deckParent
-      value: 
-      objectReference: {fileID: 2020570249}
-    - target: {fileID: 7448763093978567461, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-      propertyPath: alimentsParents
-      value: 
-      objectReference: {fileID: 431632620}
-    - target: {fileID: 7448763093978567461, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
-      propertyPath: collectionParent
-      value: 
-      objectReference: {fileID: 1927357371}
     - target: {fileID: 8891054204976810001, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
       propertyPath: m_Name
       value: DeckManager
