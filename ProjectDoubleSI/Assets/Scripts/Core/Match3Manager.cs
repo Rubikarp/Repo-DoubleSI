@@ -21,6 +21,20 @@ public class Match3Manager : MonoBehaviour
     [Header("Info")]
     public List<LineMatch> foundMatchs = new List<LineMatch>();
 
+    public void Touch(GameTile tileTouched)
+    {
+        if (foundMatchs.Count < 1) return;
+
+        List<LineMatch> lineMatched = foundMatchs.Where(line => line.matchingTile.Contains(tileTouched)).ToList();
+
+        if (lineMatched.Count > 0)
+        {
+            //Score
+            //Mana
+
+            onMatch?.Invoke(lineMatched[0]);
+        }
+    }
 
     [NaughtyAttributes.Button]
     public void LookForMatch()
@@ -43,9 +57,14 @@ public class Match3Manager : MonoBehaviour
                 newMatch = CheckItemLineFrom(true, grid.GetTile(x, y), Vector2Int.up);
                 if (newMatch == null)
                 {
-
+                    for (int i = 0; i < recipes.Count; i++)
+                    {
+                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, recipes[0].ingredients);
+                        if (newMatch != null) break;
+                    }
                 }
-                if (newMatch == null) { continue; }
+                if (newMatch == null) 
+                { continue; }
 
                 y += newMatch.Lenght - 1;
                 foundMatchs.Add(newMatch);
@@ -57,26 +76,19 @@ public class Match3Manager : MonoBehaviour
             for (int x = 0; x < grid.size.x; x++)
             {
                 newMatch = CheckItemLineFrom(false, grid.GetTile(x, y), Vector2Int.right);
-
+                if (newMatch == null)
+                {
+                    for (int i = 0; i < recipes.Count; i++)
+                    {
+                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, recipes[0].ingredients);
+                        if (newMatch != null) break;
+                    }
+                }
                 if (newMatch == null) { continue; }
 
                 x += newMatch.Lenght - 1;
                 foundMatchs.Add(newMatch);
             }
-        }
-    }
-    public void Touch(GameTile tileTouched)
-    {
-        if (foundMatchs.Count < 1) return;
-
-        List<LineMatch> lineMatched = foundMatchs.Where(line => line.matchingTile.Contains(tileTouched)).ToList();
-
-        if (lineMatched.Count > 0)
-        {
-            //Score
-            //Mana
-
-            onMatch?.Invoke(lineMatched[0]);
         }
     }
     public LineMatch CheckItemLineFrom(bool vert, GameTile testedTile, Vector2Int dir)
@@ -107,30 +119,45 @@ public class Match3Manager : MonoBehaviour
         }
         return newMatch;
     }
-
     public LineMatch CheckRecipeLineFrom(bool vert, GameTile testedTile, Vector2Int dir, FoodSCO[] recipe)
     {
         //TODO : Le faire plus proprement
         FoodSCO food = testedTile.item.Food;
         LineMatch newMatch = null;
 
-        if (food == grid.GetFood(testedTile.gridPos + dir * 1)
-         && food == grid.GetFood(testedTile.gridPos + dir * 2))
+        if (testedTile.item.Food == recipe[0]) 
         {
+            for (int i = 1; i < recipe.Length-1; i++)
+            {
+                food = grid.GetFood(testedTile.gridPos + dir * i);
+                if (recipe[i] != food)
+                {
+                    return null;
+                }
+            }
             //Match3 Confirmed
             newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform);
-            newMatch.matchingTile.Add(testedTile);
-            newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 1));
-            newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 2));
-
-            if (food == grid.GetFood(testedTile.gridPos + dir * 3))
+            for (int i = 0; i < recipe.Length; i++)
             {
-                newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 3));
-
-                if (food == grid.GetFood(testedTile.gridPos + dir * 4))
+                newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));
+            }
+            newMatch.UpdateLine();
+        }
+        else 
+        if(testedTile.item.Food == recipe.Last())
+        {
+            for (int i = 1; i < recipe.Length; i++)
+            {
+                if (recipe.FromEnd(i) != grid.GetFood(testedTile.gridPos + dir * i))
                 {
-                    newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 4));
+                    return null;
                 }
+            }
+            //Match3 Confirmed
+            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform);
+            for (int i = 0; i < recipe.Length; i++)
+            {
+                newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));
             }
             newMatch.UpdateLine();
         }
