@@ -20,6 +20,7 @@ public class GameGridManager : MonoBehaviour
 
     [Header("parameter")]
     public float dropTime = 1.2f;
+    public float dropHeight = 10f;
 
     void Awake()
     {
@@ -89,7 +90,7 @@ public class GameGridManager : MonoBehaviour
             {
                 InvockFoodOn(tile, out tempItem);
                 tempItem.Food = foodList.GetRandomFood();
-                tempItem.transform.position = tile.worldPos + Vector3.up * 20;
+                tempItem.transform.position = tile.worldPos + Vector3.up * dropHeight;
                 LeanTween.move(tempItem.gameObject, tile.worldPos, dropTime).setEase(LeanTweenType.easeOutBounce);
             }
         }

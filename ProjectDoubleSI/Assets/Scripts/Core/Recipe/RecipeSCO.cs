@@ -6,6 +6,7 @@ using Core;
 public class RecipeSCO : ScriptableObject
 {
     public string name = "Brand New Recipe";
+    public Sprite recipeSprite;
     [Expandable, Space(10)]
     public FoodSCO[] ingredients;
     public Season period = Season.Neutral;

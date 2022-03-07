@@ -1529,6 +1529,7 @@ MonoBehaviour:
   gametilePrefab: {fileID: 8854309284851856226, guid: b4f152467ff7fd84594d8695738fb10e, type: 3}
   foodList: {fileID: 11400000, guid: b2c88b8404a48c34e960cfe190a2aee1, type: 2}
   dropTime: 1.2
+  dropHeight: 10
 --- !u!1001 &815853471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2708,9 +2709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053ddf3d69de8ce458251aa046c751eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foundMatchs: []
   grid: {fileID: 751872992}
   linePrefab: {fileID: 2493061088771053427, guid: 6999b0a459260bf4baaad7a4c81551ea, type: 3}
+  recipes: []
   onMatch:
     m_PersistentCalls:
       m_Calls:
@@ -2738,6 +2739,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  foundMatchs: []
 --- !u!1001 &1688899336
 PrefabInstance:
   m_ObjectHideFlags: 0

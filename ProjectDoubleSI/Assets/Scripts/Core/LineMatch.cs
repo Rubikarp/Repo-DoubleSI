@@ -34,5 +34,5 @@ public class LineMatch
         IEnumerable<Vector3> poses = matchingTile.Select(x => x.worldPos);
         visual.SetPositions(poses.ToArray());
     }
-    public int Number { get { return matchingTile.Count; } }
+    public int Lenght { get { return matchingTile.Count; } }
 }
