@@ -7,7 +7,7 @@ public class DeckButton : MonoBehaviour
 {
 
     private Image buttonImage;
-    private CardSCO cardOlder;
+    [SerializeField] private CardSCO cardOlder;
 
     public int index;
     public bool recipe;
@@ -60,6 +60,8 @@ public class DeckButton : MonoBehaviour
         if (recipe)
         {
             deck.playerRecipesDeck.Remove(cardOlder);
+            SCODeckManagement.instance.GetAvailableAliment();
+            DeckManager.Instance.UpdateAliment();
         }
         else
         {

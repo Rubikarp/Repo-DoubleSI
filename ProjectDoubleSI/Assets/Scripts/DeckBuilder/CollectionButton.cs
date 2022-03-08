@@ -47,7 +47,7 @@ public class CollectionButton : MonoBehaviour
                 {
                     SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
-
+                    SCODeckManagement.instance.GetAvailableAliment();
                     DeckManager.Instance.UpdateAliment();
                 }
             }
@@ -60,8 +60,6 @@ public class CollectionButton : MonoBehaviour
                 {
                     SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
-                    
-                    DeckManager.Instance.UpdateAliment();
                 }
             }
         }
