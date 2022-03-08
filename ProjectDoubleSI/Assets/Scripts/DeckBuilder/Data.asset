@@ -27,13 +27,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f17b2b6af057f4d45bd36ebdd1bf6dce, type: 2}
   numberOfCards: 0
   playerToolsDeck: []
-  playerRecipesDeck:
-  - {fileID: 11400000, guid: 2aa8e1815c5ee064a827e6b9124402c5, type: 2}
-  - {fileID: 11400000, guid: 6672c4ad669c9ca4b985f3912ca813e6, type: 2}
+  playerRecipesDeck: []
   playerDeckAliment:
-  - {fileID: 11400000, guid: c72ae5382bbeb3f41a1edf12266ee6c1, type: 2}
+  - {fileID: 11400000, guid: 09d25f56469a0814ab8d20e083b4655f, type: 2}
   - {fileID: 11400000, guid: f2671ae9462569f49b83bfc644ebbf37, type: 2}
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}
-  - {fileID: 11400000, guid: 09d25f56469a0814ab8d20e083b4655f, type: 2}
-  - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
   - {fileID: 11400000, guid: f7f14a18df503c1469355eb2165df269, type: 2}
+  - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
+  - {fileID: 11400000, guid: c72ae5382bbeb3f41a1edf12266ee6c1, type: 2}

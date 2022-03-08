@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeckManager : Singleton<DeckManager>
 {
@@ -31,8 +32,19 @@ public class DeckManager : Singleton<DeckManager>
     private void Start()
     {
         UpdateAliment();
+        StartUpdateVisuel();
     }
 
+    void StartUpdateVisuel()
+    {
+        for (int i = 0; i < alimentsChildren.Count; i++)
+        {
+            Image currentButton = alimentsChildren[i].GetComponent<Image>();
+            currentButton.sprite = null;
+            currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
+        }
+        UpdateAlimentVisual();
+    }
     public void UpdateDeckButton()
     {
         //UpdateToolsButton
@@ -47,6 +59,27 @@ public class DeckManager : Singleton<DeckManager>
         }
     }
 
+    void UpdateAlimentVisual()
+    {
+        for (int i = 0; i < alimentsChildren.Count; i++)
+        {
+            Image currentButton = alimentsChildren[i].GetComponent<Image>();
+
+            if (i < SCODeckManagement.instance.playerDeckAliment.Count)
+            {
+                if (SCODeckManagement.instance.playerDeckAliment[i] != null)
+                {
+                    currentButton.sprite = SCODeckManagement.instance.playerDeckAliment[i].visual;
+                    currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 1f);
+                }
+                else
+                {
+                    currentButton.sprite = null;
+                    currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
+                }
+            }
+        }
+    }
 
     void Initialisation()
     {
@@ -114,10 +147,11 @@ public class DeckManager : Singleton<DeckManager>
                     //Si il ne l'est pas je l'ajoute.
                     FoodSCO currentAliment = recipe.recipe.ingredients[i];
                     SCODeckManagement.instance.playerDeckAliment.Add(currentAliment);
+                    UpdateAlimentVisual();
                 }
             }
         }
-        //Afficher l'aliment
+        
     }
 
 
