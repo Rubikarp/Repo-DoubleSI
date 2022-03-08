@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_SoupeDePotiron
   m_EditorClassIdentifier: 
-  recipeName: SoupeDePotiron
-  period: 2
+  recipeName: Soupe de Potiron
+  period: 8
   recipeSprite: {fileID: 21300000, guid: 343372a6963888540a3d46a1ccdaac92, type: 3}
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: 8af23cc24bda6374881070829301e9ae, type: 2}
+  - {fileID: 11400000, guid: 2a541117ced455f4a82a0f5390e8163f, type: 2}
+  - {fileID: 11400000, guid: f7f14a18df503c1469355eb2165df269, type: 2}

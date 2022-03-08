@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_freshSoup
   m_EditorClassIdentifier: 
-  recipeName: freshSoup
+  recipeName: "Soupe Fra\xEEche"
   period: 2
   recipeSprite: {fileID: 21300000, guid: 2e164fa97ec2261488d421a19cc5d812, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 5dfeeab121705104cbf01a487fb8ba07, type: 2}
   - {fileID: 11400000, guid: fd697ec6827d05a46928927733f3965d, type: 2}
+  - {fileID: 11400000, guid: 06695cbb06ce1eb4fb696bb0f1201af8, type: 2}

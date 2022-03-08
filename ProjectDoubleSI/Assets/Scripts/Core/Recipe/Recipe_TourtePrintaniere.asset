@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_TourtePrintaniere
   m_EditorClassIdentifier: 
-  recipeName: TourtePrintaniere
+  recipeName: Tourte Printaniere
   period: 2
   recipeSprite: {fileID: 21300000, guid: 099b498d6f151d84481e36448766cc5c, type: 3}
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: 585968b40444d844ca0f0016d8f006a6, type: 2}
+  - {fileID: 11400000, guid: 09d25f56469a0814ab8d20e083b4655f, type: 2}
+  - {fileID: 11400000, guid: 06695cbb06ce1eb4fb696bb0f1201af8, type: 2}

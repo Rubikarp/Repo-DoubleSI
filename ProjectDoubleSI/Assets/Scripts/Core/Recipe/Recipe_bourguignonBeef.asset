@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_bourguignonBeef
   m_EditorClassIdentifier: 
-  recipeName: Brand New Recipe
+  recipeName: Boeuf Bourgignon
   period: 1
   recipeSprite: {fileID: 21300000, guid: 0039b8a824d5e1d45bfdd2a05a047d1a, type: 3}
   ingredients:
