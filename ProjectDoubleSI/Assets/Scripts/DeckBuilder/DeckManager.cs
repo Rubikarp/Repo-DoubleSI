@@ -20,26 +20,26 @@ public class DeckManager : Singleton<DeckManager>
     #endregion
 
     public int numberOfCards;
+    SCODeckManagement deck;
 
     // Start is called before the first frame update
     void Awake()
     {
+        deck = SCODeckManagement.instance;
         Initialisation();
     }
 
     public void UpdateDeckButton()
     {
-
         //UpdateToolsButton
-        for (int i = 0; i < SCODeckManagement.instance.playerToolsDeck.Count; i++)
+        foreach (var button in playerDeckToolsButton)
         {
-            playerDeckToolsButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerToolsDeck[i]);
+            button.GetComponent<DeckButton>().UpdateButton();
         }
-
         //UpdateRecipesButton
-        for (int i = 0; i < SCODeckManagement.instance.playerRecipesDeck.Count; i++)
+        foreach (var button in playerDeckRecipesButton)
         {
-            playerDeckRecipesButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerRecipesDeck[i]);
+            button.GetComponent<DeckButton>().UpdateButton();
         }
     }
 
@@ -93,4 +93,9 @@ public class DeckManager : Singleton<DeckManager>
         UpdateDeckButton();
     }
     
+
+    public void UpdateUnequip()
+    {
+        
+    }
 }
