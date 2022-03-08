@@ -64,7 +64,7 @@ public class Match3Manager : MonoBehaviour
                 {
                     for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, player.recipes[0].ingredients);
+                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, player.recipes[i].ingredients);
                         if (newMatch != null) break;
                     }
                 }
@@ -85,7 +85,7 @@ public class Match3Manager : MonoBehaviour
                 {
                     for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, player.recipes[0].ingredients);
+                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, player.recipes[i].ingredients);
                         if (newMatch != null) break;
                     }
                 }
@@ -132,7 +132,7 @@ public class Match3Manager : MonoBehaviour
 
         if (testedTile.item.Food == recipe[0]) 
         {
-            for (int i = 1; i < recipe.Length-1; i++)
+            for (int i = 0; i < recipe.Length; i++)
             {
                 food = grid.GetFood(testedTile.gridPos + dir * i);
                 if (recipe[i] != food)
@@ -151,7 +151,7 @@ public class Match3Manager : MonoBehaviour
         else 
         if(testedTile.item.Food == recipe.Last())
         {
-            for (int i = 1; i < recipe.Length; i++)
+            for (int i = 0; i < recipe.Length; i++)
             {
                 if (recipe.FromEnd(i) != grid.GetFood(testedTile.gridPos + dir * i))
                 {
