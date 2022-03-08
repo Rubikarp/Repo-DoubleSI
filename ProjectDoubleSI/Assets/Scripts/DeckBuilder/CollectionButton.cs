@@ -26,7 +26,7 @@ public class CollectionButton : MonoBehaviour
         spriteCard.sprite = cardContener.cardAsset;
     }
 
-
+    //Faire que le joueur puisse s'équiper de recette au maximum de 6 aliments différents.
     public void Equip()
     {
         if (cardContener.typeOfCard == CardSCO.cardType.Recipe)
@@ -37,21 +37,23 @@ public class CollectionButton : MonoBehaviour
                 {
                     SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
+
+                    DeckManager.Instance.UpdateAliment();
                 }
             }
         }
         else
         {
-            if (SCODeckManagement.instance.playerRecipesDeck.Count < 3)
+            if (SCODeckManagement.instance.playerToolsDeck.Count < 3)
             {
                 if (!SCODeckManagement.instance.playerToolsDeck.Contains(cardContener))
                 {
                     SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
+                    
+                    DeckManager.Instance.UpdateAliment();
                 }
             }
         }
     }
-
-
 }

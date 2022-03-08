@@ -93,9 +93,28 @@ public class DeckManager : Singleton<DeckManager>
         UpdateDeckButton();
     }
     
-
-    public void UpdateUnequip()
+    public void UpdateAliment()
     {
-        
+        //Reset de la liste d'aliments.
+        SCODeckManagement.instance.playerDeckAliment = new List<FoodSCO>();
+
+        //pour chaque recette dans le deck
+        foreach (var recipe in SCODeckManagement.instance.playerRecipesDeck)
+        {
+            //Pour chaque aliment dans la recette
+            for (int i = 0; i < recipe.recipe.ingredients.Length; i++)
+            {
+                //Je check si l'aliment est déja dans la liste
+                if (!SCODeckManagement.instance.playerDeckAliment.Contains(recipe.recipe.ingredients[i]))
+                {
+                    //Si il ne l'est pas je l'ajoute.
+                    FoodSCO currentAliment = recipe.recipe.ingredients[i];
+                    SCODeckManagement.instance.playerDeckAliment.Add(currentAliment);
+                }
+            }
+        }
+        //Afficher l'aliment
     }
+
+
 }

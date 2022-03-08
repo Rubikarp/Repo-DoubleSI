@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Saumon Tout-en-un
   level: 0
+  cardCost: 0
   cardAsset: {fileID: 21300000, guid: ce45765d1bf163a4789cb45e711addf7, type: 3}
   cardEffet: 
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: 92f3f45b3ef6e4b43bb4a84b84595aeb, type: 2}
   typeOfCard: 1
   raretyOfTheCard: 0

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Croustillons
   level: 0
+  cardCost: 0
   cardAsset: {fileID: 21300000, guid: 0fa82357733584d41b1b5b79ebb4d39f, type: 3}
   cardEffet: 
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: e6df066166a09694a827f95a7b1b33e6, type: 2}
   typeOfCard: 1
   raretyOfTheCard: 0

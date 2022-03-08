@@ -28,3 +28,4 @@ MonoBehaviour:
   numberOfCards: 0
   playerToolsDeck: []
   playerRecipesDeck: []
+  playerDeckAliment: []

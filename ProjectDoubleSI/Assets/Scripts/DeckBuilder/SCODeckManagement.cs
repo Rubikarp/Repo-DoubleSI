@@ -19,6 +19,7 @@ public class SCODeckManagement : ScriptableSingleton<SCODeckManagement>
     [SerializeField] private int numberOfCards;
     public List<CardSCO> playerToolsDeck = new List<CardSCO>();
     public List<CardSCO> playerRecipesDeck = new List<CardSCO>();
+    public List<FoodSCO> playerDeckAliment = new List<FoodSCO>();
     #endregion
 
     [NaughtyAttributes.Button]
