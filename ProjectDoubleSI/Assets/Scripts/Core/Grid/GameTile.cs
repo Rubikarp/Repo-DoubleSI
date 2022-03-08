@@ -9,7 +9,6 @@ public class GameTile
 
     [Header("info")]
     public FoodItem item;
-    [SerializeField] private List<LineMatch> matchIn = new List<LineMatch>();
 
     [Header("Position")]
     public Vector2Int gridPos;

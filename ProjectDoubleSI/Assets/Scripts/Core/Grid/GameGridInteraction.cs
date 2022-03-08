@@ -7,7 +7,7 @@ using UnityEngine.Events;
 using UnityEditor;
 #endif
 
-[System.Serializable] 
+[System.Serializable]
 public class TileEvent : UnityEvent<GameTile> { }
 [System.Serializable]
 public class SwapEvent : UnityEvent<GameTile, GameTile> { }
@@ -18,13 +18,15 @@ public class GameGridInteraction : MonoBehaviour
     public GameGrid grid;
     public GameGridManager gridManager;
 
-    [Header("Switch")]
-    [SerializeField] public GameTile startSelectTile;
-    [Space(10)]
+    [Header("Event")]
+    public TileEvent onTouch;
+    public SwapEvent onSwap;
+
+    [Header("Info")]
+    [SerializeField] private GameTile startSelectTile;
     [SerializeField] private GameTile endSelectTile;
-    [Space(10)]
-    [SerializeField] public Vector3 dragPos;
-    [SerializeField] public Vector3 dragVect;
+    [SerializeField] private Vector3 dragPos;
+    [SerializeField] private Vector3 dragVect;
 
     void OnEnable()
     {
@@ -51,7 +53,7 @@ public class GameGridInteraction : MonoBehaviour
         dragPos = input.GetHitPos();
         dragVect = (dragPos - startSelectTile.worldPos);
 
-        if (dragVect.magnitude > (grid.cellSize/2))
+        if (dragVect.magnitude > (grid.cellSize / 2))
         {
             SwitchTry();
 
@@ -65,10 +67,11 @@ public class GameGridInteraction : MonoBehaviour
         if (startSelectTile == endSelectTile)
         {
             //Combo validate
+            onTouch?.Invoke(endSelectTile);
         }
 
-            //Reset
-            startSelectTile = null;
+        //Reset
+        startSelectTile = null;
         //
         endSelectTile = null;
         //
@@ -89,9 +92,9 @@ public class GameGridInteraction : MonoBehaviour
                 tileToMe.x = Mathf.Clamp(tileToMe.x, -1, 1);
                 tileToMe.y = Mathf.Clamp(tileToMe.y, -1, 1);
 
-                if(Mathf.Abs(tileToMe.magnitude-1) < 0.05f)
+                if (Mathf.Abs(tileToMe.magnitude - 1) < 0.05f)
                 {
-                    gridManager.Switch(startSelectTile, endSelectTile);
+                    onSwap?.Invoke(startSelectTile, endSelectTile);
                 }
             }
         }

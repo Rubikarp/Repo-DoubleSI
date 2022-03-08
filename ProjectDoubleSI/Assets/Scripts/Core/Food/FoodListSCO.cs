@@ -7,11 +7,6 @@ public class FoodListSCO : ScriptableObject
     [Expandable]
     public FoodSCO[] allFood;
 
-    public FoodSCO GetRandomFood()
-    {
-        return allFood.Random();
-    }
-
     [Button]
     public void FetchAPIData()
     {

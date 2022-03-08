@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ba186f7ae745a43a1dc5cb8ec6aa06, type: 3}
   m_Name: Food_Beef
   m_EditorClassIdentifier: 
-  visual: {fileID: 21300000, guid: 61dffaad7b7f09d41b6984eca7c31584, type: 3}
+  visual: {fileID: 21300000, guid: 97cc1dcf5d162df4f9059f14728776e6, type: 3}
   categorie: 3
   element: 1
   freshness: 81.79321

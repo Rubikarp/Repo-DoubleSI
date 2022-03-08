@@ -16,7 +16,11 @@ public class GameGridManager : MonoBehaviour
     public Transform elementStock;
     public GameObject gametilePrefab;
 
-    public FoodListSCO foodList;
+    public PlayerHand player;
+
+    [Header("parameter")]
+    public float dropTime = 1.2f;
+    public float dropHeight = 10f;
 
     void Awake()
     {
@@ -32,27 +36,87 @@ public class GameGridManager : MonoBehaviour
         LeanTween.move(a.item.gameObject, a.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
         LeanTween.move(b.item.gameObject, b.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
     }
+    
+    public void ClearMatch(LineMatch match)
+    {
+        foreach (var tile in match.matchingTile)
+        {
+            Destroy(tile.item.gameObject);
+            tile.item = null;
+        }
 
-    [Button]
-    private void FillGrid()
+        GravityCheck();
+    }
+    public void GravityCheck()
+    {
+        bool gravEnd = true;
+        do
+        {
+            gravEnd = true;
+            //De bas en haut + gauch à droite
+            for (int x = 0; x < grid.size.x; x++)
+            {
+                for (int y = 0; y < grid.size.y; y++)
+                {
+                    if (grid.GetTile(x, y).item == null)
+                    {
+                        if (grid.GetTile(x, y + 1) == null)
+                        { continue; }
+
+                        if (grid.GetTile(x, y + 1).item != null)
+                        {
+                            DropDown(grid.GetTile(x, y + 1), grid.GetTile(x, y));
+                            gravEnd = false;
+                        }
+                    }
+                }
+            }
+        } while (!gravEnd);
+        FillEmptyTiles();
+    }
+    public void DropDown(GameTile from, GameTile to)
+    {
+        to.item = from.item;
+        from.item = null;
+
+        LeanTween.move(to.item.gameObject, to.worldPos, 0.6f * (from.gridPos-to.gridPos).magnitude).setEase(LeanTweenType.easeOutBounce);
+    }
+    public void FillEmptyTiles()
     {
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
         {
-            InvockFoodOn(tile,out tempItem);
-            tempItem.Food = foodList.GetRandomFood();
+            if (tile.item == null)
+            {
+                InvockFoodOn(tile, out tempItem);
+                tempItem.Food = player.availableIngredients.Random();
+                tempItem.transform.position = tile.worldPos + Vector3.up * dropHeight;
+                LeanTween.move(tempItem.gameObject, tile.worldPos, dropTime).setEase(LeanTweenType.easeOutBounce);
+            }
         }
         UpdateName();
     }
+
+
     [Button]
+    private void GenerateGrid()
+    {
+        FoodItem tempItem;
+        foreach (var tile in grid.tiles)
+        {
+            InvockFoodOn(tile, out tempItem);
+            tempItem.Food = player.availableIngredients.Random();
+        }
+        UpdateName();
+    }
+
     public void ShuffleGrid()
     {
         FoodItem tempItem;
         foreach (var tile in grid.tiles)
         {
             tempItem = tile.item;
-            tempItem.Food = foodList.GetRandomFood();
-
+            tempItem.Food = player.availableIngredients.Random();
 #if UNITY_EDITOR
             tempItem.onChangingFood?.Invoke(tempItem);
 #endif

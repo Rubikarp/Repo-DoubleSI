@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
+  m_Name: Recipe_GratinDeCourgeAuBonPoulet
+  m_EditorClassIdentifier: 
+  recipeName: GratinDeCourgeAuBonPoulet
+  period: 2
+  recipeSprite: {fileID: 21300000, guid: 9ea3290590a158b4fa5b484918cb9596, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 8af23cc24bda6374881070829301e9ae, type: 2}
+  - {fileID: 11400000, guid: f2671ae9462569f49b83bfc644ebbf37, type: 2}
+  - {fileID: 11400000, guid: 5dfeeab121705104cbf01a487fb8ba07, type: 2}
+  - {fileID: 11400000, guid: 585968b40444d844ca0f0016d8f006a6, type: 2}
