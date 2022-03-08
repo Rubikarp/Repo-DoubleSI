@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_TartareDeSaumon
   m_EditorClassIdentifier: 
-  recipeName: TartareDeSaumon
-  period: 2
+  recipeName: Tartare de Saumon
+  period: 4
   recipeSprite: {fileID: 21300000, guid: 7a603e387dd44aa47b4752a07c3f8c87, type: 3}
   ingredients:
   - {fileID: 11400000, guid: ae39a3363adf66542ac4eae50f82fbdd, type: 2}
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}
+  - {fileID: 11400000, guid: fd697ec6827d05a46928927733f3965d, type: 2}

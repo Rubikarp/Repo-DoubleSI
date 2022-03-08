@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeckManager : Singleton<DeckManager>
 {
@@ -28,7 +29,22 @@ public class DeckManager : Singleton<DeckManager>
         deck = SCODeckManagement.instance;
         Initialisation();
     }
+    private void Start()
+    {
+        UpdateAliment();
+        StartUpdateVisuel();
+    }
 
+    void StartUpdateVisuel()
+    {
+        for (int i = 0; i < alimentsChildren.Count; i++)
+        {
+            Image currentButton = alimentsChildren[i].GetComponent<Image>();
+            currentButton.sprite = null;
+            currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
+        }
+        UpdateAlimentVisual();
+    }
     public void UpdateDeckButton()
     {
         //UpdateToolsButton
@@ -43,6 +59,33 @@ public class DeckManager : Singleton<DeckManager>
         }
     }
 
+    void UpdateAlimentVisual()
+    {
+        for (int i = 0; i < alimentsChildren.Count; i++)
+        {
+            Image currentButton = alimentsChildren[i].GetComponent<Image>();
+
+            if (i < SCODeckManagement.instance.playerDeckAliment.Count)
+            {
+                currentButton.sprite = SCODeckManagement.instance.playerDeckAliment[i].visual;
+                currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 1f);
+            }
+            else
+            {
+                currentButton.sprite = null;
+                currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
+            }
+        }
+        if (SCODeckManagement.instance.playerDeckAliment.Count == 0)
+        {
+            for (int i = 0; i < alimentsChildren.Count; i++)
+            {
+                Image currentButton = alimentsChildren[i].GetComponent<Image>();
+                currentButton.sprite = null;
+                currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
+            }
+        }
+    }
 
     void Initialisation()
     {
@@ -65,37 +108,56 @@ public class DeckManager : Singleton<DeckManager>
         }
 
         //Récupérer les boutons de la collection pour les ranger dans deux listes
-            for (int i = 0; i < 6; i++)
-            {
-                playerCollectionRecipesButton.Add(playerCollectionButton[i].gameObject);
-                playerCollectionRecipesButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
-            }
+        for (int i = 0; i < 6; i++)
+        {
+            playerCollectionRecipesButton.Add(playerCollectionButton[i].gameObject);
+            playerCollectionRecipesButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+        }
 
-            for (int i = 6; i < 12; i++)
-            {
-                playerCollectionToolsButton.Add(playerCollectionButton[i].gameObject);
-                playerCollectionToolsButton[i-6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
-            }
+        for (int i = 6; i < 12; i++)
+        {
+            playerCollectionToolsButton.Add(playerCollectionButton[i].gameObject);
+            playerCollectionToolsButton[i - 6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+        }
 
 
         //Trier les boutons deck dans deux listes.
-            for (int i = 0; i < 3; i++)
-            {
-                playerDeckToolsButton.Add(playerDeckButton[i].gameObject);
-            }
+        for (int i = 0; i < 3; i++)
+        {
+            playerDeckToolsButton.Add(playerDeckButton[i].gameObject);
+        }
 
-            for (int i = 3; i < 6; i++)
-            {
-                playerDeckRecipesButton.Add(playerDeckButton[i].gameObject);
-            
-            }
+        for (int i = 3; i < 6; i++)
+        {
+            playerDeckRecipesButton.Add(playerDeckButton[i].gameObject);
+
+        }
 
         UpdateDeckButton();
     }
-    
 
-    public void UpdateUnequip()
+    public void UpdateAliment()
     {
-        
+        //Reset de la liste d'aliments.
+        SCODeckManagement.instance.playerDeckAliment = new List<FoodSCO>();
+
+        //pour chaque recette dans le deck
+        foreach (var recipe in SCODeckManagement.instance.playerRecipesDeck)
+        {
+            //Pour chaque aliment dans la recette
+            for (int i = 0; i < recipe.recipe.ingredients.Length; i++)
+            {
+                //Je check si l'aliment est déja dans la liste
+                if (!SCODeckManagement.instance.playerDeckAliment.Contains(recipe.recipe.ingredients[i]))
+                {
+                    //Si il ne l'est pas je l'ajoute.
+                    FoodSCO currentAliment = recipe.recipe.ingredients[i];
+                    SCODeckManagement.instance.playerDeckAliment.Add(currentAliment);
+                }
+            }
+        }
+        UpdateAlimentVisual();
     }
+
+
 }

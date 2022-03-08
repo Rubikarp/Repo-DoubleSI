@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f9a84a07de44ba98abf09ae6aed7, type: 3}
   m_Name: Recipe_Crispies
   m_EditorClassIdentifier: 
-  recipeName: Crispies
+  recipeName: Croustillons
   period: 1
   recipeSprite: {fileID: 21300000, guid: 0fa82357733584d41b1b5b79ebb4d39f, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 2a541117ced455f4a82a0f5390e8163f, type: 2}
   - {fileID: 11400000, guid: c72ae5382bbeb3f41a1edf12266ee6c1, type: 2}
+  - {fileID: 11400000, guid: 2a541117ced455f4a82a0f5390e8163f, type: 2}

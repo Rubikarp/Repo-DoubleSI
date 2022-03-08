@@ -19,6 +19,8 @@ public class SCODeckManagement : ScriptableSingleton<SCODeckManagement>
     [SerializeField] private int numberOfCards;
     public List<CardSCO> playerToolsDeck = new List<CardSCO>();
     public List<CardSCO> playerRecipesDeck = new List<CardSCO>();
+
+    public List<FoodSCO> playerDeckAliment = new List<FoodSCO>();
     #endregion
 
     [NaughtyAttributes.Button]
@@ -28,6 +30,21 @@ public class SCODeckManagement : ScriptableSingleton<SCODeckManagement>
         // Load all skins into memory
         CardSCO[] cardFind = Resources.FindObjectsOfTypeAll(typeof(CardSCO)) as CardSCO[];
         allCards.AddRange(cardFind);
+    }
 
+    public List<FoodSCO> GetAvailableAliment()
+    {
+        playerDeckAliment = new List<FoodSCO>();
+
+        foreach (var card in playerRecipesDeck)
+        {
+            foreach (var ingredient in card.recipe.ingredients)
+            {
+                if(!playerDeckAliment.Contains(ingredient))
+                playerDeckAliment.Add(ingredient);
+            }
+        }
+
+        return playerDeckAliment;
     }
 }

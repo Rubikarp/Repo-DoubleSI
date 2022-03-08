@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Pizza
   level: 0
+  cardCost: 0
   cardAsset: {fileID: 21300000, guid: 98f6259bfa3d07e42903488c0e134064, type: 3}
   cardEffet: 
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: 2fddf36fbe6dd7b459c194f5c2bd4374, type: 2}
   typeOfCard: 1
   raretyOfTheCard: 0

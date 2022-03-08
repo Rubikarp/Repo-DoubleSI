@@ -7,7 +7,7 @@ public class DeckButton : MonoBehaviour
 {
 
     private Image buttonImage;
-    private CardSCO cardOlder;
+    [SerializeField] private CardSCO cardOlder;
 
     public int index;
     public bool recipe;
@@ -28,11 +28,13 @@ public class DeckButton : MonoBehaviour
             {
                 cardOlder = deck.playerRecipesDeck[index];
                 buttonImage.sprite = cardOlder.cardAsset;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1f);
             }
             else
             {
                 cardOlder = null;
                 buttonImage.sprite = null;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
             }
         }
         else
@@ -41,11 +43,13 @@ public class DeckButton : MonoBehaviour
             {
                 cardOlder = deck.playerToolsDeck[index];
                 buttonImage.sprite = cardOlder.cardAsset;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1f);
             }
             else
             {
                 cardOlder = null;
                 buttonImage.sprite = null;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
             }
         }
     }
@@ -56,6 +60,8 @@ public class DeckButton : MonoBehaviour
         if (recipe)
         {
             deck.playerRecipesDeck.Remove(cardOlder);
+            SCODeckManagement.instance.GetAvailableAliment();
+            DeckManager.Instance.UpdateAliment();
         }
         else
         {
