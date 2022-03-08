@@ -8,26 +8,61 @@ public class DeckButton : MonoBehaviour
 
     private Image buttonImage;
     private CardSCO cardOlder;
-    // Start is called before the first frame update
+
+    public int index;
+    public bool recipe;
+    SCODeckManagement deck;
     void Awake()
     {
         buttonImage = GetComponent<Image>();
         buttonImage.sprite = null;
+        deck = SCODeckManagement.instance;
     }
 
-    public void UpdateButton(CardSCO card)
+    [NaughtyAttributes.Button]
+    public void UpdateButton()
     {
-        cardOlder = card;
-        buttonImage.sprite = cardOlder.cardAsset;
+        if (recipe)
+        {
+            if (deck.playerRecipesDeck.Count > index)
+            {
+                cardOlder = deck.playerRecipesDeck[index];
+                buttonImage.sprite = cardOlder.cardAsset;
+            }
+            else
+            {
+                cardOlder = null;
+                buttonImage.sprite = null;
+            }
+        }
+        else
+        {
+            if (deck.playerToolsDeck.Count > index)
+            {
+                cardOlder = deck.playerToolsDeck[index];
+                buttonImage.sprite = cardOlder.cardAsset;
+            }
+            else
+            {
+                cardOlder = null;
+                buttonImage.sprite = null;
+            }
+        }
     }
 
+    [NaughtyAttributes.Button]
     public void Unequip()
     {
-        //En fonction de si c'est un tool ou un recipe. Le retirer du deck à une position.
-        //Trier la liste afin de retirer le vide.
+        if (recipe)
+        {
+            deck.playerRecipesDeck.Remove(cardOlder);
+        }
+        else
+        {
+            deck.playerToolsDeck.Remove(cardOlder);
+        }
 
-        buttonImage.sprite = null;
-        cardOlder = null;
+        DeckManager.Instance.UpdateDeckButton();
     }
 
 
