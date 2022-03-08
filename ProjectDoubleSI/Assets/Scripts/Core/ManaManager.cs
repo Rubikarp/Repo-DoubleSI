@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ManaManager : Singleton<ManaManager>
+public class ManaManager : MonoBehaviour
 {
-    private float maxMana = 4;
+    public float maxMana = 4;
     public float availableMana = 0;
     public Text manaRenderer;
 
