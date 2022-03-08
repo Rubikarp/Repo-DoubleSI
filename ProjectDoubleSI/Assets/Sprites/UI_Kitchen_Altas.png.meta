@@ -94,10 +94,10 @@ TextureImporter:
       name: UI_Kitchen_Altas_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 2363
-        width: 562
-        height: 590
+        x: 14
+        y: 2367
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +112,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Kitchen_Altas_2
+      name: UI_Couperet
       rect:
         serializedVersion: 2
-        x: 667
-        y: 2427
-        width: 514
-        height: 565
+        x: 627
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,13 +133,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Kitchen_Altas_3
+      name: UI_Econome
       rect:
         serializedVersion: 2
-        x: 1257
-        y: 2450
-        width: 565
-        height: 528
+        x: 1256
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,13 +154,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Kitchen_Altas_4
+      name: UI_Spatule
       rect:
         serializedVersion: 2
         x: 1889
-        y: 2424
-        width: 610
-        height: 531
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,13 +259,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Kitchen_Altas_12
+      name: UI_Attedrisseur
       rect:
         serializedVersion: 2
         x: 2312
         y: 1379
-        width: 588
-        height: 618
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,13 +343,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Kitchen_Altas_18
+      name: UI_Couvercle
       rect:
         serializedVersion: 2
-        x: 2269
-        y: 772
-        width: 688
-        height: 571
+        x: 2271
+        y: 699
+        width: 685
+        height: 700
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -33,7 +33,7 @@ public static class KarpHelper
         return _results.Count > 0;
     }
 
-    public static void DeleteChildrens(this Transform t)
+    public static void DeleteChildren(this Transform t)
     {
         foreach (Transform child in t) Object.Destroy(child.gameObject);
     }

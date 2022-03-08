@@ -11,4 +11,5 @@ public class FoodSCO : ScriptableObject
     public FoodElement element = FoodElement.Salmon;
     [Range(0f, 100f)] 
     public float freshness = 50.0f;
+
 }
