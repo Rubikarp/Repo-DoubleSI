@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbf043810c563b44193819e5338cd7f9, type: 3}
-  m_Name: T2_Econome
+  m_Name: T4_Couvercle
   m_EditorClassIdentifier: 
-  cardName: Econome
+  cardName: Couvercle
   level: 0
-  cardAsset: {fileID: 0}
+  cardAsset: {fileID: 3794934376468241584, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: 
+  recipe: {fileID: 0}
   typeOfCard: 0
   raretyOfTheCard: 0

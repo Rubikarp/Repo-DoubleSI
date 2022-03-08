@@ -2,55 +2,95 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeckManager : MonoBehaviour
+public class DeckManager : Singleton<DeckManager>
 {
-    /// <summary>
-    /// XP - This script handle the management of the Deck : Visual and Datas.
-    /// XP - The player is able to equip cards.
-    /// </summary>
+    #region UI
+    public List<GameObject> playerCollectionButton = new List<GameObject>();
+    public List<GameObject> playerCollectionRecipesButton = new List<GameObject>();
+    public List<GameObject> playerCollectionToolsButton = new List<GameObject>();
+    public GameObject collectionParent;
+    public GameObject deckParent;
+    public List<GameObject> playerDeckButton = new List<GameObject>();
+    public List<GameObject> playerDeckRecipesButton = new List<GameObject>();
+    public List<GameObject> playerDeckToolsButton = new List<GameObject>();
 
     //Aliments
     [SerializeField] private GameObject alimentsParents;
     public List<GameObject> alimentsChildren = new List<GameObject>();
-
-    #region StartVar
-    public List<GameObject> playerDeck = new List<GameObject>();
-    public List<GameObject> playerCollection = new List<GameObject>();
-    public List<GameObject> playerRecipes = new List<GameObject>();
-    public List<GameObject> playerTools = new List<GameObject>();
-    public GameObject collectionParent;
-    public GameObject deckParent;
     #endregion
 
-   
+    public int numberOfCards;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //Je récupère l'ensemble des points permettant d'afficher les aliments selon les recettes équipées.
-        foreach(Transform child in alimentsParents.transform)
+        Initialisation();
+    }
+
+    public void UpdateDeckButton()
+    {
+
+        //UpdateToolsButton
+        for (int i = 0; i < SCODeckManagement.instance.playerToolsDeck.Count; i++)
+        {
+            playerDeckToolsButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerToolsDeck[i]);
+        }
+
+        //UpdateRecipesButton
+        for (int i = 0; i < SCODeckManagement.instance.playerRecipesDeck.Count; i++)
+        {
+            playerDeckRecipesButton[i].gameObject.GetComponent<DeckButton>().UpdateButton(SCODeckManagement.instance.playerRecipesDeck[i]);
+        }
+    }
+
+
+    void Initialisation()
+    {
+        numberOfCards = SCODeckManagement.instance.allCards.Count;
+
+        //Je récupère les enfants de chaque parent pour les ranger ddans une liste parent.
+        foreach (Transform child in alimentsParents.transform)
         {
             alimentsChildren.Add(child.gameObject);
         }
 
-        foreach(Transform child in collectionParent.transform)
+        foreach (Transform child in collectionParent.transform)
         {
-            playerCollection.Add(child.gameObject);
+            playerCollectionButton.Add(child.gameObject);
         }
 
-        //Récupérer les recipes de la collection pour les ranger dans une liste
-        for (int i = 0; i < 6; i++)
+        foreach (Transform child in deckParent.transform)
         {
-            playerTools.Add(playerCollection[i].gameObject);
+            playerDeckButton.Add(child.gameObject);
         }
 
-        //Récupérer les Tools de la collection pour les ranger dans une liste
-        for (int i = 6; i < 12; i++)
-        {
-            playerRecipes.Add(playerCollection[i].gameObject);
-        }
+        //Récupérer les boutons de la collection pour les ranger dans deux listes
+            for (int i = 0; i < 6; i++)
+            {
+                playerCollectionRecipesButton.Add(playerCollectionButton[i].gameObject);
+                playerCollectionRecipesButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            }
+
+            for (int i = 6; i < 12; i++)
+            {
+                playerCollectionToolsButton.Add(playerCollectionButton[i].gameObject);
+                playerCollectionToolsButton[i-6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            }
+
+
+        //Trier les boutons deck dans deux listes.
+            for (int i = 0; i < 3; i++)
+            {
+                playerDeckToolsButton.Add(playerDeckButton[i].gameObject);
+            }
+
+            for (int i = 3; i < 6; i++)
+            {
+                playerDeckRecipesButton.Add(playerDeckButton[i].gameObject);
+            
+            }
+
+        UpdateDeckButton();
     }
-        //Pour chaque button dans la liste : Initialisation des visuels des boutons.
+    
 }
-
-
