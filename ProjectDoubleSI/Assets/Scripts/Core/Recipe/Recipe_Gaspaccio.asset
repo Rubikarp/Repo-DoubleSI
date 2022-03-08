@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Recipe_Gaspaccio
   m_EditorClassIdentifier: 
   recipeName: Gaspaccio
-  period: 2
+  period: 4
   recipeSprite: {fileID: 21300000, guid: a3ecb788126ff31429e79669933493fb, type: 3}
   ingredients:
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Recipe_bourguignonBeef
   m_EditorClassIdentifier: 
   recipeName: Brand New Recipe
-  period: 2
+  period: 1
   recipeSprite: {fileID: 21300000, guid: 0039b8a824d5e1d45bfdd2a05a047d1a, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
