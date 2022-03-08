@@ -12,7 +12,7 @@ public class CollectionButton : MonoBehaviour
     public Image spriteCard;
     [SerializeField] private TextMeshProUGUI ngFragments;
     [SerializeField] private Image fillIn;
-    private int cardCost;
+    private float cardCost;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,7 @@ public class CollectionButton : MonoBehaviour
                 {
                     SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
+                    DeckManager.Instance.UpdateToolsValue();
                 }
             }
         }
