@@ -24,6 +24,16 @@ public class CollectionButton : MonoBehaviour
     void Initialisation()
     {
         spriteCard.sprite = cardContener.cardAsset;
+        if (cardContener.typeOfCard == CardSCO.cardType.Recipe)
+        {
+            cardCost= cardContener.recipe.ingredients.Length;
+            cost.text = cardCost.ToString();
+        }
+        else
+        {
+            cardCost = cardContener.cardCost;
+            cost.text = cardCost.ToString();
+        }
     }
 
     //Faire que le joueur puisse s'équiper de recette au maximum de 6 aliments différents.

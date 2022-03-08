@@ -28,6 +28,10 @@ public class DeckManager : Singleton<DeckManager>
         deck = SCODeckManagement.instance;
         Initialisation();
     }
+    private void Start()
+    {
+        UpdateAliment();
+    }
 
     public void UpdateDeckButton()
     {
@@ -39,7 +43,7 @@ public class DeckManager : Singleton<DeckManager>
         //UpdateRecipesButton
         foreach (var button in playerDeckRecipesButton)
         {
-            button.GetComponent<DeckButton>().UpdateButton();
+           button.GetComponent<DeckButton>().UpdateButton();
         }
     }
 

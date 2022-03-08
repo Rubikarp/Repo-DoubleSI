@@ -28,11 +28,13 @@ public class DeckButton : MonoBehaviour
             {
                 cardOlder = deck.playerRecipesDeck[index];
                 buttonImage.sprite = cardOlder.cardAsset;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1f);
             }
             else
             {
                 cardOlder = null;
                 buttonImage.sprite = null;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
             }
         }
         else
@@ -41,11 +43,13 @@ public class DeckButton : MonoBehaviour
             {
                 cardOlder = deck.playerToolsDeck[index];
                 buttonImage.sprite = cardOlder.cardAsset;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1f);
             }
             else
             {
                 cardOlder = null;
                 buttonImage.sprite = null;
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
             }
         }
     }
