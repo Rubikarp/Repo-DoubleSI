@@ -14,12 +14,17 @@ public class Match3Manager : MonoBehaviour
     public GameGrid grid;
     public GameObject linePrefab;
     [Header("Dependancy")]
-    public List<RecipeSCO> recipes = new List<RecipeSCO>();
+    public PlayerHand player;
 
     [Header("Event")]
     public MatchEvent onMatch;
     [Header("Info")]
     public List<LineMatch> foundMatchs = new List<LineMatch>();
+
+    private void Start()
+    {
+        LookForMatch();
+    }
 
     public void Touch(GameTile tileTouched)
     {
@@ -57,9 +62,9 @@ public class Match3Manager : MonoBehaviour
                 newMatch = CheckItemLineFrom(true, grid.GetTile(x, y), Vector2Int.up);
                 if (newMatch == null)
                 {
-                    for (int i = 0; i < recipes.Count; i++)
+                    for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, recipes[0].ingredients);
+                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, player.recipes[0].ingredients);
                         if (newMatch != null) break;
                     }
                 }
@@ -78,9 +83,9 @@ public class Match3Manager : MonoBehaviour
                 newMatch = CheckItemLineFrom(false, grid.GetTile(x, y), Vector2Int.right);
                 if (newMatch == null)
                 {
-                    for (int i = 0; i < recipes.Count; i++)
+                    for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, recipes[0].ingredients);
+                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, player.recipes[0].ingredients);
                         if (newMatch != null) break;
                     }
                 }

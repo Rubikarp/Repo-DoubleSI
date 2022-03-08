@@ -50,9 +50,9 @@ public static class KarpHelper
     {
         return array[array.Length-1];
     }
-    public static T Last<T>(this List<T> array)
+    public static T Last<T>(this List<T> list)
     {
-        return array[array.Count - 1];
+        return list[list.Count - 1];
     }
     public static T FromEnd<T>(this T[] array, int nbr)
     {
@@ -67,9 +67,9 @@ public static class KarpHelper
     {
         return array[UnityEngine.Random.Range(0,array.Length)];
     }
-    public static T Random<T>(List<T> array)
+    public static T Random<T>(this List<T> list)
     {
-        return array[UnityEngine.Random.Range(0, array.Count)];
+        return list[UnityEngine.Random.Range(0, list.Count)];
     }
 
     public static Vector3 ToPlaneXZ(this Vector2 pos)

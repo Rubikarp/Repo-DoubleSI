@@ -5,9 +5,22 @@ using Core;
 [CreateAssetMenu(fileName = "Recipe_New", menuName = "Sciptable/Recette")]
 public class RecipeSCO : ScriptableObject
 {
-    public string name = "Brand New Recipe";
+    public string recipeName = "Brand New Recipe";
+    public Season period = Season.Neutral;
+
+    [ShowAssetPreview]
     public Sprite recipeSprite;
+
     [Expandable, Space(10)]
     public FoodSCO[] ingredients;
-    public Season period = Season.Neutral;
+
+    [Button]
+    private void RenameObject()
+    {
+        string[] name = recipeSprite.name.Split('_');
+        recipeName = name[1];
+        string assetPath = UnityEditor.AssetDatabase.GetAssetPath(this.GetInstanceID());
+        UnityEditor.AssetDatabase.RenameAsset(assetPath, "Recipe_" + recipeName);
+        UnityEditor.AssetDatabase.Refresh();
+    }
 }

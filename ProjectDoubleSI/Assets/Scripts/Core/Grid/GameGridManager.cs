@@ -16,7 +16,7 @@ public class GameGridManager : MonoBehaviour
     public Transform elementStock;
     public GameObject gametilePrefab;
 
-    public FoodListSCO foodList;
+    public PlayerHand player;
 
     [Header("parameter")]
     public float dropTime = 1.2f;
@@ -89,7 +89,7 @@ public class GameGridManager : MonoBehaviour
             if (tile.item == null)
             {
                 InvockFoodOn(tile, out tempItem);
-                tempItem.Food = foodList.GetRandomFood();
+                tempItem.Food = player.availableIngredients.Random();
                 tempItem.transform.position = tile.worldPos + Vector3.up * dropHeight;
                 LeanTween.move(tempItem.gameObject, tile.worldPos, dropTime).setEase(LeanTweenType.easeOutBounce);
             }
@@ -105,7 +105,7 @@ public class GameGridManager : MonoBehaviour
         foreach (var tile in grid.tiles)
         {
             InvockFoodOn(tile, out tempItem);
-            tempItem.Food = foodList.GetRandomFood();
+            tempItem.Food = player.availableIngredients.Random();
         }
         UpdateName();
     }
@@ -116,7 +116,7 @@ public class GameGridManager : MonoBehaviour
         foreach (var tile in grid.tiles)
         {
             tempItem = tile.item;
-            tempItem.Food = foodList.GetRandomFood();
+            tempItem.Food = player.availableIngredients.Random();
 #if UNITY_EDITOR
             tempItem.onChangingFood?.Invoke(tempItem);
 #endif
