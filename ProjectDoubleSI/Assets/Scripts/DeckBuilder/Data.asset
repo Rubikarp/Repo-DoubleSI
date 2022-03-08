@@ -26,10 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bf610fb1d2adb14e89d4039c89a9f5d, type: 2}
   - {fileID: 11400000, guid: f17b2b6af057f4d45bd36ebdd1bf6dce, type: 2}
   numberOfCards: 0
-  playerToolsDeck:
-  - {fileID: 11400000, guid: ba28ae1a31cd45141b74c16163db0cd7, type: 2}
-  - {fileID: 11400000, guid: 2ad3acea49dcf8b4287ded798795d279, type: 2}
-  - {fileID: 11400000, guid: c728caa0745ab6340b8d0399eabad86f, type: 2}
-  playerRecipesDeck:
-  - {fileID: 11400000, guid: 2aa8e1815c5ee064a827e6b9124402c5, type: 2}
-  - {fileID: 11400000, guid: 6bf610fb1d2adb14e89d4039c89a9f5d, type: 2}
+  playerToolsDeck: []
+  playerRecipesDeck: []

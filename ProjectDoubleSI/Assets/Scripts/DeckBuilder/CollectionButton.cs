@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CollectionButton : MonoBehaviour
 {
     public CardSCO cardContener;
     private Image buttonAsset;
+    [SerializeField] private TextMeshProUGUI cost;
+    public Image spriteCard;
+    [SerializeField] private TextMeshProUGUI ngFragments;
+    [SerializeField] private Image fillIn;
     private int cardCost;
 
     // Start is called before the first frame update
@@ -18,7 +23,7 @@ public class CollectionButton : MonoBehaviour
 
     void Initialisation()
     {
-        buttonAsset.sprite = cardContener.cardAsset;
+        spriteCard.sprite = cardContener.cardAsset;
     }
 
 
