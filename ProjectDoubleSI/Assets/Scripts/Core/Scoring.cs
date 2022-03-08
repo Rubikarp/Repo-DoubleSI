@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Scoring : MonoBehaviour
+public class Scoring : Singleton<Scoring>
 {
     public float scoreAdverse = 0;
     //private float percentScoreAdverse;

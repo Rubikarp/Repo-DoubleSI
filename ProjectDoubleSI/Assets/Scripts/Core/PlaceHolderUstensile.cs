@@ -13,16 +13,13 @@ public class PlaceHolderUstensile : MonoBehaviour
     public Text toolCooldownRenderer;
     private bool toolReady = true;
 
-    private ManaManager manaManager;
+    [SerializeField] ManaManager manaManager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        manaManager = ManaManager.Instance;
         toolNameRenderer.text = toolName + "(" + toolPrice + ")";
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (toolReady == true && manaManager.availableMana >= toolPrice)
