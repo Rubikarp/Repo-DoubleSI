@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using MoreMountains.Feedbacks;
 
 public class CollectionButton : MonoBehaviour
 {
@@ -46,9 +47,14 @@ public class CollectionButton : MonoBehaviour
         }
     }
 
+   [SerializeField] private MMF_Player equipSFX;
+
+
     //Faire que le joueur puisse s'équiper de recette au maximum de 6 aliments différents.
     public void Equip()
     {
+        
+
         if (cardContener.typeOfCard == CardSCO.cardType.Recipe)
         {
             if (deck.playerRecipesDeck.Count < 3)
@@ -59,6 +65,7 @@ public class CollectionButton : MonoBehaviour
                     DeckManager.Instance.UpdateDeckButton();
                     deck.GetAvailableAliment();
                     DeckManager.Instance.UpdateAliment();
+                    equipSFX.PlayFeedbacks();
                 }
             }
         }
@@ -71,6 +78,7 @@ public class CollectionButton : MonoBehaviour
                     deck.playerToolsDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
                     DeckManager.Instance.UpdateToolsValue();
+                    equipSFX.PlayFeedbacks();
                 }
             }
         }
