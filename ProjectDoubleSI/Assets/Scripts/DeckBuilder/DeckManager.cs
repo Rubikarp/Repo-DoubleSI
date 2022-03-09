@@ -25,12 +25,10 @@ public class DeckManager : Singleton<DeckManager>
     #endregion
 
     public int numberOfCards;
-    SCODeckManagement deck;
+    [SerializeField] SCODeckManagement deck;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        deck = SCODeckManagement.instance;
         Initialisation();
     }
     private void Start()
@@ -67,13 +65,13 @@ public class DeckManager : Singleton<DeckManager>
     {
         totalCostValue = 0;
 
-        if (SCODeckManagement.instance.playerToolsDeck.Count > 0)
+        if (deck.playerToolsDeck.Count > 0)
         {
-            foreach (var value in SCODeckManagement.instance.playerToolsDeck)
+            foreach (var value in deck.playerToolsDeck)
             {
                 totalCostValue += value.cardCost;
             }
-            totalCostValue = totalCostValue / SCODeckManagement.instance.playerToolsDeck.Count;
+            totalCostValue = totalCostValue / deck.playerToolsDeck.Count;
             totalCostValue = Mathf.Round(totalCostValue * 100f)/100f;
             averageCost.text = totalCostValue.ToString();
         }
@@ -91,9 +89,9 @@ public class DeckManager : Singleton<DeckManager>
         {
             Image currentButton = alimentsChildren[i].GetComponent<Image>();
 
-            if (i < SCODeckManagement.instance.playerDeckAliment.Count)
+            if (i < deck.playerDeckAliment.Count)
             {
-                currentButton.sprite = SCODeckManagement.instance.playerDeckAliment[i].visual;
+                currentButton.sprite = deck.playerDeckAliment[i].visual;
                 currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 1f);
             }
             else
@@ -102,7 +100,7 @@ public class DeckManager : Singleton<DeckManager>
                 currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
             }
         }
-        if (SCODeckManagement.instance.playerDeckAliment.Count == 0)
+        if (deck.playerDeckAliment.Count == 0)
         {
             for (int i = 0; i < alimentsChildren.Count; i++)
             {
@@ -115,7 +113,7 @@ public class DeckManager : Singleton<DeckManager>
 
     void Initialisation()
     {
-        numberOfCards = SCODeckManagement.instance.allCards.Count;
+        numberOfCards = deck.allCards.Count;
 
         //Je récupère les enfants de chaque parent pour les ranger ddans une liste parent.
         foreach (Transform child in alimentsParents.transform)
@@ -137,13 +135,13 @@ public class DeckManager : Singleton<DeckManager>
         for (int i = 0; i < 6; i++)
         {
             playerCollectionRecipesButton.Add(playerCollectionButton[i].gameObject);
-            playerCollectionRecipesButton[i].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            playerCollectionRecipesButton[i].GetComponent<CollectionButton>().cardContener = deck.allCards[i];
         }
 
         for (int i = 6; i < 12; i++)
         {
             playerCollectionToolsButton.Add(playerCollectionButton[i].gameObject);
-            playerCollectionToolsButton[i - 6].GetComponent<CollectionButton>().cardContener = SCODeckManagement.instance.allCards[i];
+            playerCollectionToolsButton[i - 6].GetComponent<CollectionButton>().cardContener = deck.allCards[i];
         }
 
 
@@ -165,20 +163,20 @@ public class DeckManager : Singleton<DeckManager>
     public void UpdateAliment()
     {
         //Reset de la liste d'aliments.
-        SCODeckManagement.instance.playerDeckAliment = new List<FoodSCO>();
+        deck.playerDeckAliment = new List<FoodSCO>();
 
         //pour chaque recette dans le deck
-        foreach (var recipe in SCODeckManagement.instance.playerRecipesDeck)
+        foreach (var recipe in deck.playerRecipesDeck)
         {
             //Pour chaque aliment dans la recette
             for (int i = 0; i < recipe.recipe.ingredients.Length; i++)
             {
                 //Je check si l'aliment est déja dans la liste
-                if (!SCODeckManagement.instance.playerDeckAliment.Contains(recipe.recipe.ingredients[i]))
+                if (!deck.playerDeckAliment.Contains(recipe.recipe.ingredients[i]))
                 {
                     //Si il ne l'est pas je l'ajoute.
                     FoodSCO currentAliment = recipe.recipe.ingredients[i];
-                    SCODeckManagement.instance.playerDeckAliment.Add(currentAliment);
+                    deck.playerDeckAliment.Add(currentAliment);
                 }
             }
         }

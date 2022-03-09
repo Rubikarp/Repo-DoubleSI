@@ -14,7 +14,8 @@ public class CollectionButton : MonoBehaviour
     [SerializeField] private Image fillIn;
     private float cardCost;
 
-    // Start is called before the first frame update
+    [SerializeField] SCODeckManagement deck;
+
     void Start()
     {
         buttonAsset = GetComponent<Image>();
@@ -41,24 +42,24 @@ public class CollectionButton : MonoBehaviour
     {
         if (cardContener.typeOfCard == CardSCO.cardType.Recipe)
         {
-            if (SCODeckManagement.instance.playerRecipesDeck.Count < 3)
+            if (deck.playerRecipesDeck.Count < 3)
             {
-                if (!SCODeckManagement.instance.playerRecipesDeck.Contains(cardContener))
+                if (!deck.playerRecipesDeck.Contains(cardContener))
                 {
-                    SCODeckManagement.instance.playerRecipesDeck.Add(cardContener);
+                    deck.playerRecipesDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
-                    SCODeckManagement.instance.GetAvailableAliment();
+                    deck.GetAvailableAliment();
                     DeckManager.Instance.UpdateAliment();
                 }
             }
         }
         else
         {
-            if (SCODeckManagement.instance.playerToolsDeck.Count < 3)
+            if (deck.playerToolsDeck.Count < 3)
             {
-                if (!SCODeckManagement.instance.playerToolsDeck.Contains(cardContener))
+                if (!deck.playerToolsDeck.Contains(cardContener))
                 {
-                    SCODeckManagement.instance.playerToolsDeck.Add(cardContener);
+                    deck.playerToolsDeck.Add(cardContener);
                     DeckManager.Instance.UpdateDeckButton();
                     DeckManager.Instance.UpdateToolsValue();
                 }

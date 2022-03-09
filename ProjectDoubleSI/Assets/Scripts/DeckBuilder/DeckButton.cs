@@ -11,12 +11,11 @@ public class DeckButton : MonoBehaviour
 
     public int index;
     public bool recipe;
-    SCODeckManagement deck;
+    [SerializeField] SCODeckManagement deck;
     void Awake()
     {
         buttonImage = GetComponent<Image>();
         buttonImage.sprite = null;
-        deck = SCODeckManagement.instance;
     }
 
     [NaughtyAttributes.Button]
@@ -60,7 +59,7 @@ public class DeckButton : MonoBehaviour
         if (recipe)
         {
             deck.playerRecipesDeck.Remove(cardOlder);
-            SCODeckManagement.instance.GetAvailableAliment();
+            deck.GetAvailableAliment();
             DeckManager.Instance.UpdateAliment();
         }
         else
