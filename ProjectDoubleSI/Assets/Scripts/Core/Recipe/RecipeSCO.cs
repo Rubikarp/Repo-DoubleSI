@@ -8,6 +8,8 @@ public class RecipeSCO : ScriptableObject
     public string recipeName = "Brand New Recipe";
     public Season period = Season.Neutral;
 
+    public GamePowers power;
+
     [ShowAssetPreview]
     public Sprite recipeSprite;
 

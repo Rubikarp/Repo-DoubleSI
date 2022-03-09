@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using NaughtyAttributes;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 #if UNITY_EDITOR
@@ -27,6 +28,10 @@ public class GameGridInteraction : MonoBehaviour
     [SerializeField] private GameTile endSelectTile;
     [SerializeField] private Vector3 dragPos;
     [SerializeField] private Vector3 dragVect;
+
+    [Header("Schlag")]
+    [SerializeField] private Match3Manager match3;
+    [SerializeField] private GameGridManager gridManage;
 
     void OnEnable()
     {
@@ -94,9 +99,22 @@ public class GameGridInteraction : MonoBehaviour
 
                 if (Mathf.Abs(tileToMe.magnitude - 1) < 0.05f)
                 {
-                    onSwap?.Invoke(startSelectTile, endSelectTile);
+                    Switch();
+
+                    //Si le swap n'a généré aucun nouveau match contenant une des cases
+                    if (!match3.foundMatchs.Any(match => match.matchingTile.Contains(startSelectTile) || match.matchingTile.Contains(endSelectTile)))
+                    {
+                        Switch();
+                    }
                 }
             }
         }
+    }
+
+    private void Switch()
+    {
+        gridManage.Switch(startSelectTile, endSelectTile);
+        match3.LookForMatch();
+        onSwap?.Invoke(startSelectTile, endSelectTile);
     }
 }
