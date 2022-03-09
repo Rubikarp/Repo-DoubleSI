@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerHand : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class PlayerHand : MonoBehaviour
 
     private void Awake()
     {
+        if(SCODeckManagement.instance.playerRecipesDeck.Count > 0)
+        {
+            recipes = SCODeckManagement.instance.playerRecipesDeck.Select(x => x.recipe).ToList();
+        }
         UpdateAvailableList();
     }
 

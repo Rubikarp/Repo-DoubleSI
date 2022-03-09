@@ -8,12 +8,26 @@ public class LineMatch
 {
     public string name = "Line X";
     public List<GameTile> matchingTile = new List<GameTile>();
-    
+
+    public List<FoodSCO> ingredients;
+    public bool isRecipe = false;
+    public RecipeSCO recipe;
+
     [Header("Line")]
     public LineRenderer visual;
 
-    public LineMatch(bool vertical,int index, GameObject linePrefab, Transform parent)
+    public LineMatch(bool vertical, int index, GameObject linePrefab, Transform parent)
     {
+        matchingTile = new List<GameTile>();
+        name = vertical ? "Column_" + index : "Line_" + index;
+        visual = MonoBehaviour.Instantiate(linePrefab, parent).GetComponent<LineRenderer>();
+        UpdateLine();
+    }
+    public LineMatch(bool vertical, int index, GameObject linePrefab, Transform parent, RecipeSCO recipe)
+    {
+        isRecipe = true;
+        this.recipe = recipe;
+
         matchingTile = new List<GameTile>();
         name = vertical ? "Column_" + index : "Line_" + index;
         visual = MonoBehaviour.Instantiate(linePrefab, parent).GetComponent<LineRenderer>();
@@ -30,6 +44,10 @@ public class LineMatch
     
     public void UpdateLine()
     {
+        //Ingredients
+        ingredients = matchingTile.Select(tile => tile.item.Food).ToList();
+
+        //Visual
         visual.positionCount = matchingTile.Count;
         IEnumerable<Vector3> poses = matchingTile.Select(x => x.worldPos);
         visual.SetPositions(poses.ToArray());

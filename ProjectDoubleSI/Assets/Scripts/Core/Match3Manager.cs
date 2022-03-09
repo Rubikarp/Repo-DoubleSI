@@ -64,7 +64,7 @@ public class Match3Manager : MonoBehaviour
                 {
                     for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, player.recipes[i].ingredients);
+                        newMatch = CheckRecipeLineFrom(true, grid.GetTile(x, y), Vector2Int.up, player.recipes[i]);
                         if (newMatch != null) break;
                     }
                 }
@@ -85,7 +85,7 @@ public class Match3Manager : MonoBehaviour
                 {
                     for (int i = 0; i < player.recipes.Count; i++)
                     {
-                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, player.recipes[i].ingredients);
+                        newMatch = CheckRecipeLineFrom(false, grid.GetTile(x, y), Vector2Int.right, player.recipes[i]);
                         if (newMatch != null) break;
                     }
                 }
@@ -124,43 +124,43 @@ public class Match3Manager : MonoBehaviour
         }
         return newMatch;
     }
-    public LineMatch CheckRecipeLineFrom(bool vert, GameTile testedTile, Vector2Int dir, FoodSCO[] recipe)
+    public LineMatch CheckRecipeLineFrom(bool vert, GameTile testedTile, Vector2Int dir, RecipeSCO recipe)
     {
         //TODO : Le faire plus proprement
         FoodSCO food = testedTile.item.Food;
         LineMatch newMatch = null;
 
-        if (testedTile.item.Food == recipe[0]) 
+        if (testedTile.item.Food == recipe.ingredients[0]) 
         {
-            for (int i = 0; i < recipe.Length; i++)
+            for (int i = 0; i < recipe.ingredients.Length; i++)
             {
                 food = grid.GetFood(testedTile.gridPos + dir * i);
-                if (recipe[i] != food)
+                if (recipe.ingredients[i] != food)
                 {
                     return null;
                 }
             }
             //Match3 Confirmed
-            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform);
-            for (int i = 0; i < recipe.Length; i++)
+            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform, recipe);
+            for (int i = 0; i < recipe.ingredients.Length; i++)
             {
                 newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));
             }
             newMatch.UpdateLine();
         }
         else 
-        if(testedTile.item.Food == recipe.Last())
+        if(testedTile.item.Food == recipe.ingredients.Last())
         {
-            for (int i = 0; i < recipe.Length; i++)
+            for (int i = 0; i < recipe.ingredients.Length; i++)
             {
-                if (recipe.FromEnd(i) != grid.GetFood(testedTile.gridPos + dir * i))
+                if (recipe.ingredients.FromEnd(i) != grid.GetFood(testedTile.gridPos + dir * i))
                 {
                     return null;
                 }
             }
             //Match3 Confirmed
-            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform);
-            for (int i = 0; i < recipe.Length; i++)
+            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform, recipe);
+            for (int i = 0; i < recipe.ingredients.Length; i++)
             {
                 newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));
             }
