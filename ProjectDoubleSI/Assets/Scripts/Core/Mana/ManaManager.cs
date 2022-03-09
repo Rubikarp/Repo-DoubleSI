@@ -24,6 +24,23 @@ public class ManaManager : MonoBehaviour
         onMaxManaChange?.Invoke();
     }
 
+    public void MatchManaCalc(LineMatch match)
+    {
+        if(match.Lenght >= 3)
+        {
+            ManaUp(match.Lenght - 2);
+        }
+        else
+        {
+            ManaUp(1);
+        }
+    }
+
+    public void ManaUp(int value)
+    {
+        availableMana = Mathf.Clamp(availableMana + value, 0, maxMana);
+        onManaChange?.Invoke();
+    }
     public void MaxManaUp(int value)
     {
         maxMana += value;
@@ -33,11 +50,6 @@ public class ManaManager : MonoBehaviour
     public bool CanCast(int castCost)
     {
         return availableMana >= castCost;
-    }
-    public void AddMana(int value)
-    {
-        availableMana = Mathf.Clamp(availableMana + value, 0, maxMana);
-        onManaChange?.Invoke();
     }
     public void LoseMana(int castCost)
     {

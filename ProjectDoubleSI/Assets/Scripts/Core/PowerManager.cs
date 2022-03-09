@@ -50,22 +50,28 @@ public class PowerManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// réduit à 0 le cooldown d'un ustensile aléatoire
+    /// </summary>
     public void ToolCooldownReset()
     {
         //réduit à 0 le cooldown d'un ustensile aléatoire
         cards.Where(card => !card.usable).ToList().Random().ResetCD();
     }
 
+    /// <summary>
+    /// augmente de 50% le gain de score des prochaines recettes pendant 10 secondes
+    /// </summary>
     public void TempScoreBonus()
     {
-        //augmente de 50% le gain de score des prochaines recettes pendant 10 secondes
         score.FeverTime(10f, 1.5f);
     }
 
-
+    /// <summary>
+    /// ajoute 1 de mana max permanent
+    /// </summary>
     public void MaxManaUp()
     {
-        //ajoute un de mana max permanent
         mana.MaxManaUp(1);
     }
 }
