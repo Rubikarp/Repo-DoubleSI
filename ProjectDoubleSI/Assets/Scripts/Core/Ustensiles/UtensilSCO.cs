@@ -15,6 +15,7 @@ public class UtensilSCO : ScriptableObject
     public int manaCost = 1;
     [Range(0, 60)]
     public float cooldown = 10.0f;
+    public AudioClip UstensilVFX;
 
     [Button]
     private void RenameObject()

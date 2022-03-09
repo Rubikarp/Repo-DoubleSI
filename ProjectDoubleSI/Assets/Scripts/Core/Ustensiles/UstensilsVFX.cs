@@ -5,18 +5,14 @@ using MoreMountains.Feedbacks;
 
 public class UstensilsVFX : MonoBehaviour
 {
-    MMF_Player ustensilsSFX;
-    GameObject ustensils;
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] MMF_Player utensilsFeedback;
+    [SerializeField] UtensilSCO utensil;
+    [SerializeField] AudioClip utensilAudioClip;
+    
+    public void Initializtion()
     {
-        ustensilsSFX.Initialization(ustensils);
+        utensilAudioClip = utensil.UstensilVFX;
+        utensilsFeedback.GetFeedbackOfType<MMF_Sound>().Sfx = utensilAudioClip; 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
