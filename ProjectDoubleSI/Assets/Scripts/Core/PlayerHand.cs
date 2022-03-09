@@ -12,12 +12,13 @@ public class PlayerHand : MonoBehaviour
     [Header("Info")]
     [NaughtyAttributes.Expandable]
     public List<FoodSCO> availableIngredients = new List<FoodSCO>();
+    [SerializeField] SCODeckManagement deck;
 
     private void Awake()
     {
-        if(SCODeckManagement.instance.playerRecipesDeck.Count > 0)
+        if(deck.playerRecipesDeck.Count > 0)
         {
-            recipes = SCODeckManagement.instance.playerRecipesDeck.Select(x => x.recipe).ToList();
+            recipes = deck.playerRecipesDeck.Select(x => x.recipe).ToList();
         }
         UpdateAvailableList();
     }

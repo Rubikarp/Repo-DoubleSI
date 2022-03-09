@@ -5,7 +5,7 @@ using UnityEditor;
 using System.Linq;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
-public class SCODeckManagement : ScriptableSingleton<SCODeckManagement>
+public class SCODeckManagement : ScriptableObject
 {
     /// <summary>
     /// XP - This script handle the management of the Deck : Visual and Datas.
