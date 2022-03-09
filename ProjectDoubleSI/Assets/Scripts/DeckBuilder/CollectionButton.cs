@@ -16,6 +16,9 @@ public class CollectionButton : MonoBehaviour
 
     [SerializeField] SCODeckManagement deck;
 
+    [SerializeField] private GameObject[] circle;
+    [SerializeField] private Image[] aliment;
+
     void Start()
     {
         buttonAsset = GetComponent<Image>();
@@ -29,6 +32,12 @@ public class CollectionButton : MonoBehaviour
         {
             cardCost= cardContener.recipe.ingredients.Length;
             cost.text = cardCost.ToString();
+
+            for (int i = 0; i < cardContener.recipe.ingredients.Length; i++)
+            {
+                circle[i].SetActive(true);
+                aliment[i].sprite = cardContener.recipe.ingredients[i].visual;
+            }
         }
         else
         {
