@@ -43,10 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ba1e6d2e4bf974abb73db24867a715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 1507315390106910777}
   mana: {fileID: 6195457361640214772}
-  score: {fileID: 874274220932684770}
+  points: {fileID: 2504162842351806242}
+  gridManage: {fileID: 1507315390106910776}
   cards:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -557,6 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b340b00886f674b983f6b1e80691fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deck: {fileID: 11400000, guid: 627f0e736c9856b4eb9989c04c8e2092, type: 2}
   recipes:
   - {fileID: 11400000, guid: 823cf56567d59dd418b278fb2da509b2, type: 2}
   - {fileID: 11400000, guid: e6df066166a09694a827f95a7b1b33e6, type: 2}
@@ -676,7 +678,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  feverTime: 0
 --- !u!114 &7323670016093598364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 874274220932684770}
-  limitThreshold: 100
+  limitThreshold: 2000
   winningRatio: 0.9
   onPlayerKO:
     m_PersistentCalls:
@@ -710,8 +711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a6c9e4fdcc8bb489bc6dcc9d1b0f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientScore: 50
-  recipeScore: 300
   onPlayerScore:
     m_PersistentCalls:
       m_Calls:
@@ -727,6 +726,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ingredientScore: 50
+  recipeScore: 300
+  feverTime: 0
+  <FeverRestingTime>k__BackingField: 0
 --- !u!1001 &1507315388290563863
 PrefabInstance:
   m_ObjectHideFlags: 0

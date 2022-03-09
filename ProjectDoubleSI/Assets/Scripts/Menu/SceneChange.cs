@@ -10,6 +10,10 @@ namespace Menu
         public string sceneName;
 
         [ContextMenu("ChangeToScene")]
+        public void ChangeToSceneIn(float delay)
+        {
+            Invoke("LoadSceneMode", delay);
+        }
         public void ChangeToScene()
         {
             SceneManager.LoadScene(sceneName);
@@ -21,6 +25,10 @@ namespace Menu
         public void ChangeToScene(int scene)
         {
             SceneManager.LoadScene(scene);
+        }
+        private void LoadSceneMode()
+        {
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

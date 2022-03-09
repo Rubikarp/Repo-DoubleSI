@@ -36,10 +36,14 @@ public class GameGridManager : MonoBehaviour
         LeanTween.move(a.item.gameObject, a.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
         LeanTween.move(b.item.gameObject, b.worldPos, 0.2f).setEase(LeanTweenType.easeInQuad);
     }
-    
+
     public void ClearMatch(LineMatch match)
     {
-        foreach (var tile in match.matchingTile)
+        ClearTiles(match.matchingTile);
+    }
+    public void ClearTiles(List<GameTile> tiles)
+    {
+        foreach (var tile in tiles)
         {
             Destroy(tile.item.gameObject);
             tile.item = null;
@@ -47,6 +51,7 @@ public class GameGridManager : MonoBehaviour
 
         GravityCheck();
     }
+    
     public void GravityCheck()
     {
         bool gravEnd = true;
@@ -124,6 +129,27 @@ public class GameGridManager : MonoBehaviour
         UpdateName();
     }
 
+    public List<GameTile> SelectALine(bool vertical, int index)
+    {
+        List<GameTile> aimTiles = new List<GameTile>();
+        if (vertical)
+        {
+            index = Mathf.Clamp(index, 0, grid.size.x);
+            for (int i = 0; i < grid.size.y; i++)
+            {
+                aimTiles.Add(grid.GetTile(index, i));
+            }
+        }
+        else
+        {
+            index = Mathf.Clamp(index, 0, grid.size.y);
+            for (int i = 0; i < grid.size.x; i++)
+            {
+                aimTiles.Add(grid.GetTile(i, index));
+            }
+        }
+        return aimTiles;
+    }
     private void UpdateName()
     {
         FoodItem tempItem;

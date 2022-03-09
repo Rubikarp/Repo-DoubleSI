@@ -6,13 +6,13 @@ using System.Linq;
 public class PlayerHand : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] SCODeckManagement deck;
     [NaughtyAttributes.Expandable]
     public List<RecipeSCO> recipes = new List<RecipeSCO>();
 
     [Header("Info")]
     [NaughtyAttributes.Expandable]
     public List<FoodSCO> availableIngredients = new List<FoodSCO>();
-    [SerializeField] SCODeckManagement deck;
 
     private void Awake()
     {
