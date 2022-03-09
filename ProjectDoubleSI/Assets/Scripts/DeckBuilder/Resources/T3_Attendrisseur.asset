@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Attendrisseur
   level: 0
   cardCost: 2
-  cardAsset: {fileID: 9209574389913052115, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
+  cardAsset: {fileID: 106563167538125461, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: 
   recipe: {fileID: 0}
   typeOfCard: 0

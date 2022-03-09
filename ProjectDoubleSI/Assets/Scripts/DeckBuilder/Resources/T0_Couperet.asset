@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Couperet
   level: 0
   cardCost: 1
-  cardAsset: {fileID: 494197220483499886, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
+  cardAsset: {fileID: -1915728160673158013, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: 
   recipe: {fileID: 0}
   typeOfCard: 0

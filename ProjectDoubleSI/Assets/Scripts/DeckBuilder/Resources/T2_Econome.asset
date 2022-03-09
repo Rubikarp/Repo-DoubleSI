@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Econome
   level: 0
   cardCost: 3
-  cardAsset: {fileID: -376805180973292168, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
+  cardAsset: {fileID: 3680682535897769983, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: 
   recipe: {fileID: 0}
   typeOfCard: 0
