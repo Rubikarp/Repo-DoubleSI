@@ -21,6 +21,7 @@ public class SCODeckManagement : ScriptableObject
     public List<CardSCO> playerRecipesDeck = new List<CardSCO>();
 
     public List<FoodSCO> playerDeckAliment = new List<FoodSCO>();
+    public CardSCO detailCard;
     #endregion
 
     [NaughtyAttributes.Button]
@@ -31,6 +32,8 @@ public class SCODeckManagement : ScriptableObject
         CardSCO[] cardFind = Resources.FindObjectsOfTypeAll(typeof(CardSCO)) as CardSCO[];
         allCards.AddRange(cardFind);
     }
+
+    
 
     public List<FoodSCO> GetAvailableAliment()
     {

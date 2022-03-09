@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using MoreMountains.Feedbacks;
+using UnityEngine.EventSystems;
 
-public class CollectionButton : MonoBehaviour
+public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
 {
     public CardSCO cardContener;
     private Image buttonAsset;
@@ -48,6 +49,41 @@ public class CollectionButton : MonoBehaviour
     }
 
    [SerializeField] private MMF_Player equipSFX;
+
+    public void CallDetails()
+    {
+        deck.detailCard = cardContener;
+        DeckManager.Instance.detailsMenu.PopDetails(cardContener);
+    }
+
+    public bool isPressed;
+
+    // Start is called before the first frame update
+    public void OnUpdateSelected(BaseEventData data)
+    {
+        if (isPressed)
+        {
+            StartCoroutine(WaitBeforeCallDetails());
+        }
+    }
+    public void OnPointerDown(PointerEventData data)
+    {
+        isPressed = true;
+    }
+    public void OnPointerUp(PointerEventData data)
+    {
+        isPressed = false;
+    }
+
+    private IEnumerator WaitBeforeCallDetails()
+    {
+        yield return new WaitForSeconds(0.25f);
+        if (isPressed)
+        {
+            isPressed = false;
+            CallDetails();
+        }
+    }
 
 
     //Faire que le joueur puisse s'équiper de recette au maximum de 6 aliments différents.

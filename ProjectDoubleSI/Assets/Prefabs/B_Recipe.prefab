@@ -1539,6 +1539,7 @@ MonoBehaviour:
   - {fileID: 6226848872084736825}
   - {fileID: 1637755948182050380}
   equipSFX: {fileID: 5765919194124386544}
+  isPressed: 0
 --- !u!1 &8323134356684518330
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class DeckManager : Singleton<DeckManager>
 
     public int numberOfCards;
     [SerializeField] SCODeckManagement deck;
+    public DetailsMenu detailsMenu;
 
     void Awake()
     {

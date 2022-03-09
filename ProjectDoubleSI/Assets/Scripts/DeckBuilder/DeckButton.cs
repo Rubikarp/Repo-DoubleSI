@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class DeckButton : MonoBehaviour
+public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
 {
 
     private Image buttonImage;
@@ -16,6 +17,12 @@ public class DeckButton : MonoBehaviour
     {
         buttonImage = GetComponent<Image>();
         buttonImage.sprite = null;
+    }
+
+    public void CallDetails()
+    {
+        deck.detailCard = cardOlder;
+        DeckManager.Instance.detailsMenu.PopDetails(cardOlder);
     }
 
     [NaughtyAttributes.Button]
@@ -71,5 +78,39 @@ public class DeckButton : MonoBehaviour
         DeckManager.Instance.UpdateDeckButton();
     }
 
+    public void CallDetailsDeck()
+    {
+        deck.detailCard = cardOlder;
+        DeckManager.Instance.detailsMenu.PopDetails(cardOlder);
+    }
+
+    public bool isPressed;
+
+    // Start is called before the first frame update
+    public void OnUpdateSelected(BaseEventData data)
+    {
+        if (isPressed)
+        {
+            StartCoroutine(WaitBeforeCallDetails());
+        }
+    }
+    public void OnPointerDown(PointerEventData data)
+    {
+        isPressed = true;
+    }
+    public void OnPointerUp(PointerEventData data)
+    {
+        isPressed = false;
+    }
+
+    private IEnumerator WaitBeforeCallDetails()
+    {
+        yield return new WaitForSeconds(0.25f);
+        if (isPressed)
+        {
+            isPressed = false;
+            CallDetailsDeck();
+        }
+    }
 
 }
