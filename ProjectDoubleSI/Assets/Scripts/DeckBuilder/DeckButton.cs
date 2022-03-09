@@ -66,6 +66,7 @@ public class DeckButton : MonoBehaviour
         else
         {
             deck.playerToolsDeck.Remove(cardOlder);
+            DeckManager.Instance.UpdateToolsValue();
         }
 
         DeckManager.Instance.UpdateDeckButton();

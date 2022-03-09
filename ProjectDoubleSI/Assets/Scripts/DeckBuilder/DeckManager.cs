@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DeckManager : Singleton<DeckManager>
 {
@@ -14,6 +15,9 @@ public class DeckManager : Singleton<DeckManager>
     public List<GameObject> playerDeckButton = new List<GameObject>();
     public List<GameObject> playerDeckRecipesButton = new List<GameObject>();
     public List<GameObject> playerDeckToolsButton = new List<GameObject>();
+
+    [SerializeField] private TextMeshProUGUI averageCost;
+    [SerializeField] private float totalCostValue;
 
     //Aliments
     [SerializeField] private GameObject alimentsParents;
@@ -57,6 +61,28 @@ public class DeckManager : Singleton<DeckManager>
         {
             button.GetComponent<DeckButton>().UpdateButton();
         }
+    }
+
+    public void UpdateToolsValue()
+    {
+        totalCostValue = 0;
+
+        if (SCODeckManagement.instance.playerToolsDeck.Count > 0)
+        {
+            foreach (var value in SCODeckManagement.instance.playerToolsDeck)
+            {
+                totalCostValue += value.cardCost;
+            }
+            totalCostValue = totalCostValue / SCODeckManagement.instance.playerToolsDeck.Count;
+            totalCostValue = Mathf.Round(totalCostValue * 100f)/100f;
+            averageCost.text = totalCostValue.ToString();
+        }
+        else
+        {
+            totalCostValue = 0;
+            averageCost.text = totalCostValue.ToString();
+        }
+       
     }
 
     void UpdateAlimentVisual()
