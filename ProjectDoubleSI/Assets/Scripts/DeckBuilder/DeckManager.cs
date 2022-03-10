@@ -28,6 +28,8 @@ public class DeckManager : Singleton<DeckManager>
     [SerializeField] SCODeckManagement deck;
     public DetailsMenu detailsMenu;
 
+    public Sprite[] season;
+
     void Awake()
     {
         Initialisation();

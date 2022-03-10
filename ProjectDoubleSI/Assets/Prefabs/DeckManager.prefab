@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7808737427137863798}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.754838
+  m_Size: 0.60191435
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2651,7 +2651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000032020544}
+  m_AnchoredPosition: {x: 0, y: 0.00002033611}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &8094462299712719016
@@ -3445,7 +3445,7 @@ RectTransform:
   m_Father: {fileID: 453743199}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.13141876}
   m_AnchorMax: {x: 1, y: 0.6486889}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -3813,8 +3813,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8.238037}
-  m_SizeDelta: {x: 0, y: 16.475952}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8126791951299440636
 MonoBehaviour:
@@ -5142,6 +5142,12 @@ MonoBehaviour:
   numberOfCards: 0
   deck: {fileID: 11400000, guid: 627f0e736c9856b4eb9989c04c8e2092, type: 2}
   detailsMenu: {fileID: 3012792722232387897}
+  season:
+  - {fileID: 21300000, guid: 4cf7b057da858d44eabb38d369fd5982, type: 3}
+  - {fileID: 21300000, guid: 3ff332cdab02cb847a506f3b24bf80f4, type: 3}
+  - {fileID: 21300000, guid: 78ca0e799465ed3418ec6fbcc268b30f, type: 3}
+  - {fileID: 21300000, guid: 12811bdd2c93dfb4b944dbdfa3bf3d5f, type: 3}
+  - {fileID: 21300000, guid: 2096facb3a4037e47a46676e5189e7e9, type: 3}
 --- !u!1 &9170884838591674179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,8 +5950,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5448847748862231175, guid: 1cef62abcddf9d44986e7847ee9edfbc, type: 3}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5954,7 +5964,7 @@ PrefabInstance:
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3609140718197326501}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -5965,7 +5975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeToScene
+      value: PlayFeedbacks
       objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -5973,7 +5983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneChange, Assembly-CSharp
+      value: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
       objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -6026,6 +6036,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6834249594894773564}
     m_Modifications:
+    - target: {fileID: 732767399, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: sceneName
+      value: SplashScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 523502894806387616, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_text
       value: 
@@ -6122,6 +6136,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -533026293499779086, guid: 1cef62abcddf9d44986e7847ee9edfbc, type: 3}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6449,6 +6467,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 840413986, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].Sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: d2c7df417c1fd6049a07b0380a2298eb, type: 3}
     - target: {fileID: 523502894806387616, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_text
       value: 

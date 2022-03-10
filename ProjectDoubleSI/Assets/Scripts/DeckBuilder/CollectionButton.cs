@@ -20,6 +20,7 @@ public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerD
 
     [SerializeField] private GameObject[] circle;
     [SerializeField] private Image[] aliment;
+    [SerializeField] private Image seasonImage;
 
     void Start()
     {
@@ -33,7 +34,29 @@ public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerD
         if (cardContener.typeOfCard == CardSCO.cardType.Recipe)
         {
             cardCost= cardContener.recipe.ingredients.Length;
-            cost.text = cardCost.ToString();
+            cost.text = cardCost.ToString();    
+            switch (cardContener.recipe.period)
+            {
+                case Core.Season.Error:
+                    break;
+                case Core.Season.Winter:
+                    seasonImage.sprite = DeckManager.Instance.season[2];
+                    break;
+                case Core.Season.Spring:
+                    seasonImage.sprite = DeckManager.Instance.season[3];
+                    break;
+                case Core.Season.Summer:
+                    seasonImage.sprite = DeckManager.Instance.season[4];
+                    break;
+                case Core.Season.Autumn:
+                    seasonImage.sprite = DeckManager.Instance.season[1];
+                    break;
+                case Core.Season.Neutral:
+                    seasonImage.sprite = DeckManager.Instance.season[0];
+                    break;
+                default:
+                    break;
+            }
 
             for (int i = 0; i < cardContener.recipe.ingredients.Length; i++)
             {
