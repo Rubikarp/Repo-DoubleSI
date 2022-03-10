@@ -827,8 +827,8 @@ MonoBehaviour:
   elementStock: {fileID: 1507315389976009200}
   gametilePrefab: {fileID: 8854309284851856226, guid: b4f152467ff7fd84594d8695738fb10e, type: 3}
   player: {fileID: 1507315390182352748}
-  dropTime: 1.2
-  dropHeight: 10
+  dropTime: 0.6
+  dropHeight: 18
 --- !u!1 &1507315390182352749
 GameObject:
   m_ObjectHideFlags: 0
