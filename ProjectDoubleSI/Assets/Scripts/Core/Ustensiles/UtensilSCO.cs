@@ -17,6 +17,8 @@ public class UtensilSCO : ScriptableObject
     public float cooldown = 10.0f;
     public AudioClip UstensilVFX;
 
+    public string powerText;
+
 #if UNITY_EDITOR
 
     [Button]

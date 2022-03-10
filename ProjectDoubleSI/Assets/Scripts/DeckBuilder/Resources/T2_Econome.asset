@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   cardCost: 3
   cardAsset: {fileID: 3680682535897769983, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
-  cardEffet: 
+  cardEffet: La prochaine recette vaut 50% de points en plus.
   recipe: {fileID: 0}
   typeOfCard: 0
-  raretyOfTheCard: 0
+  raretyOfTheCard: 1

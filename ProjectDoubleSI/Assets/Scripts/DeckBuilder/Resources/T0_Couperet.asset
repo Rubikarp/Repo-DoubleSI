@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   cardCost: 1
   cardAsset: {fileID: -1915728160673158013, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
-  cardEffet: 
+  cardEffet: "Le prochain match d\xE9truit une ligne ou colonne al\xE9atoire."
   recipe: {fileID: 0}
   typeOfCard: 0
   raretyOfTheCard: 0

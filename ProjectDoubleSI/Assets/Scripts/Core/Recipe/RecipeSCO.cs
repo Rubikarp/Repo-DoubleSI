@@ -16,6 +16,8 @@ public class RecipeSCO : ScriptableObject
     [Expandable, Space(10)]
     public FoodSCO[] ingredients;
 
+    public string powerText;
+
     #if UNITY_EDITOR
     [Button]
     private void RenameObject()
