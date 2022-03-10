@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 1e0d95b93ee934d42b234744845235df
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2996776270609235301
+    second: UI_Kitchen_Altas_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -220,13 +223,13 @@ TextureImporter:
       name: UI_Kitchen_Altas_9
       rect:
         serializedVersion: 2
-        x: 939
+        x: 931
         y: 2115
-        width: 1781
+        width: 1709
         height: 241
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 306, y: 0, z: 60, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -569,6 +572,27 @@ TextureImporter:
       bones: []
       spriteID: 0a2b98115ffcda680800000000000000
       internalID: -8742102650188090720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Kitchen_Altas_1
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 2212
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9244070cdf4966d0800000000000000
+      internalID: -2996776270609235301
       vertices: []
       indices: 
       edges: []
