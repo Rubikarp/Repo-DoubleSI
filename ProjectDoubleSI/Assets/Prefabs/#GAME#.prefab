@@ -304,6 +304,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  marteau: {fileID: 0}
 --- !u!1 &1507315388206407732
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 1507315390106910777}
-  linePrefab: {fileID: 2493061088771053427, guid: 6999b0a459260bf4baaad7a4c81551ea, type: 3}
+  visuPrefab:
+  - {fileID: 2493061088771053427, guid: 6999b0a459260bf4baaad7a4c81551ea, type: 3}
+  - {fileID: 4732352203202451031, guid: 56299bdb11fd4944aa2fcef2e82013db, type: 3}
+  - {fileID: 1044985898661894288, guid: a610a2e63c539f149a28b08feaf699ae, type: 3}
   player: {fileID: 1507315390182352748}
   onMatch:
     m_PersistentCalls:
@@ -528,6 +532,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onSwapRefuse:
+    m_PersistentCalls:
+      m_Calls: []
   startSelectTile:
     name: Tile[0,0]
     item: {fileID: 0}

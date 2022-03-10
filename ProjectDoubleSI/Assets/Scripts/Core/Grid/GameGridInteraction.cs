@@ -22,6 +22,7 @@ public class GameGridInteraction : MonoBehaviour
     [Header("Event")]
     public TileEvent onTouch;
     public SwapEvent onSwap;
+    public SwapEvent onSwapRefuse;
 
     [Header("Info")]
     [SerializeField] private GameTile startSelectTile;
@@ -110,6 +111,7 @@ public class GameGridInteraction : MonoBehaviour
                     //Si le swap n'a généré aucun nouveau match contenant une des cases
                     if (!match3.foundMatchs.Any(match => match.matchingTile.Contains(startSelectTile) || match.matchingTile.Contains(endSelectTile)))
                     {
+                        onSwapRefuse?.Invoke(startSelectTile, endSelectTile);
                         Switch();
                     }
                 }

@@ -12,7 +12,9 @@ public class Match3Manager : MonoBehaviour
 {
     [Header("Dependancy")]
     public GameGrid grid;
-    public GameObject linePrefab;
+    [Tooltip("LineRender / VFX Recipe / VFX Ingredient")]
+    public GameObject[] visuPrefab;
+
     [Header("Dependancy")]
     public PlayerHand player;
 
@@ -109,7 +111,7 @@ public class Match3Manager : MonoBehaviour
          && food == grid.GetFood(testedTile.gridPos + dir * 2))
         {
             //Match3 Confirmed
-            newMatch = new LineMatch(vert,vert?testedTile.gridPos.x:testedTile.gridPos.y, linePrefab, transform);
+            newMatch = new LineMatch(vert,vert?testedTile.gridPos.x:testedTile.gridPos.y, visuPrefab, transform);
             newMatch.matchingTile.Add(testedTile);
             newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 1));
             newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * 2));
@@ -144,7 +146,7 @@ public class Match3Manager : MonoBehaviour
                 }
             }
             //Match3 Confirmed
-            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform, recipe);
+            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, visuPrefab, transform, recipe);
             for (int i = 0; i < recipe.ingredients.Length; i++)
             {
                 newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));
@@ -162,7 +164,7 @@ public class Match3Manager : MonoBehaviour
                 }
             }
             //Match3 Confirmed
-            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, linePrefab, transform, recipe);
+            newMatch = new LineMatch(vert, vert ? testedTile.gridPos.x : testedTile.gridPos.y, visuPrefab, transform, recipe);
             for (int i = 0; i < recipe.ingredients.Length; i++)
             {
                 newMatch.matchingTile.Add(grid.GetTile(testedTile.gridPos + dir * i));

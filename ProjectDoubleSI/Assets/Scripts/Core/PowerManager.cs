@@ -32,6 +32,9 @@ public class PowerManager : MonoBehaviour
     public GameGridInteraction gridInteract;
     public List<UtensilCard> cards = new List<UtensilCard>();
 
+    [Header("Other")]
+    public GameObject marteau;
+
     public void LaunchPower(GamePowers power)
     {
         switch (power)
@@ -64,9 +67,7 @@ public class PowerManager : MonoBehaviour
                 Debug.LogError("Invalid Power");
                 break;
         }
-
     }
-
 
     /// <summary>
     /// Supprime un ligne du board aléatoirement
@@ -85,15 +86,17 @@ public class PowerManager : MonoBehaviour
     [Button]
     public void ClearRandomSquare()
     {
-        int column = 2;
-        int line = 2;
-
+        marteau.SetActive(true);
+        Invoke("SupprSquare", 0.3f);
+    }
+    private void SupprSquare()
+    {
         List<GameTile> aimTiles = new List<GameTile>();
         for (int x = 0; x < 3; x++)
         {
             for (int y = 0; y < 3; y++)
             {
-                aimTiles.Add(grid.GetTile(line + y, column + x));
+                aimTiles.Add(grid.GetTile(1 + y, 1 + x));
             }
         }
         gridManage.ClearTiles(aimTiles);

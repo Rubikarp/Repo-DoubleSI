@@ -14,23 +14,30 @@ public class LineMatch
     public RecipeSCO recipe;
 
     [Header("Line")]
+    GameObject[] visuPrefab;
     public LineRenderer visual;
+    public List<GameObject> vfx = new List<GameObject>();
 
-    public LineMatch(bool vertical, int index, GameObject linePrefab, Transform parent)
+    public LineMatch(bool vertical, int index, GameObject[] visuPrefab, Transform parent)
     {
-        matchingTile = new List<GameTile>();
         name = vertical ? "Column_" + index : "Line_" + index;
-        visual = MonoBehaviour.Instantiate(linePrefab, parent).GetComponent<LineRenderer>();
+
+        matchingTile = new List<GameTile>();
+        this.visuPrefab = visuPrefab;
+
+        visual = MonoBehaviour.Instantiate(visuPrefab[0], parent).GetComponent<LineRenderer>();
         UpdateLine();
     }
-    public LineMatch(bool vertical, int index, GameObject linePrefab, Transform parent, RecipeSCO recipe)
+    public LineMatch(bool vertical, int index, GameObject[] visuPrefab, Transform parent, RecipeSCO recipe)
     {
-        isRecipe = true;
-        this.recipe = recipe;
+        name = vertical ? "Column_" + index : "Line_" + index;
 
         matchingTile = new List<GameTile>();
-        name = vertical ? "Column_" + index : "Line_" + index;
-        visual = MonoBehaviour.Instantiate(linePrefab, parent).GetComponent<LineRenderer>();
+        isRecipe = true;
+        this.recipe = recipe;
+        this.visuPrefab = visuPrefab;
+
+        visual = MonoBehaviour.Instantiate(visuPrefab[0], parent).GetComponent<LineRenderer>();
         UpdateLine();
     }
 
@@ -38,14 +45,26 @@ public class LineMatch
     {
         if (visual != null)
         {
+            visual.transform.DeleteChildren();
             GameObject.Destroy(visual.gameObject);
         }
     }
-    
+
     public void UpdateLine()
     {
         //Ingredients
         ingredients = matchingTile.Select(tile => tile.item.Food).ToList();
+
+        GameObject temp;
+        visual.transform.DeleteChildren();
+        for (int i = 0; i < matchingTile.Count; i++)
+        {
+            temp = MonoBehaviour.Instantiate(visuPrefab[isRecipe ? 1 : 2],
+                                             matchingTile[i].worldPos, 
+                                             Quaternion.Euler(-90,0,0), 
+                                             visual.transform);
+            vfx.Add(temp);
+        }
 
         //Visual
         visual.positionCount = matchingTile.Count;
