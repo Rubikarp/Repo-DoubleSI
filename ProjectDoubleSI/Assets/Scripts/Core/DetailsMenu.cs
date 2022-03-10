@@ -68,12 +68,22 @@ public class DetailsMenu : MonoBehaviour
                 aliment[i].sprite = cardToDisplay.recipe.ingredients[i].visual;
             }
 
+            seasonImage.color = new Color(seasonImage.color.r, seasonImage.color.g, seasonImage.color.b, 1f);
         }
         else
         {
             bgCadre.sprite = diffCadres[1];
             cardCost.text = cardToDisplay.cardCost.ToString();
             cardSkill.text = cardToDisplay.cardEffet;
+
+            for (int i = 0; i < circle.Length; i++)
+            {
+                circle[i].SetActive(false);
+                aliment[i].color = new Color(aliment[i].color.r, aliment[i].color.g, aliment[i].color.b, 0f);
+            }
+
+            seasonImage.color = new Color(seasonImage.color.r, seasonImage.color.g, seasonImage.color.b, 0f);
+
         }
 
         cardVisual.sprite = cardToDisplay.cardAsset;
