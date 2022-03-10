@@ -17,7 +17,14 @@ public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHan
     {
         buttonImage = GetComponent<Image>();
         buttonImage.sprite = null;
+
+        if (deck.playerRecipesDeck.Count > 0 || deck.playerToolsDeck.Count > 0)
+        {
+            UpdateButton();
+        }
+
     }
+
 
     public void CallDetails()
     {
@@ -101,15 +108,28 @@ public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHan
     public void OnPointerUp(PointerEventData data)
     {
         isPressed = false;
+        CoroutineStated();
     }
+
+    bool coroutineStarted = false;
 
     private IEnumerator WaitBeforeCallDetails()
     {
+        coroutineStarted = true;
         yield return new WaitForSeconds(0.35f);
         if (isPressed)
         {
+            coroutineStarted = false;
             isPressed = false;
             CallDetailsDeck();
+        }
+    }
+
+    private void CoroutineStated()
+    {
+        if (coroutineStarted)
+        {
+            StopAllCoroutines();
         }
     }
 

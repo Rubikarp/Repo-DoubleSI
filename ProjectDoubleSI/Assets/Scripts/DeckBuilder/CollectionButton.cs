@@ -72,16 +72,29 @@ public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerD
     }
     public void OnPointerUp(PointerEventData data)
     {
+        CoroutineStated();
         isPressed = false;
     }
 
+    bool coroutineStarted = false;
+
     private IEnumerator WaitBeforeCallDetails()
     {
+        coroutineStarted = true;
         yield return new WaitForSeconds(0.35f);
         if (isPressed)
         {
+            coroutineStarted = false;
             isPressed = false;
             CallDetails();
+        }
+    }
+
+    private void CoroutineStated()
+    {
+        if (coroutineStarted)
+        {
+            StopAllCoroutines();
         }
     }
 
