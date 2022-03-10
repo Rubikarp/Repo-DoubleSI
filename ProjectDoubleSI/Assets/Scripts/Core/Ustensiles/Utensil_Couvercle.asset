@@ -17,4 +17,4 @@ MonoBehaviour:
   effect: 5
   manaCost: 1
   cooldown: 5
-  UstensilVFX: {fileID: 8300000, guid: d3576e5f16e2fc74d9e0259e4d15cbc0, type: 3}
+  UstensilVFX: {fileID: 8300000, guid: 987db3e4be956e840bdae2059ade3393, type: 3}
