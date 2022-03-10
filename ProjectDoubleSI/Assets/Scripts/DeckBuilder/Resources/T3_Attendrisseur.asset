@@ -18,5 +18,6 @@ MonoBehaviour:
   cardAsset: {fileID: 106563167538125461, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: "D\xE9truit le centre de la grille (3x3)."
   recipe: {fileID: 0}
+  tool: {fileID: 11400000, guid: b6097d9d75208a046854e7bdf067f391, type: 2}
   typeOfCard: 0
   raretyOfTheCard: 0

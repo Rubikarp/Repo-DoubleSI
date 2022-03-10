@@ -18,5 +18,6 @@ MonoBehaviour:
   cardAsset: {fileID: 2085423665032232250, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: Le prochain switch est libre.
   recipe: {fileID: 0}
+  tool: {fileID: 11400000, guid: 7aeb436853cfb984f845fe2daeaddc48, type: 2}
   typeOfCard: 0
   raretyOfTheCard: 1

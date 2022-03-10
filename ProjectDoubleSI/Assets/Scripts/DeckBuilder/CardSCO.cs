@@ -13,6 +13,7 @@ public class CardSCO : ScriptableObject
     public Sprite cardAsset;
     public string cardEffet;
     public RecipeSCO recipe;
+    public UtensilSCO tool;
 
     public enum cardRarety
     {

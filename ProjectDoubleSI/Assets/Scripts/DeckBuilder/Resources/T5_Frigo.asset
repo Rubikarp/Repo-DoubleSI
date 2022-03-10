@@ -18,5 +18,6 @@ MonoBehaviour:
   cardAsset: {fileID: -8136264165163387657, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   cardEffet: La prochaine recette compte double.
   recipe: {fileID: 0}
+  tool: {fileID: 11400000, guid: 2e6561be490f2cc4d96bbb47594da3a1, type: 2}
   typeOfCard: 0
   raretyOfTheCard: 3
