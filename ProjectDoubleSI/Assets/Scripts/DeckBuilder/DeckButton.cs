@@ -13,6 +13,7 @@ public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHan
     public int index;
     public bool recipe;
     [SerializeField] SCODeckManagement deck;
+
     void Awake()
     {
         buttonImage = GetComponent<Image>();
