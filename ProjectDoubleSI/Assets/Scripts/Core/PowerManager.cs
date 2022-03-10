@@ -126,12 +126,21 @@ public class PowerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// augmente de 30% le gain de score des prochaines recettes pendant 10 secondes
+    /// augmente de 50% le gain de score de la prochaine recette
     /// </summary>
     [Button]
     public void NextScoreBonus()
     {
         points.NextScoreBonus(1.3f);
+    }
+
+    /// <summary>
+    /// augmente de 100% le gain de score de la prochaine recette
+    /// </summary>
+    [Button]
+    public void NextScoreBonusDouble()
+    {
+        points.NextScoreBonusDouble(2f);
     }
 
     /// <summary>

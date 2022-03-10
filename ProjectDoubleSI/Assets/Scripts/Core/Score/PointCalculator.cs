@@ -22,6 +22,9 @@ public class PointCalculator : MonoBehaviour
     private bool nextScoreBonus;
     [Range(1, 2)] float nextScoreMult = 1.5f;
 
+    [field: SerializeField]
+    private bool nextScoreBonusDouble;
+    [Range(1, 2)] float nextScoreMultDouble = 2.0f;
 
     public void PlayerMatch(LineMatch match)
     {
@@ -48,6 +51,13 @@ public class PointCalculator : MonoBehaviour
             nextScoreBonus = false;
         }
 
+        //BonusDouble
+        if (nextScoreBonusDouble && match.isRecipe)
+        {
+            score *= nextScoreMultDouble;
+            nextScoreBonusDouble = false;
+        }
+
         onPlayerScore?.Invoke(score);
     }
 
@@ -65,6 +75,12 @@ public class PointCalculator : MonoBehaviour
     {
         nextScoreBonus = true;
         nextScoreMult = Mathf.Max(multiplication, 1.0f);
+    }
+
+    public void NextScoreBonusDouble(float multiplication)
+    {
+        nextScoreBonusDouble = true;
+        nextScoreMultDouble = Mathf.Max(multiplication, 1.0f);
     }
 
     private IEnumerator FeverCD(float duration)
