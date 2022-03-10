@@ -15,6 +15,7 @@ public enum GamePowers
     MaxManaUp,
     SquareDestroy,
     IngredientLine,
+    CanAnySwitch,
 }
 
 [System.Serializable]
@@ -28,6 +29,7 @@ public class PowerManager : MonoBehaviour
     private PlayerHand player;
     public PointCalculator points;
     public GameGridManager gridManage;
+    public GameGridInteraction gridInteract;
     public List<UtensilCard> cards = new List<UtensilCard>();
 
     public void LaunchPower(GamePowers power)
@@ -55,6 +57,9 @@ public class PowerManager : MonoBehaviour
             case GamePowers.IngredientLine:
                 SameIngredientLine();
                 break;
+            case GamePowers.CanAnySwitch:
+                SameIngredientLine();
+                break;
             default:
                 Debug.LogError("Invalid Power");
                 break;
@@ -80,8 +85,8 @@ public class PowerManager : MonoBehaviour
     [Button]
     public void ClearRandomSquare()
     {
-        int column = Random.Range(0, grid.size.x - 2);
-        int line = Random.Range(0, grid.size.y - 2);
+        int column = 2;
+        int line = 2;
 
         List<GameTile> aimTiles = new List<GameTile>();
         for (int x = 0; x < 3; x++)
@@ -158,4 +163,11 @@ public class PowerManager : MonoBehaviour
             tile.item.Food = ingredient;
         }
     }
+
+    [Button]
+    public void CanAnySwitch()
+    {
+        gridInteract.NextSwitchOP();
+    }
+
 }

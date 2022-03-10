@@ -32,6 +32,7 @@ public class GameGridInteraction : MonoBehaviour
     [Header("Schlag")]
     [SerializeField] private Match3Manager match3;
     [SerializeField] private GameGridManager gridManage;
+    public bool canAnySwap = false;
 
     void OnEnable()
     {
@@ -101,6 +102,11 @@ public class GameGridInteraction : MonoBehaviour
                 {
                     Switch();
 
+                    if (canAnySwap)
+                    {
+                        canAnySwap = false;
+                        return;
+                    }
                     //Si le swap n'a généré aucun nouveau match contenant une des cases
                     if (!match3.foundMatchs.Any(match => match.matchingTile.Contains(startSelectTile) || match.matchingTile.Contains(endSelectTile)))
                     {
@@ -110,6 +116,11 @@ public class GameGridInteraction : MonoBehaviour
             }
         }
     }
+    public void NextSwitchOP()
+    {
+        canAnySwap = true;
+    }
+
 
     private void Switch()
     {

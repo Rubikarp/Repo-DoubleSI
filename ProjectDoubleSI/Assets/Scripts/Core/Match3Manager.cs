@@ -18,6 +18,7 @@ public class Match3Manager : MonoBehaviour
 
     [Header("Event")]
     public MatchEvent onMatch;
+    public PowerEvent onRecipeMatch;
     [Header("Info")]
     public List<LineMatch> foundMatchs = new List<LineMatch>();
 
@@ -34,8 +35,10 @@ public class Match3Manager : MonoBehaviour
 
         if (lineMatched.Count > 0)
         {
-            //Score
-            //Mana
+            if (lineMatched[0].isRecipe)
+            {
+                onRecipeMatch?.Invoke(lineMatched[0].recipe.power);
+            }
 
             onMatch?.Invoke(lineMatched[0]);
         }

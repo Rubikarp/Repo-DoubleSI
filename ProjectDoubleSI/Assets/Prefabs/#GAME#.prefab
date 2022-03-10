@@ -299,6 +299,7 @@ MonoBehaviour:
   mana: {fileID: 6195457361640214772}
   points: {fileID: 2504162842351806242}
   gridManage: {fileID: 1507315390106910776}
+  gridInteract: {fileID: 1507315388618786357}
   cards:
   - {fileID: 0}
   - {fileID: 0}
@@ -392,6 +393,21 @@ MonoBehaviour:
       - m_Target: {fileID: 6195457361640214772}
         m_TargetAssemblyTypeName: ManaManager, Assembly-CSharp
         m_MethodName: MatchManaCalc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRecipeMatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6663295947579846506}
+        m_TargetAssemblyTypeName: PowerManager, Assembly-CSharp
+        m_MethodName: LaunchPower
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -526,6 +542,7 @@ MonoBehaviour:
   dragVect: {x: 0, y: 0, z: 0}
   match3: {fileID: 1507315388206407734}
   gridManage: {fileID: 1507315390106910776}
+  canAnySwap: 0
 --- !u!1 &1507315389976009201
 GameObject:
   m_ObjectHideFlags: 0
