@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbf043810c563b44193819e5338cd7f9, type: 3}
-  m_Name: R5_SaumonToutEn1
+  m_Name: R5_Bourgignon
   m_EditorClassIdentifier: 
-  cardName: Saumon Tout-en-un
+  cardName: Boeuf Bourgignon
   level: 0
   cardCost: 0
-  cardAsset: {fileID: 21300000, guid: ce45765d1bf163a4789cb45e711addf7, type: 3}
-  cardEffet: 
-  recipe: {fileID: 11400000, guid: 92f3f45b3ef6e4b43bb4a84b84595aeb, type: 2}
+  cardAsset: {fileID: 21300000, guid: 0039b8a824d5e1d45bfdd2a05a047d1a, type: 3}
+  cardEffet: Chaque recette rapporte 25% de score bonus. Dure 20 secondes.
+  recipe: {fileID: 11400000, guid: 823cf56567d59dd418b278fb2da509b2, type: 2}
   typeOfCard: 1
-  raretyOfTheCard: 0
+  raretyOfTheCard: 3

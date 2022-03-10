@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}
   - {fileID: 11400000, guid: f2671ae9462569f49b83bfc644ebbf37, type: 2}
   - {fileID: 11400000, guid: f2671ae9462569f49b83bfc644ebbf37, type: 2}
+  powerText: Augmente le seuil maximum de saveur de 1.

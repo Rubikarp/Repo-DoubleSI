@@ -27,12 +27,14 @@ public class DetailsMenu : MonoBehaviour
         {
             bgCadre.sprite = diffCadres[0];
             cardCost.text = cardToDisplay.recipe.ingredients.Length.ToString();
-           
+            cardSkill.text = cardToDisplay.cardEffet;
+
         }
         else
         {
             bgCadre.sprite = diffCadres[1];
             cardCost.text = cardToDisplay.cardCost.ToString();
+            cardSkill.text = cardToDisplay.cardEffet;
         }
 
         cardVisual.sprite = cardToDisplay.cardAsset;

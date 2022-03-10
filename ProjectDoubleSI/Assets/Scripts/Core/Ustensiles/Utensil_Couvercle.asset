@@ -18,3 +18,4 @@ MonoBehaviour:
   manaCost: 1
   cooldown: 5
   UstensilVFX: {fileID: 8300000, guid: 987db3e4be956e840bdae2059ade3393, type: 3}
+  powerText: "R\xE9initialise la grille."

@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}
   - {fileID: 11400000, guid: 5dfeeab121705104cbf01a487fb8ba07, type: 2}
   - {fileID: 11400000, guid: c72ae5382bbeb3f41a1edf12266ee6c1, type: 2}
+  powerText: "La ligne du bas devient un seul ingr\xE9dient."

@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   cardCost: 0
   cardAsset: {fileID: 21300000, guid: 6bbd3360f8afe1d48b5cc1276be20aca, type: 3}
-  cardEffet: 
+  cardEffet: Gagne de 3 saveurs (Mana).
   recipe: {fileID: 11400000, guid: f561f19995d29b24a9c8bbdac0f3597f, type: 2}
   typeOfCard: 1
-  raretyOfTheCard: 0
+  raretyOfTheCard: 1

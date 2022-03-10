@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad2a4fc46bf562540a4dc4ef4f19f337, type: 2}
   - {fileID: 11400000, guid: 09d25f56469a0814ab8d20e083b4655f, type: 2}
   - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
+  powerText: Chaque match rapporte 25% de score bonus. Dure 10 secondes.

@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   cardCost: 3
   cardAsset: {fileID: -800126559132392074, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
-  cardEffet: 
+  cardEffet: "R\xE9initialise la grille."
   recipe: {fileID: 0}
   typeOfCard: 0
-  raretyOfTheCard: 0
+  raretyOfTheCard: 2

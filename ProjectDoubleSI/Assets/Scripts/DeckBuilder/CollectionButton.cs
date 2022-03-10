@@ -39,12 +39,14 @@ public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerD
             {
                 circle[i].SetActive(true);
                 aliment[i].sprite = cardContener.recipe.ingredients[i].visual;
+                cardContener.cardEffet = cardContener.recipe.powerText;
             }
         }
         else
         {
             cardCost = cardContener.cardCost;
             cost.text = cardCost.ToString();
+            
         }
     }
 

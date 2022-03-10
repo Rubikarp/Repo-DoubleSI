@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   cardCost: 2
   cardAsset: {fileID: 2085423665032232250, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
-  cardEffet: 
+  cardEffet: Le prochain switch est libre.
   recipe: {fileID: 0}
   typeOfCard: 0
-  raretyOfTheCard: 0
+  raretyOfTheCard: 1

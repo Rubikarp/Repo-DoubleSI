@@ -18,3 +18,4 @@ MonoBehaviour:
   manaCost: 1
   cooldown: 5
   UstensilVFX: {fileID: 8300000, guid: fde523dd290cf5346a535a77caa79c16, type: 3}
+  powerText: La prochaine recette vaut 50% de points en plus.
