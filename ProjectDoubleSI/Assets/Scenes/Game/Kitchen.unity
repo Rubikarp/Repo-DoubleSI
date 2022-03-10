@@ -1930,6 +1930,22 @@ PrefabInstance:
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 208725153}
+    - target: {fileID: 5580915638154485799, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: MyEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 751872993}
+    - target: {fileID: 5580915638154485799, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: MyEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShuffleGrid
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580915638154485799, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: MyEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameGridManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580915638154485799, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: MyEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6195457361640214772, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: onManaChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

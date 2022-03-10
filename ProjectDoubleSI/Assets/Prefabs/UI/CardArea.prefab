@@ -679,6 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mana: {fileID: 0}
   gauge: {fileID: 3784430602058880523}
+  mamaDispo: {fileID: 5040978014889106746}
 --- !u!1 &3784430602158615363
 GameObject:
   m_ObjectHideFlags: 0

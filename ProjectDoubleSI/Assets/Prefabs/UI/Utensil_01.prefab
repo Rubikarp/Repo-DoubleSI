@@ -607,6 +607,7 @@ MonoBehaviour:
   card: {fileID: 7998141175030683492}
   utensilSprite: {fileID: 7998141175462974290}
   toolNameRenderer: {fileID: 7998141174159168271}
+  toolCost: {fileID: 1432775973625512878}
 --- !u!114 &610279732
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class UtensilDrawer : MonoBehaviour
     [Space(10)]
     [SerializeField] Image utensilSprite;
     [SerializeField] TextMeshProUGUI toolNameRenderer;
+    [SerializeField] TextMeshProUGUI toolCost;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class UtensilDrawer : MonoBehaviour
         utensilSprite.sprite = card.utensil.sprite;
 
         toolNameRenderer.text = card.utensil.utensilName;
+        toolCost.text = card.utensil.manaCost.ToString();
     }
 }
     
