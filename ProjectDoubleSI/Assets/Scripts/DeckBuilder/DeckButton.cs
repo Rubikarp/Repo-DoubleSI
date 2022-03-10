@@ -105,7 +105,7 @@ public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHan
 
     private IEnumerator WaitBeforeCallDetails()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.35f);
         if (isPressed)
         {
             isPressed = false;

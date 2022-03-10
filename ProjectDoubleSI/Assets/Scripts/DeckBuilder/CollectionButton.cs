@@ -77,7 +77,7 @@ public class CollectionButton : MonoBehaviour, IUpdateSelectedHandler, IPointerD
 
     private IEnumerator WaitBeforeCallDetails()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.35f);
         if (isPressed)
         {
             isPressed = false;
