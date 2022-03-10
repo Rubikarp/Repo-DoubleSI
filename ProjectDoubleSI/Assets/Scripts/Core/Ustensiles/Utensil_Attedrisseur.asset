@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Utensil_Attedrisseur
   m_EditorClassIdentifier: 
   sprite: {fileID: 106563167538125461, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
-  utensilName: Attedrisseur
+  utensilName: Attendrisseur
   effect: 7
   manaCost: 1
   cooldown: 5
