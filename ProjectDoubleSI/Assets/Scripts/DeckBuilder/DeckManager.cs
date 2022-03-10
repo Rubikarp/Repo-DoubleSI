@@ -31,11 +31,6 @@ public class DeckManager : Singleton<DeckManager>
     void Awake()
     {
         Initialisation();
-
-        if (deck.playerDeckAliment.Count > 0)
-        {
-            UpdateAlimentVisual();
-        }
     }
     private void Start()
     {
@@ -165,6 +160,16 @@ public class DeckManager : Singleton<DeckManager>
         }
 
         UpdateDeckButton();
+
+        if (deck.playerDeckAliment.Count > 0)
+        {
+            UpdateAlimentVisual();
+        }
+
+        if (deck.playerToolsDeck.Count > 0)
+        {
+            UpdateToolsValue();
+        }
     }
 
     public void UpdateAliment()
