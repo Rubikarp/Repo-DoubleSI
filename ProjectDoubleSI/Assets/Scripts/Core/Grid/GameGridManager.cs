@@ -19,6 +19,7 @@ public class GameGridManager : MonoBehaviour
     public PlayerHand player;
 
     [Header("parameter")]
+    public float gravityTime = 1.2f;
     public float dropTime = 1.2f;
     public float dropHeight = 10f;
 
@@ -66,13 +67,14 @@ public class GameGridManager : MonoBehaviour
                 {
                     if (grid.GetTile(x, y).item == null)
                     {
-                        if (grid.GetTile(x, y + 1) == null)
-                        { continue; }
-
-                        if (grid.GetTile(x, y + 1).item != null)
+                        for (int i = y; i < grid.size.y; i++)
                         {
-                            DropDown(grid.GetTile(x, y + 1), grid.GetTile(x, y));
+                            if (grid.GetTile(x, i).item == null)
+                            { continue; }
+
+                            DropDown(grid.GetTile(x, i), grid.GetTile(x, y));
                             gravEnd = false;
+                            break;
                         }
                     }
                 }
@@ -85,7 +87,7 @@ public class GameGridManager : MonoBehaviour
         to.item = from.item;
         from.item = null;
 
-        LeanTween.move(to.item.gameObject, to.worldPos, 0.6f * (from.gridPos-to.gridPos).magnitude).setEase(LeanTweenType.easeOutBounce);
+        LeanTween.move(to.item.gameObject, to.worldPos, gravityTime * (from.gridPos-to.gridPos).magnitude).setEase(LeanTweenType.easeOutBounce);
     }
     public void FillEmptyTiles()
     {
