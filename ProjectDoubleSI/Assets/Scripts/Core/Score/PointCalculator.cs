@@ -13,7 +13,7 @@ public class PointCalculator : MonoBehaviour
 
     [Header("Other Data")]
     [SerializeField] private bool feverTime;
-    [Range(1, 2)] float feverTimeMult = 1.3f;
+    [Range(1, 2)] float feverTimeMult = 1.25f;
     IEnumerator feverCD;
 
     [field: SerializeField]
@@ -38,7 +38,7 @@ public class PointCalculator : MonoBehaviour
         }
 
         //Bonus sup
-        if (feverTime)
+        if (feverTime && match.isRecipe == false)
         {
             score *= feverTimeMult;
         }

@@ -15,6 +15,8 @@ public enum GamePowers
     MaxManaUp,
     SquareDestroy,
     IngredientLine,
+    ShuffleBoard,
+    ManaThreeUp,
     CanAnySwitch,
 }
 
@@ -31,6 +33,7 @@ public class PowerManager : MonoBehaviour
     public GameGridManager gridManage;
     public GameGridInteraction gridInteract;
     public List<UtensilCard> cards = new List<UtensilCard>();
+
 
     [Header("Other")]
     public GameObject marteau;
@@ -60,6 +63,12 @@ public class PowerManager : MonoBehaviour
             case GamePowers.IngredientLine:
                 SameIngredientLine();
                 break;
+            case GamePowers.ShuffleBoard:
+                ShuffleBoard();
+                break;
+            case GamePowers.ManaThreeUp:
+                ManaThreeUp();
+                break;
             case GamePowers.CanAnySwitch:
                 SameIngredientLine();
                 break;
@@ -70,7 +79,7 @@ public class PowerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Supprime un ligne du board aléatoirement
+    /// Supprime un ligne du board alï¿½atoirement
     /// </summary>
     [Button]
     public void ClearRandomLine()
@@ -81,7 +90,7 @@ public class PowerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Supprime un block de 3x3 block du board aléatoirement
+    /// Supprime un block de 3x3 block du board alï¿½atoirement
     /// </summary>
     [Button]
     public void ClearRandomSquare()
@@ -103,12 +112,12 @@ public class PowerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// réduit à 0 le cooldown d'un ustensile aléatoire
+    /// rï¿½duit ï¿½ 0 le cooldown d'un ustensile alï¿½atoire
     /// </summary>
     [Button]
     public void ToolCooldownReset()
     {
-        //réduit à 0 le cooldown d'un ustensile aléatoire
+        //rï¿½duit ï¿½ 0 le cooldown d'un ustensile alï¿½atoire
         List<UtensilCard> cardsInCD = cards.Where(card => !card.usable).ToList();
 
         if (cardsInCD.Count <= 0) return;
@@ -151,9 +160,15 @@ public class PowerManager : MonoBehaviour
         gridManage.ShuffleGrid();
     }
 
-    /// <summary>
-    /// Randomly change all item
-    /// </summary>
+    public void ManaThreeUp()
+    {
+        mana.ManaUp(3);
+
+        /// <summary>
+        /// Randomly change all item
+        /// </summary>
+    }
+
     [Button]
     public void SameIngredientLine()
     {
