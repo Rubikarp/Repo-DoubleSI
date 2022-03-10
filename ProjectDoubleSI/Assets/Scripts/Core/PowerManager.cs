@@ -11,6 +11,7 @@ public enum GamePowers
     ToolCooldownReset,
     NoSwitchCancel,
     TempScoreMult,
+    RecipeTempScoreMult,
     LineDestroy,
     MaxManaUp,
     SquareDestroy,
@@ -18,6 +19,7 @@ public enum GamePowers
     ShuffleBoard,
     ManaThreeUp,
     CanAnySwitch,
+    NextScoreBonusDouble,
 }
 
 [System.Serializable]
@@ -51,6 +53,9 @@ public class PowerManager : MonoBehaviour
             case GamePowers.TempScoreMult:
                 TempScoreBonus();
                 break;
+            case GamePowers.RecipeTempScoreMult:
+                RecipeTempScoreBonus();
+                break;
             case GamePowers.LineDestroy:
                 ClearRandomLine();
                 break;
@@ -71,6 +76,9 @@ public class PowerManager : MonoBehaviour
                 break;
             case GamePowers.CanAnySwitch:
                 SameIngredientLine();
+                break;
+            case GamePowers.NextScoreBonusDouble:
+                NextScoreBonusDouble();
                 break;
             default:
                 Debug.LogError("Invalid Power");
@@ -125,21 +133,39 @@ public class PowerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// augmente de 50% le gain de score des prochaines recettes pendant 10 secondes
+    /// augmente de 25% le gain de score des prochains matchs pendant 10 secondes
     /// </summary>
     [Button]
     public void TempScoreBonus()
     {
-        points.FeverTime(10f, 1.5f);
+        points.FeverTime(10f, 1.25f);
     }
 
     /// <summary>
-    /// augmente de 30% le gain de score des prochaines recettes pendant 10 secondes
+    /// augmente de 25% le gain de score des prochaines recettes pendant 20 secondes
+    /// </summary>
+    [Button]
+    public void RecipeTempScoreBonus()
+    {
+        points.FeverTime(20f, 1.25f);
+    }
+
+    /// <summary>
+    /// augmente de 50% le gain de score de la prochaine recette
     /// </summary>
     [Button]
     public void NextScoreBonus()
     {
-        points.NextScoreBonus(1.3f);
+        points.NextScoreBonus(1.5f);
+    }
+
+    /// <summary>
+    /// augmente de 100% le gain de score de la prochaine recette
+    /// </summary>
+    [Button]
+    public void NextScoreBonusDouble()
+    {
+        points.NextScoreBonusDouble(2f);
     }
 
     /// <summary>

@@ -16,12 +16,21 @@ public class PointCalculator : MonoBehaviour
     [Range(1, 2)] float feverTimeMult = 1.25f;
     IEnumerator feverCD;
 
+    [Header("Other Data")]
+    [SerializeField] private bool recipeFeverTime;
+    [Range(1, 2)] float recipeFeverTimeMult = 1.25f;
+    IEnumerator recipeFeverCD;
+
     [field: SerializeField]
     public float FeverRestingTime { get; private set; }
+
+    public float RecipeFeverRestingTime { get; private set; }
 
     private bool nextScoreBonus;
     [Range(1, 2)] float nextScoreMult = 1.5f;
 
+    private bool nextScoreBonusDouble;
+    [Range(1, 2)] float nextScoreMultDouble = 2.0f;
 
     public void PlayerMatch(LineMatch match)
     {
@@ -48,6 +57,17 @@ public class PointCalculator : MonoBehaviour
             nextScoreBonus = false;
         }
 
+        //BonusDouble
+        if (nextScoreBonusDouble && match.isRecipe)
+        {
+            score *= nextScoreMultDouble;
+            nextScoreBonusDouble = false;
+        }
+        if (recipeFeverTime && match.isRecipe)
+        {
+            score *= recipeFeverTimeMult;
+        }
+
         onPlayerScore?.Invoke(score);
     }
 
@@ -61,10 +81,28 @@ public class PointCalculator : MonoBehaviour
         feverCD = FeverCD(duration);
         StartCoroutine(feverCD);
     }
+
+    public void RecipeFeverTime(float duration, float multiplication)
+    {
+        feverTimeMult = Mathf.Max(multiplication, 1.0f);
+        feverTime = true;
+
+        //Coroutine
+        if (feverCD != null) StopCoroutine(recipeFeverCD);
+        feverCD = RecipeFeverCD(duration);
+        StartCoroutine(recipeFeverCD);
+    }
+
     public void NextScoreBonus(float multiplication)
     {
         nextScoreBonus = true;
         nextScoreMult = Mathf.Max(multiplication, 1.0f);
+    }
+
+    public void NextScoreBonusDouble(float multiplication)
+    {
+        nextScoreBonusDouble = true;
+        nextScoreMultDouble = Mathf.Max(multiplication, 1.0f);
     }
 
     private IEnumerator FeverCD(float duration)
@@ -76,5 +114,16 @@ public class PointCalculator : MonoBehaviour
             yield return null;
         }
         feverTime = false;
+    }
+
+    private IEnumerator RecipeFeverCD(float duration)
+    {
+        RecipeFeverRestingTime = duration;
+        while (RecipeFeverRestingTime > 0)
+        {
+            RecipeFeverRestingTime -= Time.deltaTime;
+            yield return null;
+        }
+        recipeFeverTime = false;
     }
 }
