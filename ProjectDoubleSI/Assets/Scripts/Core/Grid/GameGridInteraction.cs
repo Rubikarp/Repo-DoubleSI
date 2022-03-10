@@ -23,6 +23,7 @@ public class GameGridInteraction : MonoBehaviour
     public TileEvent onTouch;
     public SwapEvent onSwap;
     public SwapEvent onSwapRefuse;
+    public SwapEvent onSwapAccepted;
 
     [Header("Info")]
     [SerializeField] private GameTile startSelectTile;
@@ -113,6 +114,10 @@ public class GameGridInteraction : MonoBehaviour
                     {
                         onSwapRefuse?.Invoke(startSelectTile, endSelectTile);
                         Switch();
+                    }
+                    else
+                    {
+                        onSwapAccepted?.Invoke(startSelectTile, endSelectTile);
                     }
                 }
             }

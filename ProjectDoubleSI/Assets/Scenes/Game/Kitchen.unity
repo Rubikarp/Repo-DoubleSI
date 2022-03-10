@@ -258,6 +258,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e388d197fd6cfb44886751a31c5f13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &481624155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150735855, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &481624156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481624155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &481624157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481624155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f28567615824aa499dcd740537fe9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeFeeback: {fileID: 481624156}
+  MatchSFXs:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 87330e686eec5485b9d791f320125d9c, type: 3}
 --- !u!1 &498609171
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +364,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e388d197fd6cfb44886751a31c5f13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &695992430 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &751872993 stripped
@@ -650,6 +693,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912685055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1913560837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 57462c8a4d006bb47a87e533a65c175b, type: 3}
@@ -1712,6 +1766,58 @@ PrefabInstance:
       propertyPath: camTransf
       value: 
       objectReference: {fileID: 2094414843}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 695992430}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1912685055}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayFeedbacks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CancelInvoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.MonoBehaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1507315390182352748, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: recipes.Array.data[1]
       value: 
