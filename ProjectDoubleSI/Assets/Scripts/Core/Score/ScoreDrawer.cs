@@ -14,7 +14,7 @@ public class ScoreDrawer : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerScore;
     public void UpdateScore()
     {
-        scoreGauge.value = score.PlayerRatio;
+        scoreGauge.value = 1-score.PlayerRatio;
 
         playerScore.text = "Player : " + score.EnemyScore.ToString("F0");
         enemyScore.text = score.PlayerScore.ToString("F0") + " : Enemy";

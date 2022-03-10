@@ -14,6 +14,7 @@ public class UtensilCard : MonoBehaviour
     public bool NotEnabled => false;
     [EnableIf("NotEnabled")]
     public bool usable = true;
+    public float restingTime;
     private IEnumerator coolDownMethode;
 
     public void UseCard()
@@ -24,6 +25,7 @@ public class UtensilCard : MonoBehaviour
             if (!mana.CanCast(utensil.manaCost)) return;
 
             //EFFECT
+            mana.LoseMana(utensil.manaCost);
             onCardEffect?.Invoke(utensil.effect);
 
             coolDownMethode = CoolDown(utensil.cooldown);
@@ -34,9 +36,10 @@ public class UtensilCard : MonoBehaviour
     public IEnumerator CoolDown(float CD)
     {
         usable = false;
-        while (CD > 0)
+        restingTime = CD;
+        while (restingTime > 0)
         {
-            CD -= Time.deltaTime;
+            restingTime -= Time.deltaTime;
             yield return null;
         }
         usable = true;
