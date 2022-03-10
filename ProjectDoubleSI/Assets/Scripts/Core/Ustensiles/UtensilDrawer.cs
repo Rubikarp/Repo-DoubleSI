@@ -24,5 +24,9 @@ public class UtensilDrawer : MonoBehaviour
         toolNameRenderer.text = card.utensil.utensilName;
         toolCost.text = card.utensil.manaCost.ToString();
     }
+
+    public void Update()
+    {
+        utensilSprite.color = new Color(1 - (card.restingTime / card.utensil.cooldown), 1, 1);
+    }
 }
-    

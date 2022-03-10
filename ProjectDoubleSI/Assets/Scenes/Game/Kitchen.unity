@@ -1287,11 +1287,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1572636146}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
@@ -1303,20 +1299,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1244877716}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: LookForMatch
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: Match3Manager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265404426313, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1555,10 +1555,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: LookForMatch
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: Match3Manager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1605,10 +1601,6 @@ PrefabInstance:
     - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: LookForMatch
       objectReference: {fileID: 0}
     - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
