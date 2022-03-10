@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5774589486654993381, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].Sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: d2c7df417c1fd6049a07b0380a2298eb, type: 3}
     - target: {fileID: 5885539996155549718, guid: f9cfd46ecd1a2884693968e050e08ac0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
