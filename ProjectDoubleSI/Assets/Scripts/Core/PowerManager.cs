@@ -50,6 +50,9 @@ public class PowerManager : MonoBehaviour
             case GamePowers.ToolCooldownReset:
                 ToolCooldownReset();
                 break;
+            case GamePowers.NoSwitchCancel:
+                NoSwitchCancel();
+                break;
             case GamePowers.TempScoreMult:
                 TempScoreBonus();
                 break;
@@ -84,6 +87,11 @@ public class PowerManager : MonoBehaviour
                 Debug.LogError("Invalid Power");
                 break;
         }
+    }
+
+    private void NoSwitchCancel()
+    {
+        gridInteract.NextSwitchOP();
     }
 
     /// <summary>
