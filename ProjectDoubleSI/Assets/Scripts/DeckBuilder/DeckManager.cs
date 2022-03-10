@@ -31,6 +31,11 @@ public class DeckManager : Singleton<DeckManager>
     void Awake()
     {
         Initialisation();
+
+        if (deck.playerDeckAliment.Count > 0)
+        {
+            UpdateAlimentVisual();
+        }
     }
     private void Start()
     {
@@ -47,6 +52,7 @@ public class DeckManager : Singleton<DeckManager>
             currentButton.color = new Color(currentButton.color.r, currentButton.color.g, currentButton.color.b, 0f);
         }
         UpdateAlimentVisual();
+        UpdateDeckButton();
     }
     public void UpdateDeckButton()
     {
