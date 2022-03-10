@@ -130,7 +130,7 @@ public class PowerManager : MonoBehaviour
     [Button]
     public void TempScoreBonus()
     {
-        points.FeverTime(10f, 1.5f);
+        points.FeverTime(10f, 1.25f);
     }
 
     /// <summary>
@@ -139,7 +139,7 @@ public class PowerManager : MonoBehaviour
     [Button]
     public void RecipeTempScoreBonus()
     {
-        points.FeverTime(10f, 1.5f);
+        points.FeverTime(20f, 1.25f);
     }
 
     /// <summary>
@@ -148,7 +148,7 @@ public class PowerManager : MonoBehaviour
     [Button]
     public void NextScoreBonus()
     {
-        points.NextScoreBonus(1.3f);
+        points.NextScoreBonus(1.5f);
     }
 
     /// <summary>

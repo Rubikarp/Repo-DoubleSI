@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Tartiflette
   period: 1
-  power: 9
+  power: 10
   recipeSprite: {fileID: 21300000, guid: 6bbd3360f8afe1d48b5cc1276be20aca, type: 3}
   ingredients:
   - {fileID: 11400000, guid: e772d2e8461815c41870ea6dd02bd364, type: 2}

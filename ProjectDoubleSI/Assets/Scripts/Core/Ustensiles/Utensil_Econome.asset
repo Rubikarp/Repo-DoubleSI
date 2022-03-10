@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 3680682535897769983, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   utensilName: Econome
-  effect: 1
+  effect: 0
   manaCost: 1
   cooldown: 5
   UstensilVFX: {fileID: 8300000, guid: d3576e5f16e2fc74d9e0259e4d15cbc0, type: 3}

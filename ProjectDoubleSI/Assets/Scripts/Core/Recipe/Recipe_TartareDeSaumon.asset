@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Tartare de Boeuf
   period: 4
+  power: 8
   recipeSprite: {fileID: 21300000, guid: 7a603e387dd44aa47b4752a07c3f8c87, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}

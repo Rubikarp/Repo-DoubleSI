@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Omelette
   period: -1
+  power: 1
   recipeSprite: {fileID: 21300000, guid: 36039db690069c141a0293d9aa0a2d5e, type: 3}
   ingredients:
   - {fileID: 11400000, guid: c72ae5382bbeb3f41a1edf12266ee6c1, type: 2}
