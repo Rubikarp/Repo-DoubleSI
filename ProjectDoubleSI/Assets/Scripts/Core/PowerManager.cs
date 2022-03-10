@@ -15,6 +15,8 @@ public enum GamePowers
     MaxManaUp,
     SquareDestroy,
     IngredientLine,
+    ShuffleBoard,
+    ManaThreeUp,
 }
 
 [System.Serializable]
@@ -29,6 +31,7 @@ public class PowerManager : MonoBehaviour
     public PointCalculator points;
     public GameGridManager gridManage;
     public List<UtensilCard> cards = new List<UtensilCard>();
+
 
     public void LaunchPower(GamePowers power)
     {
@@ -54,6 +57,12 @@ public class PowerManager : MonoBehaviour
                 break;
             case GamePowers.IngredientLine:
                 SameIngredientLine();
+                break;
+            case GamePowers.ShuffleBoard:
+                ShuffleBoard();
+                break;
+            case GamePowers.ManaThreeUp:
+                ManaThreeUp();
                 break;
             default:
                 Debug.LogError("Invalid Power");
@@ -143,9 +152,15 @@ public class PowerManager : MonoBehaviour
         gridManage.ShuffleGrid();
     }
 
-    /// <summary>
-    /// Randomly change all item
-    /// </summary>
+    public void ManaThreeUp()
+    {
+        mana.ManaUp(3);
+
+        /// <summary>
+        /// Randomly change all item
+        /// </summary>
+    }
+
     [Button]
     public void SameIngredientLine()
     {
