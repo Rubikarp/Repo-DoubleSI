@@ -2655,6 +2655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 258725411}
     m_Modifications:
+    - target: {fileID: 732767399, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: sceneName
+      value: Kitchen
+      objectReference: {fileID: 0}
     - target: {fileID: 545092326470132703, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2738,6 +2742,22 @@ PrefabInstance:
     - target: {fileID: 545092326470132703, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeToSceneIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menu.SceneChange, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467356928776681078, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7211983958365866042, guid: 509781bbedd0c1249a7e1c7750f385ba, type: 3}
       propertyPath: m_Name

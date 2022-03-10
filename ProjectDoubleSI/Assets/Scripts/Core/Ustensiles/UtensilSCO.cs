@@ -17,6 +17,8 @@ public class UtensilSCO : ScriptableObject
     public float cooldown = 10.0f;
     public AudioClip UstensilVFX;
 
+#if UNITY_EDITOR
+
     [Button]
     private void RenameObject()
     {
@@ -26,4 +28,5 @@ public class UtensilSCO : ScriptableObject
         UnityEditor.AssetDatabase.RenameAsset(assetPath, "Utensil_" + utensilName);
         UnityEditor.AssetDatabase.Refresh();
     }
+#endif
 }

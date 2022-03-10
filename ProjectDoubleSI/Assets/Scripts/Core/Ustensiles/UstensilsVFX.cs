@@ -12,7 +12,7 @@ public class UstensilsVFX : MonoBehaviour
     public void Initializtion()
     {
         utensilAudioClip = utensil.UstensilVFX;
-        utensilsFeedback.GetFeedbackOfType<MMF_Sound>().Sfx = utensilAudioClip; 
+        //utensilsFeedback.GetFeedbackOfType<MMF_Sound>().Sfx = utensilAudioClip; 
     }
 
 }

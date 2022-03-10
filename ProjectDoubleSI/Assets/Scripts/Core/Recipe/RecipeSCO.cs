@@ -16,6 +16,7 @@ public class RecipeSCO : ScriptableObject
     [Expandable, Space(10)]
     public FoodSCO[] ingredients;
 
+    #if UNITY_EDITOR
     [Button]
     private void RenameObject()
     {
@@ -25,4 +26,5 @@ public class RecipeSCO : ScriptableObject
         UnityEditor.AssetDatabase.RenameAsset(assetPath, "Recipe_" + recipeName);
         UnityEditor.AssetDatabase.Refresh();
     }
+    #endif
 }

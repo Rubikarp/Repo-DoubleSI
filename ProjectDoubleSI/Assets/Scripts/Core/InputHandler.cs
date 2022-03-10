@@ -25,36 +25,73 @@ public class InputHandler : MonoBehaviour
     public UnityEvent onInputMaintain;
     public UnityEvent onInputRelease;
 
+    [Header("Mobile")]
+    private Touch touch;
+    private float distance = 0;
+    private float lastDistance;
+
     void Update()
     {
         GetHitPos();
 
         //OnPress
-        if (Input.GetMouseButtonDown(0) && grid.InZone(hitPoint))
+        if (grid.InZone(hitPoint))
         {
-            if (!KarpHelper.IsOverUI())
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (!KarpHelper.IsOverUI())
+                {
+                    isMaintaining = true;
+                    onInputPress?.Invoke();
+                }
+            }
+        }
+        if (isMaintaining)
+        {
+            //OnDrag
+            if (Input.GetMouseButton(0))
+            {
+                if (KarpHelper.IsOverUI())
+                {
+                    onInputRelease?.Invoke();
+                }
+                else
+                {
+                    onInputMaintain?.Invoke();
+                }
+            }
+            //OnRelease
+            if (Input.GetMouseButtonUp(0))
+            {
+                isMaintaining = false;
+                onInputRelease?.Invoke();
+            }
+        }
+
+        //Tap Input
+        if (Input.touchCount == 1)
+        {
+            touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
             {
                 isMaintaining = true;
                 onInputPress?.Invoke();
             }
-        }
-        //OnDrag
-        if (Input.GetMouseButton(0) && isMaintaining)
-        {
-            if (KarpHelper.IsOverUI())
-            {
-                onInputRelease?.Invoke();
-            }
             else
             {
-                onInputMaintain?.Invoke();
+                if (isMaintaining)
+                {
+                    onInputMaintain?.Invoke();
+                }
             }
         }
-        //OnRelease
-        if (Input.GetMouseButtonUp(0) && isMaintaining)
+        //No fingers on screen.
+        else if (Input.touchCount == 0)
         {
-            isMaintaining = false;
-            onInputRelease?.Invoke();
+            if (touch.phase == TouchPhase.Ended)
+            {
+
+            }
         }
     }
 
@@ -64,8 +101,11 @@ public class InputHandler : MonoBehaviour
         //Reset HitPoint
         hitPoint = Vector3.zero;
         //Mouse In Screen
-        if (!cam.pixelRect.Contains(cam.ScreenToViewportPoint(Input.mousePosition))) 
-        { return hitPoint; }
+        if (!cam.pixelRect.Contains(cam.ScreenToViewportPoint(Input.mousePosition)))
+        {
+            if (!cam.pixelRect.Contains(touch.position))
+            { return hitPoint; }
+        }
 
         //Get Ray
         ray = cam.ScreenPointToRay(Input.mousePosition);
