@@ -17,7 +17,9 @@ public class DetailsMenu : MonoBehaviour
     [SerializeField] private Image raretyDisplay;
     [SerializeField] private Sprite[] rarety;
     [SerializeField] private Image seasonImage;
-    
+
+    [SerializeField] private GameObject[] circle;
+    [SerializeField] private Image[] aliment;
 
     public void PopDetails(CardSCO cardToDisplay)
     {
@@ -51,6 +53,19 @@ public class DetailsMenu : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+
+            for (int i = 0; i < circle.Length; i++)
+            {
+                circle[i].SetActive(false);
+                aliment[i].color = new Color(aliment[i].color.r, aliment[i].color.g, aliment[i].color.b, 0f);
+            }
+
+            for (int i = 0; i < cardToDisplay.recipe.ingredients.Length; i++)
+            {
+                circle[i].SetActive(true);
+                aliment[i].color = new Color(aliment[i].color.r, aliment[i].color.g, aliment[i].color.b, 1f);
+                aliment[i].sprite = cardToDisplay.recipe.ingredients[i].visual;
             }
 
         }
