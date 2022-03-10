@@ -16,6 +16,7 @@ public class DetailsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cardCost;
     [SerializeField] private Image raretyDisplay;
     [SerializeField] private Sprite[] rarety;
+    [SerializeField] private Image seasonImage;
     
 
     public void PopDetails(CardSCO cardToDisplay)
@@ -28,6 +29,29 @@ public class DetailsMenu : MonoBehaviour
             bgCadre.sprite = diffCadres[0];
             cardCost.text = cardToDisplay.recipe.ingredients.Length.ToString();
             cardSkill.text = cardToDisplay.cardEffet;
+
+            switch (cardToDisplay.recipe.period)    
+            {
+                case Core.Season.Error:
+                    break;
+                case Core.Season.Winter:
+                    seasonImage.sprite = DeckManager.Instance.season[2];
+                    break;
+                case Core.Season.Spring:
+                    seasonImage.sprite = DeckManager.Instance.season[3];
+                    break;
+                case Core.Season.Summer:
+                    seasonImage.sprite = DeckManager.Instance.season[4];
+                    break;
+                case Core.Season.Autumn:
+                    seasonImage.sprite = DeckManager.Instance.season[1];
+                    break;
+                case Core.Season.Neutral:
+                    seasonImage.sprite = DeckManager.Instance.season[0];
+                    break;
+                default:
+                    break;
+            }
 
         }
         else
