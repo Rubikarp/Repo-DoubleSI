@@ -49,6 +49,18 @@ public class LineMatch
             GameObject.Destroy(visual.gameObject);
         }
     }
+    public void End()
+    {
+        if (visual != null)
+        {
+            for (int i = 0; i < matchingTile.Count; i++)
+            {
+                MonoBehaviour.Instantiate(visuPrefab[3], matchingTile[i].worldPos, Quaternion.Euler(-90, 0, 0));
+            }
+            visual.transform.DeleteChildren();
+            GameObject.Destroy(visual.gameObject);
+        }
+    }
 
     public void UpdateLine()
     {

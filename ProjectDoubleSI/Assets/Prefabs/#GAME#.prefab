@@ -352,8 +352,9 @@ MonoBehaviour:
   grid: {fileID: 1507315390106910777}
   visuPrefab:
   - {fileID: 2493061088771053427, guid: 6999b0a459260bf4baaad7a4c81551ea, type: 3}
-  - {fileID: 4732352203202451031, guid: 56299bdb11fd4944aa2fcef2e82013db, type: 3}
   - {fileID: 1044985898661894288, guid: a610a2e63c539f149a28b08feaf699ae, type: 3}
+  - {fileID: 4732352203202451031, guid: 56299bdb11fd4944aa2fcef2e82013db, type: 3}
+  - {fileID: 303392855113616987, guid: 651b2424bfc440144b1eeadd89b74d52, type: 3}
   player: {fileID: 1507315390182352748}
   onMatch:
     m_PersistentCalls:
@@ -397,6 +398,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6195457361640214772}
         m_TargetAssemblyTypeName: ManaManager, Assembly-CSharp
         m_MethodName: MatchManaCalc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2504162842351806242}
+        m_TargetAssemblyTypeName: PointCalculator, Assembly-CSharp
+        m_MethodName: PlayerMatch
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1058,6 +1071,7 @@ MonoBehaviour:
   ingredientScore: 50
   recipeScore: 300
   feverTime: 0
+  recipeFeverTime: 0
   <FeverRestingTime>k__BackingField: 0
 --- !u!1001 &107928695339122702
 PrefabInstance:

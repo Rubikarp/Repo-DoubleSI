@@ -40,6 +40,7 @@ public class GameGridManager : MonoBehaviour
     public void ClearMatch(LineMatch match)
     {
         ClearTiles(match.matchingTile);
+        match.End();
     }
     public void ClearTiles(List<GameTile> tiles)
     {
