@@ -43,6 +43,7 @@ public class DeckButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHan
                 cardOlder = deck.playerRecipesDeck[index];
                 buttonImage.sprite = cardOlder.cardAsset;
                 buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1f);
+                
             }
             else
             {
