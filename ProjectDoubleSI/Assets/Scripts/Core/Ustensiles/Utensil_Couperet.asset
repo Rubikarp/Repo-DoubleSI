@@ -16,6 +16,6 @@ MonoBehaviour:
   utensilName: Couperet
   effect: 5
   manaCost: 1
-  cooldown: 5
+  cooldown: 10
   UstensilVFX: {fileID: 8300000, guid: be57606f41af84248b981f2a7efdd0eb, type: 3}
   powerText: "Le prochain match d\xE9truit une ligne ou colonne al\xE9atoire"
