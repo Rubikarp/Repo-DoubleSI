@@ -80,6 +80,7 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - id: 0
+  - id: 1
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   references:
@@ -128,6 +129,52 @@ MonoBehaviour:
         MinPitch: 0.6
         MaxPitch: 1
         SfxAudioMixerGroup: {fileID: -3165942800488051908, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+    00000001:
+      type: {class: MMF_NVClip, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: 1153963699
+        Label: Haptic Clip
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 150735856}
+        DebugActive: 0
+        Clip: {fileID: -8404250095460277587, guid: 99f7d393f665146bdb0d9f8d92bcdc14, type: 3}
+        FallbackPreset: 5
+        Loop: 0
+        SeekTime: 0
+        MinLevel: 1
+        MaxLevel: 1
+        MinFrequencyShift: 0
+        MaxFrequencyShift: 0
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 1
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
 --- !u!114 &1768349334516158312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +285,7 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - id: 0
+  - id: 1
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   references:
@@ -286,6 +334,52 @@ MonoBehaviour:
         MinPitch: 0.9
         MaxPitch: 1.1
         SfxAudioMixerGroup: {fileID: -3165942800488051908, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+    00000001:
+      type: {class: MMF_NVClip, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: -689793908
+        Label: Haptic Clip
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 163620515}
+        DebugActive: 0
+        Clip: {fileID: -8404250095460277587, guid: 5da0381b8256c4606b3ba7d880db679b, type: 3}
+        FallbackPreset: 8
+        Loop: 0
+        SeekTime: 0
+        MinLevel: 0.8
+        MaxLevel: 1.2
+        MinFrequencyShift: -0.2
+        MaxFrequencyShift: 0.2
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 1
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
 --- !u!1 &1388760171245634983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1167,7 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - id: 0
+  - id: 1
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   references:
@@ -1121,6 +1216,52 @@ MonoBehaviour:
         MinPitch: 0.9
         MaxPitch: 1.1
         SfxAudioMixerGroup: {fileID: -3165942800488051908, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+    00000001:
+      type: {class: MMF_NVClip, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: -1157148889
+        Label: Haptic Clip
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 1222129886176076189}
+        DebugActive: 0
+        Clip: {fileID: -8404250095460277587, guid: 77e18ef93118746718a4ee20bfa19a09, type: 3}
+        FallbackPreset: 7
+        Loop: 0
+        SeekTime: 0
+        MinLevel: 0.8
+        MaxLevel: 1
+        MinFrequencyShift: -0.1
+        MaxFrequencyShift: 0.1
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 0
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
 --- !u!1 &5230454975759321713
 GameObject:
   m_ObjectHideFlags: 0
