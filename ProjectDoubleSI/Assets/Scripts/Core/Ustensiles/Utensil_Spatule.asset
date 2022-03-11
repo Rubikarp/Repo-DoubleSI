@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 2085423665032232250, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   utensilName: Spatule
   effect: 2
-  manaCost: 1
-  cooldown: 5
+  manaCost: 2
+  cooldown: 15
   UstensilVFX: {fileID: 8300000, guid: d3576e5f16e2fc74d9e0259e4d15cbc0, type: 3}
   powerText: Le prochain switch est libre.

@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 3680682535897769983, guid: 1e0d95b93ee934d42b234744845235df, type: 3}
   utensilName: Econome
   effect: 0
-  manaCost: 1
-  cooldown: 5
+  manaCost: 2
+  cooldown: 20
   UstensilVFX: {fileID: 8300000, guid: fde523dd290cf5346a535a77caa79c16, type: 3}
   powerText: La prochaine recette vaut 50% de points en plus.
