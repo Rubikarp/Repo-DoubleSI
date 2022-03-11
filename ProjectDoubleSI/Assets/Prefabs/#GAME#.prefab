@@ -331,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1507315390106910777}
   mana: {fileID: 6195457361640214772}
+  player: {fileID: 1507315390182352748}
   points: {fileID: 2504162842351806242}
   gridManage: {fileID: 1507315390106910776}
   gridInteract: {fileID: 1507315388618786357}
@@ -933,9 +934,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck: {fileID: 11400000, guid: 627f0e736c9856b4eb9989c04c8e2092, type: 2}
   recipes:
-  - {fileID: 11400000, guid: 823cf56567d59dd418b278fb2da509b2, type: 2}
-  - {fileID: 11400000, guid: e6df066166a09694a827f95a7b1b33e6, type: 2}
-  - {fileID: 11400000, guid: 8d98e1f1b0cae754395aa245419e2f6e, type: 2}
+  - {fileID: 11400000, guid: 4ca6693719234f147b94e1a3b10ad320, type: 2}
+  - {fileID: 11400000, guid: 45224a192beb03b4c99d30504c260b43, type: 2}
+  - {fileID: 11400000, guid: 1917e5bcb6b9fa9489964cc60dcf00a3, type: 2}
+  utensils: []
+  cardUtensils:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   availableIngredients:
   - {fileID: 11400000, guid: 6681f471f1f3d4c428fb08c2fb00e2c7, type: 2}
   - {fileID: 11400000, guid: 5dfeeab121705104cbf01a487fb8ba07, type: 2}

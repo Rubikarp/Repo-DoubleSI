@@ -44,10 +44,11 @@ public class GameScore : MonoBehaviour
     public void PlayerScorePoint(float points)
     {
         playerScore += points;
-
-        enemyScore += points * Random.Range(0.4f, 1.4f);
         onScoreChange?.Invoke();
+
+        EnemyScorePoint(points* Random.Range(0.4f, 1.1f));
     }
+
     public void EnemyScorePoint(float points)
     {
         enemyScore += points;

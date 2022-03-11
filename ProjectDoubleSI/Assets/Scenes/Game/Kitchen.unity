@@ -247,6 +247,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57462c8a4d006bb47a87e533a65c175b, type: 3}
+--- !u!114 &283713363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &338769157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &383294975 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
@@ -608,6 +630,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1735756507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+  m_PrefabInstance: {fileID: 1507315389625658329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1876427537 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1061417267033504869, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
@@ -1250,14 +1283,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1061417265073548566, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265080425233, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_text
-      value: 'Player : 0.'
-      objectReference: {fileID: 0}
     - target: {fileID: 1061417265241207766, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1287,10 +1312,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1572636146}
     - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1507315389625658330}
@@ -1298,26 +1319,6 @@ PrefabInstance:
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1244877716}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: Match3Manager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265271923339, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1061417265404426313, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1326,10 +1327,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1061417265490446370, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_text
-      value: '.0 : Enemy'
-      objectReference: {fileID: 0}
     - target: {fileID: 1061417265573546341, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1337,10 +1334,6 @@ PrefabInstance:
     - target: {fileID: 1061417265573546341, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061417265573546341, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1061417265628011135, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: score
@@ -1350,14 +1343,18 @@ PrefabInstance:
       propertyPath: playerHand
       value: 
       objectReference: {fileID: 232637651}
-    - target: {fileID: 1061417265992545750, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -19.200012
-      objectReference: {fileID: 0}
     - target: {fileID: 1061417267033504869, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: mana
       value: 
       objectReference: {fileID: 1572636146}
+    - target: {fileID: 1061417267055015640, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].MaxVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061417267055015640, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].MinVolume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1529217527413058391, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1535,14 +1532,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1572636146}
     - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1507315389625658330}
@@ -1550,18 +1539,6 @@ PrefabInstance:
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1244877716}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: Match3Manager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217314569682888, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6937217314569682891, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1583,14 +1560,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1572636146}
     - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1507315389625658330}
@@ -1598,18 +1567,6 @@ PrefabInstance:
       propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1244877716}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: Match3Manager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937217315176713944, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: onCardEffect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6937217315176713947, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1630,14 +1587,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2094414842}
-    - target: {fileID: 7675011395617669979, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_PixelPerfect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7675011395617669979, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
-      propertyPath: m_PlaneDistance
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 7768150894663173082, guid: dae80fc031f2c1e4aa83df8a518dbc2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1752,10 +1701,562 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1]
+      value: MoreMountains.Feedbacks.NiceVibrations MoreMountains.FeedbacksForThirdParty.MMF_NVClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: -8404250095460277587, guid: 99f7d393f665146bdb0d9f8d92bcdc14, type: 3}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Label
+      value: Haptic Clip
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Owner
+      value: 
+      objectReference: {fileID: 283713363}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Channel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].SeekTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].UniqueID
+      value: 1153963699
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DebugActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].FallbackPreset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TrackID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Sequence
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Quantized
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TargetBPM
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxFrequencyShift
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinFrequencyShift
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InitialDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.PlayDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.RepeatForever
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TimescaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.NumberOfRepeats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.CooldownDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InterruptsOnStop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.GamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ConstantIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.DelayBetweenRepeats
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.ForceGamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ExcludeFromHoldingPauses
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ContributeToTotalDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.MMFeedbacksDirectionCondition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfHapticsSupported
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAdvancedRequirementsMet
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAmplitudeModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150735856, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfFrequencyModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1]
+      value: MoreMountains.Feedbacks.NiceVibrations MoreMountains.FeedbacksForThirdParty.MMF_NVClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: -8404250095460277587, guid: 5da0381b8256c4606b3ba7d880db679b, type: 3}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Label
+      value: Haptic Clip
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Owner
+      value: 
+      objectReference: {fileID: 1735756507}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Channel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxLevel
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinLevel
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].SeekTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].UniqueID
+      value: -689793908
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DebugActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].FallbackPreset
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TrackID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Sequence
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Quantized
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TargetBPM
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxFrequencyShift
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinFrequencyShift
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InitialDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.PlayDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.RepeatForever
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TimescaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.NumberOfRepeats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.CooldownDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InterruptsOnStop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.GamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ConstantIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.DelayBetweenRepeats
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.ForceGamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ExcludeFromHoldingPauses
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ContributeToTotalDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.MMFeedbacksDirectionCondition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfHapticsSupported
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAdvancedRequirementsMet
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAmplitudeModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163620515, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfFrequencyModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 874274220932684770, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: onScoreChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1008608523}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1]
+      value: MoreMountains.Feedbacks.NiceVibrations MoreMountains.FeedbacksForThirdParty.MMF_NVClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: -8404250095460277587, guid: 77e18ef93118746718a4ee20bfa19a09, type: 3}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Label
+      value: Haptic Clip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Owner
+      value: 
+      objectReference: {fileID: 338769157}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Channel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinLevel
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].SeekTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].UniqueID
+      value: -1157148889
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DebugActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].DisplayColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].FallbackPreset
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TrackID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Sequence
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.Quantized
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TargetBPM
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MaxFrequencyShift
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].MinFrequencyShift
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InitialDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.PlayDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.RepeatForever
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.TimescaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.NumberOfRepeats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.CooldownDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.InterruptsOnStop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.GamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ConstantIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.DelayBetweenRepeats
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.IntensityIntervalMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.ForceGamepadID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ExcludeFromHoldingPauses
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.ContributeToTotalDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].Timing.MMFeedbacksDirectionCondition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfHapticsSupported
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAdvancedRequirementsMet
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfAmplitudeModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222129886176076189, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].HapticSettings.OnlyPlayIfFrequencyModulationSupported
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1507315388618786352, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: m_Name
       value: '#GAME#'
@@ -1812,6 +2313,18 @@ PrefabInstance:
       propertyPath: camTransf
       value: 
       objectReference: {fileID: 2094414843}
+    - target: {fileID: 1507315390182352748, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: cardUtensils.Array.data[0]
+      value: 
+      objectReference: {fileID: 383294975}
+    - target: {fileID: 1507315390182352748, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: cardUtensils.Array.data[1]
+      value: 
+      objectReference: {fileID: 602910176}
+    - target: {fileID: 1507315390182352748, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: cardUtensils.Array.data[2]
+      value: 
+      objectReference: {fileID: 506738351}
     - target: {fileID: 4386048069792884697, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

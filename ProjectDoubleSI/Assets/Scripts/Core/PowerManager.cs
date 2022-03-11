@@ -30,7 +30,7 @@ public class PowerManager : MonoBehaviour
     [Header("Reference")]
     public GameGrid grid;
     public ManaManager mana;
-    private PlayerHand player;
+    public PlayerHand player;
     public PointCalculator points;
     public GameGridManager gridManage;
     public GameGridInteraction gridInteract;

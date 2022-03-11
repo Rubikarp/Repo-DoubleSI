@@ -6,13 +6,13 @@ using MoreMountains.Feedbacks;
 public class UstensilsVFX : MonoBehaviour
 {
     [SerializeField] MMF_Player utensilsFeedback;
-    [SerializeField] UtensilSCO utensil;
+    [SerializeField] UtensilCard utensilCard;
     [SerializeField] AudioClip utensilAudioClip;
-    
+
     public void Initializtion()
     {
-        utensilAudioClip = utensil.UstensilVFX;
-        //utensilsFeedback.GetFeedbackOfType<MMF_Sound>().Sfx = utensilAudioClip; 
+        utensilAudioClip = utensilCard.utensil.UstensilVFX;
+        utensilsFeedback.GetFeedbackOfType<MMF_Sound>().Sfx = utensilAudioClip;
     }
 
 }

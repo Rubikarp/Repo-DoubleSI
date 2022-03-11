@@ -26,6 +26,9 @@ public class ManaManager : MonoBehaviour
 
     public void MatchManaCalc(LineMatch match)
     {
+        if (match.isRecipe)
+        { return; }
+
         if(match.Lenght >= 3)
         {
             ManaUp(match.Lenght - 2);

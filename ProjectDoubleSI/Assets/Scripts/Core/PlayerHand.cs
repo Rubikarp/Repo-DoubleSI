@@ -9,6 +9,9 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] SCODeckManagement deck;
     [NaughtyAttributes.Expandable]
     public List<RecipeSCO> recipes = new List<RecipeSCO>();
+    public List<UtensilSCO> utensils = new List<UtensilSCO>();
+
+    public List<UtensilCard> cardUtensils = new List<UtensilCard>();
 
     [Header("Info")]
     [NaughtyAttributes.Expandable]
@@ -20,8 +23,21 @@ public class PlayerHand : MonoBehaviour
         {
             recipes = deck.playerRecipesDeck.Select(x => x.recipe).ToList();
         }
+        if (deck.playerToolsDeck.Count > 0)
+        {
+            utensils = deck.playerToolsDeck.Select(x=> x.tool).ToList();
+        }
         UpdateAvailableList();
+
+        for (int i = 0; i < cardUtensils.Count; i++)
+        {
+            if (cardUtensils.Count <= utensils.Count)
+            {
+                cardUtensils[i].utensil = utensils[i];
+            }
+        }
     }
+
 
     [NaughtyAttributes.Button]
     public void UpdateAvailableList()
