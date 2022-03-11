@@ -11,10 +11,15 @@ public class RecipeSFX : MonoBehaviour
 
     public void SwitchSFX(LineMatch match)
     {
-        if(match.isRecipe)
+        if (match.isRecipe)
         {
             recipeFeeback.GetFeedbackOfType<MMF_Sound>().Sfx = MatchSFXs[0];
         }
-        else recipeFeeback.GetFeedbackOfType<MMF_Sound>().Sfx = MatchSFXs[1];
+        else
+        {
+            recipeFeeback.GetFeedbackOfType<MMF_Sound>().Sfx = MatchSFXs[1];
+        }
+
+        recipeFeeback.PlayFeedbacks();
     }
 }

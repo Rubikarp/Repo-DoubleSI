@@ -1728,6 +1728,10 @@ PrefabInstance:
       propertyPath: camTransf
       value: 
       objectReference: {fileID: 2094414843}
+    - target: {fileID: 1507315388618786357, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
+      propertyPath: onSwapRefuse.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1507315390182352748, guid: 88901cf153a5879439ee342f0d734d22, type: 3}
       propertyPath: cardUtensils.Array.data[0]
       value: 
